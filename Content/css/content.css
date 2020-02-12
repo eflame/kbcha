@@ -89,9 +89,10 @@ ver : 1.00
 .field input[type="text"], 
 .field select {width:100%;}
 
-.field > .inner {display:flex;}
+.field > .inner {display:flex; position:relative;}
 .field > .inner * {flex:1 1 auto; align-items:baseline;}
 .field > .inner .sign {line-height:42px; margin:0 4px; color:#e4e4e4;}
+.field > .inner .btn {position:absolute; right:15px; top:50%; transform:translate(0, -50%);}
 
 
 
