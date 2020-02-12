@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>롯데시네마 HTML 목록</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<style type="text/css">
+		/* CSS 리셋 설정 */
+		body,html,
+		header,footer,aside,nav,section,article,details,figure,figcaption,menu,command,
+		div,dl,dd,ol,ul,li,form,fieldset,legend,iframe,table,caption,thead,tfoot,tbody,tr,th,td, /* 블럭 요소 */
+		h1,h2,h3,h4,h5,h6,dt,summary,input,textarea,button,select,datalist,
+		img,embed,object,canvas,audio,video,meter,progress,keygen, /* 인라인 블럭 요소 */
+		a,label,output,dialog, /* 인라인 요소 */
+		address,blockquote, /* 텍스트 블럭 요소 */
+		p,pre,/* 텍스트 인라인 블럭 요소 */
+		span,b,strong,i,em,dfn,var,u,ins,s,del,q,mark,small,sub,sup,abbr,bdi,bdo,cite,time,ruby,rp,rt,code,kbd,samp, /* 텍스트 인라인 요소 */
+		acronym,big,frame,frameset,noframes,tt, /* HTML5에서 사용하지 않는 요소 */
+		map,option,hr,*{border:0;padding:0;margin:0;color:inherit;font-family:inherit;font-size:inherit;line-height:inherit;vertical-align:top}
+		header,footer,aside,nav,section,article,details,summary,figure,figcaption,menu,command{display:block} /* HTML5 블럭 요소 */
+		applet,basefont,center,dir,font,strike{display:none} /* XHTML4, HTML5 이후 사용하지 않는 요소 제거 */
+		q,blockquote{quotes:none;content:none}
+		li,menu{list-style:none}
+		table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed} /* 테이블 보더 변경 (겹칩지 않음 separate) */
+		caption{text-align:left}
+		th,td{text-align:left;vertical-align:middle;}
+		address{font-style:normal}
+		label{display:inline-block;*zoom:1}
+		a{text-decoration:none;display:inline-block;*zoom:1} /* 접근성 포커싱을 위해 a요소 속성 변경 */
+		a:hover{text-decoration:underline;color:#1979CA}
+		/* 공통 설정 */
+		html{overflow-y:scroll}
+		html,body{/*min-width:800px;*/background:#fff} /* 가로스크롤 시 배경이 잘리는 버그를 없애기 위해 최소사이즈 지정 */
+		body{color:#333;font:normal 12px/1 "Nanum Gothic",Sans-Serif} /* 기본 폰트 지정 */
+		.blind{position:absolute;width:0;height:0;left:0;top:0;font-size:0;line-height:0;overflow:hidden}
+		.hidden{width:0;height:0;font-size:0;line-height:0;overflow:hidden;visibility:hidden} /* .blind를 적용할 수 없는 곳에 사용 (예, caption) */
+		/* 내용 */
+		#wrap{padding:0 10px;margin:0 auto}
+		#header h1{padding:20px 0;text-align:center;font-size:30px;}
+		#header h1 strong {color:#0058EF;}
+		#header .nav{border-width:3px 0;border-style:solid;border-color:#222;overflow:hidden}
+		#header .nav li{float:left;width:50%;}
+		#header .nav li.dev{float:left;width:100%;background:#222;color:#fff;height:50px;text-align:center;line-height:50px;display:block;font-size:16px;font-weight:bold;}
+		#header .nav li a{height:50px;color:#333;font-size:16px;font-weight:bold;text-align:center;line-height:50px;display:block}
+		#header .nav li.on a{color:#fff;background:#222}
+		.list_table{margin:40px 0;line-height:1.5}
+		.list_table tr.line td {border-top:2px solid #000}
+		.list_table th{padding:10px 0;border:1px solid #e5e5e5;text-align:center;}
+		.list_table th[scope="col"]{background:#f7f7f7;}
+		.list_table th[scope="row"]{color:#4c4c4c;font-weight:normal;}
+		.list_table td{min-height:15px; padding:8px 5px;border:1px solid #e5e5e5;color:#4c4c4c;word-break:break-word}
+		.list_table td.t_left{padding-left:10px;text-align:left}
+		.list_table td img{vertical-align:middle}
+		.list_table td a{font-size:11px;}
+		.list_table td a span{height:24px;padding:0 8px;color:#fff;line-height:24px;display:block}
+		.list_table td span.date{background-color:#4f4f4f}
+		.list_table td span.jpg{background-color:#ff8a23}
+		.list_table td span.kwah{background-color:#6f9fd1}
+		.list_table td.line{background:#dddddd;height:1px;padding:0;}
+		.today {background:#fcead7;font-weight:bold}
+		.today .on {}
+		.t_center {text-align:center;}
+		.remark {float:right;}
+		.remark span {margin-left:10px;}
+		.remark span:before {content:"-"}
+		.txt_fin {color:#0058EF !important;}
+		.txt_ing {color:#EF3100 !important;}
+		.txt_add {color:#00BE19 !important;}
+	</style>
+	<script type="text/javascript" src="Content/js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.list_table tbody th').each(function(i){
+				$(this).text(i+1);
+			});
+
+			var date=new Date();
+			var yy = date.getFullYear();
+			var mm=""+((date.getMonth()+1)<10)?'0'+(date.getMonth()+1):(date.getMonth()+1);
+			var dd=(date.getDate()<10)?'0'+date.getDate():date.getDate();
+			var today=(yy+'-'+mm+'-'+dd);
+
+			//alert( '.' +today)
+			$('td').each(function(){
+				var vars=$(this).text();
+				if(vars==today){
+					$(this).parent('tr').addClass('today');
+					$(this).addClass('on')
+				}
+
+			})
+		});
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="header">
+			<h1>롯데시네마 <strong>모바일</strong> HTML LIST</h1>
+		</div>
+		<div style="border: 1px solid #aaa; background:#f0f0f0; padding: 10px 20px; line-height: 1.5;">
+			<h2> Mark-up 수정 이력 </h2>
+			<b>* v1.0</b> : 2019.09.19 (Design XD 기준)<br />
+			<b>* v2.0</b> : 2019.09.30 (Design XD 기준)<br />
+			<b>* v3.0</b> : 2019.10.01 (수정 날짜 기준)<br /><br />
+			<h2> 수정 시, 아래 내용으로 주석 필 기입 </h2>
+			<p style="padding: 0 20px; font-family: Consolas, 'Noto Sans KR'; color:red;">
+				&lt;!-- 수정 v3.0 20191018 : 설명 --&gt; <br />
+				<!-- 수정 v2.0 : (클래스 / 마크업) 수정 -->
+				(Mark-up Code)<br />
+				<!-- //수정 v2.0 : (클래스 / 마크업) 수정 -->
+				&lt;!-- //수정 v3.0 20191018 : 설명 --&gt;
+			</p>
+		</div>
+		<div class="remark">
+			<span class="txt_fin">완료일 : 2019.09.25</span>
+			<span class="txt_ing">수정일 : 10.01 (v2.0), 10.14 (v3.0)</span>
+			<span class="txt_add">추가 : 추가 (v3.0)</span>
+		</div>
+
+		<!--
+		<ul class="tab_menu">
+			<li><a href="#menu1">메인</a></li>
+			<li><a href="#menu2">예매</a></li>
+			<li><a href="#menu3">영화</a></li>
+			<li><a href="#menu4">영화관</a></li>
+			<li><a href="#menu5">스위트샵</a></li>
+		</ul>
+		-->
+
+
+		<table class="list_table" summary="롯데시네마 모바일 HTML LIST 입니다.">
+			<caption class="hidden">롯데시네마 모바일 HTML LIST</caption>
+			<colgroup>
+				<col style="width:8%"/>
+				<col style="width:10%"/>
+				<col style="width:12%"/>
+				<col style="width:12%"/>
+				<col style="width:18%"/>
+				<col style="width:50px"/>
+				<col style="width:90px"/>
+				<col style="width:110px"/>
+				<col style="width:auto"/>
+			</colgroup>
+			<thead>
+				<tr>
+					<th scope="col">1depth</th>
+					<th scope="col">2depth</th>
+					<th scope="col">3depth</th>
+					<th scope="col">4depth</th>
+					<th scope="col">파일명</th>
+					<th scope="col">작업자</th>
+					<th scope="col">작업완료일</th>
+					<th scope="col">수정일</th>
+					<th scope="col">비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- 구분선 ================================================================================ -->
+				<tr>
+					<td rowspan="15">가이드</td>
+					<td rowspan="7">layout</td>
+					<td>font</td>
+					<td></td>
+					<td><a href="html/guide/guide_font.html" target="_blank">guide_font.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>layout</td>
+					<td></td>
+					<td><a href="html/guide/guide_layout.html" target="_blank">guide_layout.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업</td>
+					<td></td>
+					<td><a href="html/guide/guide_popup.html" target="_blank">guide_popup.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>body 스크롤 방지</td>
+					<td></td>
+					<td><a href="html/guide/guide_scroll_none.html" target="_blank">guide_scroll_none.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">탭</td>
+					<td>기본</td>
+					<td><a href="html/guide/guide_tab.html" target="_blank">guide_tab.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>inner</td>
+					<td><a href="html/guide/guide_tab_inner.html" target="_blank">guide_tab_inner.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>fixed</td>
+					<td><a href="html/guide/guide_tab_fixed.html" target="_blank">guide_tab_fixed.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="8">유형</td>
+					<td>버튼</td>
+					<td></td>
+					<td><a href="html/guide/guide_btn.html" target="_blank">guide_btn.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>아이콘, 텍스트</td>
+					<td></td>
+					<td><a href="html/guide/guide_text.html" target="_blank">guide_text.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>폼</td>
+					<td></td>
+					<td><a href="html/guide/guide_form.html" target="_blank">guide_form.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>별점</td>
+					<td></td>
+					<td><a href="html/guide/guide_star.html" target="_blank">guide_star.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>내역 없음</td>
+					<td></td>
+					<td><a href="html/guide/guide_notice.html" target="_blank">guide_notice.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>스크롤</td>
+					<td></td>
+					<td><a href="html/guide/guide_scroll.html" target="_blank">guide_scroll.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>슬라이드(swipe.js)</td>
+					<td></td>
+					<td><a href="html/guide/guide_slide.html" target="_blank">guide_slide.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>달력</td>
+					<td></td>
+					<td><a href="html/guide/guide_datepicker.html" target="_blank">guide_datepicker.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">기타</td>
+					<td>이벤트_brandnew</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/event2/이벤트_brandnew.html" target="_blank">이벤트_brandnew.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>이벤트_히든팝콘.html</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/event/이벤트_히든팝콘.html" target="_blank">이벤트_히든팝콘.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>lotteon</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/common/lotteon.html" target="_blank">lotteon.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#none" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="7">공통</td>
+					<td rowspan="4">에러</td>
+					<td>type1</td>
+					<td></td>
+					<td><a href="html/common/error_type1.html" target="_blank">error_type1.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>type2</td>
+					<td></td>
+					<td><a href="html/common/error_type2.html" target="_blank">error_type2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.22</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>type3</td>
+					<td></td>
+					<td><a href="html/common/error_type3.html" target="_blank">error_type3.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.22</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>type4</td>
+					<td></td>
+					<td><a href="html/common/error_type4.html" target="_blank">error_type4.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.22</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">점검</td>
+					<td>type5</td>
+					<td></td>
+					<td><a href="html/common/error_type5.html" target="_blank">error_type5.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>type6</td>
+					<td></td>
+					<td><a href="html/common/error_type6.html" target="_blank">error_type6.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.11.09</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>type7</td>
+					<td></td>
+					<td><a href="html/common/error_type7.html" target="_blank">error_type7.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.11.09</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">메인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="3"><a href="html/common/main.html" target="_blank">main.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td rowspan="3" class="t_center txt_ing">08.12<br /> 10.08 <br /> 10.23 (v3.0)</td>
+					<td rowspan="3">10.23 : 메인 스와이프 AD플래그 추가</td>
+				</tr>
+				<tr>
+					<td>드로우 (공통)</td>
+					<td></td>
+					<td></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+				</tr>
+				<tr>
+					<td>팝업</td>
+					<td></td>
+					<td></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.08</td>
+				</tr>
+				<tr>
+					<td>씨츄제공동의팝업</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/common/main_seechu.html" target="_blank">main_seechu.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.24</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="9">회원</td>
+					<td rowspan="9">로그인</td>
+					<td>통합 로그인</td>
+					<td></td>
+					<td><a href="html/common/MJO010.html" target="_blank">MJO010.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center ">08.12</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>PIN 로그인</td>
+					<td></td>
+					<td><a href="html/common/MJO040.html" target="_blank">MJO040.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.13</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">생체인증 로그인 설정 안내</td>
+					<td></td>
+					<td><a href="html/common/MJO050.html" target="_blank">MJO050.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>로그인안내 _ alert</td>
+					<td><a href="html/common/MJO050_popup1.html" target="_blank">MJO050_popup1.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>생체인증 로그인 설정 _ alert</td>
+					<td><a href="html/common/MJO050_popup2.html" target="_blank">MJO050_popup2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>생체로그인(지문,홍채,얼굴) _ alert</td>
+					<td><a href="html/common/MJO050_popup3.html" target="_blank">MJO050_popup3.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">비회원 로그인_팝업</td>
+					<td></td>
+					<td><a href="html/common/MJO020.html" target="_blank">MJO020.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center txt_ing">10.14 (v3.0)<br />10.23 (v3.0)</td>
+					<td>10.23 : 버튼추가</td>
+				</tr>
+				<tr>
+					<td>로그인진행 _ alert</td>
+					<td><a href="html/common/MJO020_popup.html" target="_blank">MJO020_popup.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.13</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>비회원 예매내역 안내</td>
+					<td></td>
+					<td><a href="html/common/MJO030.html" target="_blank">MJO030.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="5">설정</td>
+					<td>앱설정</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/common/MDA010.html" target="_blank">MDA010.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">마케팅/혜택 수신 상세설정</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/common/MDA010_2.html" target="_blank">MDA010_2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>마케팅/혜택 수신 상세설정 팝업1</td>
+					<td></td>
+					<td><a href="html/common/MDA010_2_popup1.html" target="_blank">MDA010_2_popup1.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>마케팅/혜택 수신 상세설정 팝업2</td>
+					<td></td>
+					<td><a href="html/common/MDA010_2_popup2.html" target="_blank">MDA010_2_popup2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>마케팅/혜택 수신 상세설정 팝업3</td>
+					<td></td>
+					<td><a href="html/common/MDA010_2_popup3.html" target="_blank">MDA010_2_popup3.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.12</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="4">알림함</td>
+					<td>전체</td>
+					<td></td>
+					<td></td>
+					<td rowspan="3"><a href="html/common/MMB000.html" target="_blank">MMB000.html</a></td>
+					<td rowspan="3" class="t_center"></td>
+					<td rowspan="3" class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>이벤트</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화정보</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>알림목록 삭제_alert </td>
+					<td></td>
+					<td></td>
+					<td><a href="html/common/MMB000_alert.html" target="_blank">MMB000_alert.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="6">바로티켓</td>
+					<td>목록</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MBT010.html" target="_blank">MBT010.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center txt_ing">10.11 (v3.0)</td>
+					<td>10.11 : 상태 플래그 수정</td>
+				</tr>
+				<tr>
+					<td>영상</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MBT000.html" target="_blank">MBT000.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center txt_ing">10.30 (v3.0)</td>
+					<td>10.30 : 팝콘 이미지 추가</td>
+				</tr>
+				<tr>
+					<td rowspan="4">상세</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MBT020.html" target="_blank">MBT020.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center txt_ing">10.30 (v3.0)</td>
+					<td>10.30 : 이미지 수정</td>
+				</tr>
+				<tr>
+					<td>좌석확인</td>
+					<td></td>
+					<td><a href="html/ticketing/MBT021.html" target="_blank">MBT021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>주차권</td>
+					<td></td>
+					<td><a href="html/ticketing/MBT022.html" target="_blank">MBT022.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>예매내역 공유</td>
+					<td></td>
+					<td><a href="html/ticketing/MBT023.html" target="_blank">MBT023.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="13">바로팝콘</td>
+					<td>인덱스</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/snack/MBP000.html" target="_blank">MBP000.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="7">지금주문</td>
+					<td rowspan="3">상품목록</td>
+					<td>목록 (tab)</td>
+					<td><a href="html/snack/MBP010.html" target="_blank">MBP010.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>목록 (전체)</td>
+					<td><a href="html/snack/MBP010_all.html" target="_blank">MBP010_all.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.11.18</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				
+				<tr>
+					<td>옵션 설정 레이어 팝업</td>
+					<td><a href="html/snack/MBP010_popup2.html" target="_blank">MBP010_popup2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">상품상세</td>
+					<td>콤보</td>
+					<td><a href="html/snack/MBP012.html" target="_blank">MBP012.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.06</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>단일상품</td>
+					<td><a href="html/snack/MBP013.html" target="_blank">MBP013.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.06</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화관선택</td>
+					<td></td>
+					<td><a href="html/snack/MBP014.html" target="_blank">MBP014.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.06</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>장바구니</td>
+					<td></td>
+					<td><a href="html/snack/MBP015.html" target="_blank">MBP015.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">주문확인</td>
+					<td>제조중</td>
+					<td></td>
+					<td><a href="html/snack/MBP020.html" target="_blank">MBP020.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>제조완료</td>
+					<td></td>
+					<td><a href="html/snack/MBP021.html" target="_blank">MBP021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>픽업완료</td>
+					<td></td>
+					<td><a href="html/snack/MBP022.html" target="_blank">MBP022.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">정보성알림</td>
+					<td>알림동의</td>
+					<td></td>
+					<td><a href="html/snack/MBP010_2.html" target="_blank">MBP010_2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center ">10.11 (v2.1)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>권한설정</td>
+					<td></td>
+					<td><a href="html/snack/MBP010_3.html" target="_blank">MBP010_3.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.11.25</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="2">빠른예매</td>
+					<td>인덱스</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MQT000.html" target="_blank">MQT000.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.28</td>
+					<td class="t_center txt_ing">08.28<br />09.23<br />10.14 (v3.0)<br />10.25 (v3.0)</td>
+					<td>10.25 : 인원선택시 노출 </td>
+				</tr>
+				<tr>
+					<td>인원선택</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MTI051.html" target="_blank">MTI051.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.28</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="8">일반예매</td>
+					<td>영화 선택</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MTI010.html" target="_blank">MTI010.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.19</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화관 선택</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MTI020.html" target="_blank">MTI020.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">날짜/시간 선택</td>
+					<td>영화관별 예매</td>
+					<td></td>
+					<td><a href="html/ticketing/MTI030.html" target="_blank">MTI030.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td class="t_center ">09.23</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화별 예매</td>
+					<td></td>
+					<td><a href="html/ticketing/MTI030_b.html" target="_blank">MTI030_b.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>회차정보 레이어</td>
+					<td></td>
+					<td><a href="html/ticketing/MTI031.html" target="_blank">MTI031.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>인원선택</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MTI051.html" target="_blank">MTI051.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>좌석선택</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MTI051_detail2.html" target="_blank">MTI051_detail2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!-- 구분선 ================================================================================ -->
+				<tr>
+					<td>좌석선택 test</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/ticketing/MTI051_detail2_개발.html" target="_blank">MTI051_detail2_개발.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="38">주문/결제</td>
+					<td rowspan="36">결제 index</td>
+					<td>(회원)</td>
+					<td class="t_center "></td>
+					<td><a href="html/payment/MTP001.html" target="_blank">MTP001.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center txt_ing">10.11 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>(비회원)</td>
+					<td class="t_center "></td>
+					<td><a href="html/payment/MTP002.html" target="_blank">MTP002.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.20</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화관 예매 안내팝업</td>
+					<td class="t_center "></td>
+					<td><a href="html/payment/MTP900.html" target="_blank">MTP900.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_add">10.17 (v3.0)</td>
+					<td>10.17 : 추가페이지</td>
+				</tr>
+				<tr>
+					<td>결제대행서비스 약관보기</td>
+					<td class="t_center "></td>
+					<td><a href="html/payment/MTP110.html" target="_blank">MTP110.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.07</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>스토어</td>
+					<td class="t_center "></td>
+					<td><a href="html/payment/MTP003.html" target="_blank">MTP003.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>바로팝콘</td>
+					<td class="t_center "></td>
+					<td><a href="html/payment/MTP004.html" target="_blank">MTP004.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">팝업 : iframe</td>
+					<td>parent</td>
+					<td><a href="html/payment/팝업_iframe_parent.html" target="_blank">팝업_iframe_parent.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>child</td>
+					<td><a href="html/payment/팝업_iframe_child.html" target="_blank">팝업_iframe_child.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin"></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="28">할인/포인트</td>
+					<td>L.Point 온라인 사용인증 팝업</td>
+					<td><a href="html/payment/MTP011.html" target="_blank">MTP011.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.19</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>L.Point 카드조회 팝업</td>
+					<td><a href="html/payment/MTP012.html" target="_blank">MTP012.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.19</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>L.Point FREE 팝업</td>
+					<td><a href="html/payment/MTP013.html" target="_blank">MTP013.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.19</td>
+					<td class="t_center txt_ing">10.11 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>VIP 쿠폰 팝업</td>
+					<td><a href="html/payment/MTP021.html" target="_blank">MTP021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.20</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>클럽 쿠폰 팝업</td>
+					<td><a href="html/payment/MTP022.html" target="_blank">MTP022.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.20</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>관람권등록 팝업 </td>
+					<td><a href="html/payment/MTP031.html" target="_blank">MTP031.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td class="t_center txt_ing">10.11 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>모바일 관람권 팝업 </td>
+					<td><a href="html/payment/MTP032.html" target="_blank">MTP032.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>모바일 금액권 팝업 </td>
+					<td><a href="html/payment/MTP033.html" target="_blank">MTP033.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>기프팅 팝업 </td>
+					<td><a href="html/payment/MTP034.html" target="_blank">MTP034.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>기프티엘 팝업 </td>
+					<td><a href="html/payment/MTP035.html" target="_blank">MTP035.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.21</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>삼성M기프트관람권 팝업 </td>
+					<td><a href="html/payment/MTP036.html" target="_blank">MTP036.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신한Combo 무료관람권 팝업 </td>
+					<td><a href="html/payment/MTP037.html" target="_blank">MTP037.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>모니터링 팝업 </td>
+					<td><a href="html/payment/MTP038.html" target="_blank">MTP038.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>롯데모바일 상품권</td>
+					<td><a href="html/payment/MTP039.html" target="_blank">MTP039.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.01</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>할인권 등록 사용 팝업</td>
+					<td><a href="html/payment/MTP041.html" target="_blank">MTP041.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OK캐쉬백 팝업</td>
+					<td><a href="html/payment/MTP051.html" target="_blank">MTP051.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>현대M포인트 팝업</td>
+					<td><a href="html/payment/MTP052.html" target="_blank">MTP052.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신한Combo할인 팝업</td>
+					<td><a href="html/payment/MTP053.html" target="_blank">MTP053.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신한Combo무료관람 팝업</td>
+					<td><a href="html/payment/MTP053a.html" target="_blank">MTP053a.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>GS&POINT 팝업</td>
+					<td><a href="html/payment/MTP054.html" target="_blank">MTP054.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>NH문화누리 팝업</td>
+					<td><a href="html/payment/MTP055.html" target="_blank">MTP055.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>S-OIL포인트 팝업</td>
+					<td><a href="html/payment/MTP056.html" target="_blank">MTP056.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>블루멤버스 팝업</td>
+					<td><a href="html/payment/MTP057.html" target="_blank">MTP057.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>레드멤버스</td>
+					<td><a href="html/payment/MTP058.html" target="_blank">MTP058.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>해피머니 팝업</td>
+					<td><a href="html/payment/MTP059.html" target="_blank">MTP059.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.22</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>모바일팝 팝업</td>
+					<td><a href="html/payment/MTP05a.html" target="_blank">MTP05a.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신한 ACE Blue Label 팝업</td>
+					<td><a href="html/payment/MTP05b.html" target="_blank">MTP05b.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>신한 카드 Deep Oil 팝업</td>
+					<td><a href="html/payment/MTP05c.html" target="_blank">MTP05c.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center ">08.29</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>예약완료</td>
+					<td>결제 후 적립 및 신청</td>
+					<td></td>
+					<td><a href="html/payment/MTP130.html" target="_blank">MTP130.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.28</td>
+					<td class="t_center ">09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>결제완료</td>
+					<td>스토어</td>
+					<td></td>
+					<td><a href="html/payment/MTP140.html" target="_blank">MTP140.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="5">스토어</td>
+					<td>목록</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/mall/MSH010.html" target="_blank">MSH010.html</a></td>
+					<td rowspan="5" class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center txt_ing">09.02<br />09.05<br />09.30<br />10.14 (v3.0)<br />10.21 (v3.0)</td>
+					<td>10.14 : 배너위치변경 (개발 처리 확인)<br />10.21 : 클래스명변경 .main_banner_btm -> .banner_box (개발 처리 확인)</td>
+				</tr>
+				<tr>
+					<td rowspan="4">상품상세</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/mall/MSH020.html" target="_blank">MSH020.html</a></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center txt_ing">09.02<br />09.05<br />09.30<br />10.21 (v3.0)</td>
+					<td>10.21 : 개발이슈 데이터 p태그로 만듬 맞게 수정 </td>
+				</tr>
+				<tr>
+					<td>사용가능영화관</td>
+					<td></td>
+					<td><a href="html/mall/MSH021.html" target="_blank">MSH021.html</a></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>구매하기</td>
+					<td></td>
+					<td><a href="html/mall/MSH022.html" target="_blank">MSH022.html</a></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center ">09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>선물하기</td>
+					<td></td>
+					<td><a href="html/mall/MSH023.html" target="_blank">MSH023.html</a></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center txt_ing">09.30<br />10.14 (v3.0)</td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="51">마이페이지</td>
+					<td rowspan="4">홈</td>
+					<td rowspan="3">index</td>
+					<td></td>
+					<td><a href="html/member/MMY000.html" target="_blank">MMY000.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.14</td>
+					<td class="t_center txt_ing">10.14 (v3.0)<br />11.02 (v3.0)<br />11.06 (v3.0)</td>
+					<td>11.02 : 이벤트영역추가<br />11.06 : 이벤트영역 추가</td>
+				</tr>
+				</tr>
+					<td>팝업 : L.Point 바코드 </td>
+					<td><a href="html/member/MMY002.html" target="_blank">MMY002.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.28</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : 영화관 선택 팝업</td>
+					<td><a href="html/member/MMY004.html" target="_blank">MMY004.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.28</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>나의 영화관 설정</td>
+					<td></td>
+					<td><a href="html/member/MMY003.html" target="_blank">MMY003.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.28</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">쿠폰함</td>
+					<td rowspan="4">목록</td>
+					<td></td>
+					<td rowspan="3"><a href="html/member/MMY011.html" target="_blank">MMY011.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center txt_ing">10.22 (v3.0)</td>
+					<td>10.22 : 테이블 width값 수정</td>
+				</tr>
+				</tr>
+					<td>쿠폰함 상세</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>기타 팝업</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화관 선택 팝업</td>
+					<td><a href="html/customer/MCS001.html" target="_blank">MCS001.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="9">결제내역</td>
+					<td rowspan="2">예매내역</td>
+					<td>목록</td>
+					
+					<td><a href="html/member/MMY021.html" target="_blank">MMY021.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="html/member/MMY0211.html" target="_blank">MMY0211.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.23</td>
+					<td class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="3">구매선물내역</td>
+					<td>목록</td>
+					<td><a href="html/member/MMY022.html" target="_blank">MMY022.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세_구매내역</td>
+					<td rowspan="2"><a href="html/member/MMY0221.html" target="_blank">MMY0221.html</a></td>
+					<td class="t_center"></td>
+					<td rowspan="2" class="t_center txt_fin">2019.08.26</td>
+					<td rowspan="2" class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세_선물내역</td>
+					<td class="t_center"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">취소내역</td>
+					<td>목록</td>
+					<td><a href="html/member/MMY023.html" target="_blank">MMY023.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세_예매</td>
+					<td rowspan="3"><a href="html/member/MMY0231.html" target="_blank">MMY0231.html</a></td>
+					<td class="t_center"></td>
+					<td rowspan="3" class="t_center txt_fin">2019.08.26</td>
+					<td rowspan="3" class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세_구매</td>
+					<td class="t_center"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세_선물</td>
+					<td class="t_center"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="15">멤버십</td>
+					<td rowspan="5">VIP존</td>
+					<td>index</td>
+					<td><a href="html/member/MME011.html" target="_blank">MME011.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center txt_ing">10.11 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : 적립내역</td>
+					<td><a href="html/member/MME012.html" target="_blank">MME012.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center txt_ing">10.11 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : 나의 기념일 등록</td>
+					<td><a href="html/member/MME013.html" target="_blank">MME013.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : VIP 쿠폰 발급</td>
+					<td><a href="html/member/MME014.html" target="_blank">MME014.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.06</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>임시 팝업</td>
+					<td><a href="html/member/MME011_popup.html" target="_blank">MME011_popup.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>클럽멤버십</td>
+					<td></td>
+					<td><a href="html/member/MME021.html" target="_blank">MME021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="5">틴틴클럽</td>
+					<td></td>
+					<td><a href="html/member/MME031.html" target="_blank">MME031.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.16 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>가입방법</td>
+					<td><a href="html/member/MME032.html" target="_blank">MME032.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.18 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>회원헤택</td>
+					<td><a href="html/member/MME033.html" target="_blank">MME033.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.18 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>매점헤택</td>
+					<td><a href="html/member/MME034.html" target="_blank">MME034.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.18 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>사용제외 영화관 팝업</td>
+					<td><a href="html/member/MME035.html" target="_blank">MME035.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.06</td>
+					<td class="t_center "></td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td rowspan="4">브라보클럽 </td>
+					<td></td>
+					<td><a href="html/member/MME041.html" target="_blank">MME041.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.16 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>가입방법</td>
+					<td><a href="html/member/MME042.html" target="_blank">MME042.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.18 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>회원헤택</td>
+					<td><a href="html/member/MME043.html" target="_blank">MME043.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.18 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>매점헤택</td>
+					<td><a href="html/member/MME044.html" target="_blank">MME044.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.04</td>
+					<td class="t_center txt_ing">10.18 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="7">MY 무비로그</td>
+					<td rowspan="5">내가본영화</td>
+					<td>리스트</td>
+					<td><a href="html/member/MMY031.html" target="_blank">MMY031.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center ">09.16</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>리스트가 없는 경우</td>
+					<td><a href="html/member/MMY0311.html" target="_blank">MMY0311.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.03</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : 관람평 작성,수정</td>
+					<td><a href="html/member/MMY0312.html" target="_blank">MMY0312.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : 관람평 작성,수정 (상단광고)</td>
+					<td><a href="html/member/MMY0312_b.html" target="_blank">MMY0312_b.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업 : 관람영화등록</td>
+					<td><a href="html/member/MMY0314.html" target="_blank">MMY0314.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.03</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">보고싶어요</td>
+					<td>리스트</td>
+					<td><a href="html/member/MMY031.html" target="_blank">MMY031.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.05</td>
+					<td class="t_center txt_ing">10.18(v3.0))</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>리스트가 없는경우</td>
+					<td><a href="html/member/MMY0311.html" target="_blank">MMY0311.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.09.03</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">나의 이벤트</td>
+					<td>리스트</td>
+					<td></td>
+					<td><a href="html/member/MMY050.html" target="_blank">MMY050.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.23</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>응모 내역 없는경우</td>
+					<td></td>
+					<td><a href="html/member/MMY051.html" target="_blank">MMY051.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.23</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">투표결과</td>
+					<td>이미지형</td>
+					<td><a href="html/member/MMY0541.html" target="_blank">MMY0541.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.24</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>텍스트형</td>
+					<td><a href="html/member/MMY0541_2.html" target="_blank">MMY0541_2.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.24</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="8">나의 정보 관리</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="html/member/MMY040.html" target="_blank">MMY040.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>프로필 변경</td>
+					<td></td>
+					<td><a href="html/member/MMY001.html" target="_blank">MMY001.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">1:1문의 내역</td>
+					<td>목록</td>
+					<td><a href="html/member/MMY042.html" target="_blank">MMY042.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="html/member/MMY0421.html" target="_blank">MMY0421.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center  txt_fin">2019.08.26</td>
+					<td class="t_center txt_ing">10.14 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">단체관람/대관문의 내역</td>
+					<td>목록</td>
+					<td><a href="html/member/MMY043.html" target="_blank">MMY043.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="html/member/MMY0431.html" target="_blank">MMY0431.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">분실물 문의 내역</td>
+					<td>목록</td>
+					<td><a href="html/member/MMY044.html" target="_blank">MMY044.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="html/member/MMY0441.html" target="_blank">MMY0441.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="22">영화관</td>
+					<td rowspan="5">영화관 목록</td>
+					<td rowspan="4">일반</td>
+					<td>index</td>
+					<td rowspan="5"><a href="html/movie/MTH000.html" target="_blank">MTH000.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>My 영화관</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>가까운 영화관</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>지역별</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>스페셜관</td>
+					<td></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.15</td>
+					<td class="t_center txt_add">10.28 (v3.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="17">영화관 상세</td>
+					<td rowspan="8">일반</td>
+					<td>index</td>
+					<td rowspan="8"><a href="html/movie/MTH010.html" target="_blank">MTH010.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>탭_영화관 소개</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>탭_상영시간표</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>탭_요금안내</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_대중교통 안내</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_자가용/주차 안내</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_지도보기</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_공유</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.08.16</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td rowspan="9">스페셜관</td>
+					<td>샤롯데</td>
+					<td>
+						<a href="html/movie/MTH021.html" target="_blank">MTH021.html</a><br />
+						<a href="html/movie/MTH0211.html" target="_blank">MTH0211.html(상세)</a><br />
+					</td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.10.11<br>2019.10.15</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수퍼플렉스G</td>
+					<td>
+						<a href="html/movie/MTH022.html" target="_blank">MTH022.html</a><br />
+						<a href="html/movie/MTH0221.html" target="_blank">MTH0221.html((상세))</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수퍼플렉스</td>
+					<td>
+						<a href="html/movie/MTH023.html" target="_blank">MTH023.html</a><br />
+						<a href="html/movie/MTH0231.html" target="_blank">MTH0231.html(상세)</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수퍼S</td>
+					<td>
+						<a href="html/movie/MTH024.html" target="_blank">MTH024.html</a><br />
+						<a href="html/movie/MTH0241.html" target="_blank">MTH0241.html(상세)</a><br />
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>수퍼4D</td>
+					<td>
+						<a href="html/movie/MTH025.html" target="_blank">MTH025.html</a><br />
+						<a href="html/movie/MTH0251.html" target="_blank">MTH0251.html</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>씨네패밀리</td>
+					<td>
+						<a href="html/movie/MTH026.html" target="_blank">MTH026.html</a><br />
+						<a href="html/movie/MTH0261.html" target="_blank">MTH0261.html(상세)</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>씨네커플</td>
+					<td>
+						<a href="html/movie/MTH027.html" target="_blank">MTH027.html</a><br />
+						<a href="html/movie/MTH0271.html" target="_blank">MTH0271.html(상세)</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>씨네비즈</td>
+					<td>
+						<a href="html/movie/MTH028.html" target="_blank">MTH028.html</a><br />
+						<a href="html/movie/MTH0281.html" target="_blank">MTH0281.html(상세)</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>씨네 Comfort</td>
+					<td>
+						<a href="html/movie/MTH029.html" target="_blank">MTH029.html</a><br />
+						<a href="html/movie/MTH0291.html" target="_blank">MTH0291.html(상세)</a>
+					</td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.11</td>
+					<td class="t_center txt_ing"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="13">영화</td>
+					<td rowspan="7">영화 목록</td>
+					<td>홈</td>
+					<td></td>
+					<td rowspan="7"><a href="html/movie/MFI010.html" target="_blank">MFI010.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.29</td>
+					<td class="t_center txt_ing">10.01 (v2.0)<br />10.18 (v3.0)<br />10.29 (v3.0)</td>
+					<td>10.18 : 텍스트 수정 (개발 처리 확인)<br />10.29 : 상단광고영역 스와이퍼 추가 (개발 처리 확인)</td>
+				</tr>
+				<tr>
+					<td>현재상영작</td>
+					<td></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">10.01 (v2.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상영예정작</td>
+					<td></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">10.01 (v2.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>롯시 Only</td>
+					<td></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">10.01 (v2.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>아르떼</td>
+					<td></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">10.01 (v2.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>오페라</td>
+					<td></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center txt_ing">10.01 (v2.0) <br/> 10.25 (v3.0)</td>
+					<td>10.25 : 오페라 이미지 수정 (개발 처리 확인)</td>
+				</tr>
+				<tr>
+					<td>영화제</td>
+					<td></td>
+					<td class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">10.01 (v2.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="6">영화 정보 상세</td>
+					<td>index</td>
+					<td></td>
+					<td rowspan="6"><a href="html/movie/MFI001.html" target="_blank">MFI001.html</a></td>
+					<td class="t_center"></td>
+					<td rowspan="6" class="t_center txt_fin">2019.08.13</td>
+					<td rowspan="6" class="t_center txt_ing">10.16 (v3.0)</td>
+					<td>10.16 : 영화등급 아이콘 위치변경</td>
+				</tr>
+				<tr>
+					<td rowspan="3">탭_영화정보</td>
+					<td>index</td>
+					<td class="t_center"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_감독 및 배우</td>
+					<td class="t_center"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_포스터/스틸컷</td>
+					<td class="t_center"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>탭_평점 및 관람평</td>
+					<td class="t_center"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업_공유</td>
+					<td class="t_center"></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="27">이벤트</td>
+					<td rowspan="8">홈</td>
+					<td></td>
+					<td></td>
+					<td rowspan="6"><a href="html/event/MEV000.html" target="_blank">MEV000.html</a></td>
+					<td class="t_center" rowspan="6"></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center ">09.09<br />10.16</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화</td>
+					<td></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>시사회/무대인사</td>
+					<td></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>롯시 NOW</td>
+					<td></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>제휴할인</td>
+					<td></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>우리동네 영화관</td>
+					<td></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">당첨자발표</td>
+					<td>목록</td>
+					<td><a href="html/event/MEV021.html" target="_blank">MEV021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center ">09.10</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td><a href="html/event/MEV022.html" target="_blank">MEV022.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="19">이벤트</td>
+					<td rowspan="16">템플릿</td>
+					<td>정보전달형</td>
+					<td><a href="html/event/MEV041.html" target="_blank">MEV041.html</a></td>
+					<td class="t_center" rowspan="6"></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>예매형</td>
+					<td><a href="html/event/MEV042.html" target="_blank">MEV042.html</a></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>시네몰 구매형</td>
+					<td><a href="html/event/MEV043.html" target="_blank">MEV043.html</a></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>설문형</td>
+					<td><a href="html/event/MEV044.html" target="_blank">MEV044.html</a></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>퀴즈형</td>
+					<td><a href="html/event/MEV045.html" target="_blank">MEV045.html</a></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>댓글형</td>
+					<td><a href="html/event/MEV046.html" target="_blank">MEV046.html</a></td>
+					<td class="t_center txt_fin">2019.08.30</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>무대인사</td>
+					<td><a href="html/event/MEV047.html" target="_blank">MEV047.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>시사회</td>
+					<td><a href="html/event/MEV048.html" target="_blank">MEV048.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>갤러리등록형_목록</td>
+					<td><a href="html/event/MEV049.html" target="_blank">MEV049.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>갤러리등록형_상세</td>
+					<td><a href="html/event/MEV0491.html" target="_blank">MEV0491.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>갤러리등록형_등록하기</td>
+					<td><a href="html/event/MEV0492.html" target="_blank">MEV0492.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>응모번호형</td>
+					<td><a href="html/event/이벤트상세_응모번호형.html" target="_blank">응모번호형</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.02</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>버튼형</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center "></td>
+					<td>스탬프형,출석형 내용빠진 버튼유형</td>
+				</tr>
+				<tr>
+					<td>스탬프형</td>
+					<td><a href="html/event/MEV051.html" target="_blank">MEV051.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>출석형</td>
+					<td><a href="html/event/MEV052.html" target="_blank">MEV052.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.09</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>게임형</td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td>X</td>
+				</tr>
+				<tr>
+					<td rowspan="3">신규템플릿</td>
+					<td>시네마 폴</td>
+					<td><a href="html/event/MEV054.html" target="_blank">MEV054.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.17</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>시네마 폴 투표결과</td>
+					<td><a href="html/event/MEV0541.html" target="_blank">MEV0541.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.17</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>초성퀴즈</td>
+					<td><a href="html/event/MEV055.html" target="_blank">MEV055.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.17</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="11">고객센터</td>
+					<td rowspan="2">공통</td>
+					<td>날짜선택팝업</td>
+					<td></td>
+					<td><a href="html/customer/MCS000.html" target="_blank">MCS000.html</a></td>
+					<td rowspan="11" class="t_center"></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center ">09.04</td>
+					<td></td>
+				</tr>
+				</tr>
+				<tr>
+					<td>영화관선택</td>
+					<td></td>
+					<td><a href="html/customer/MCS001.html" target="_blank">MCS001.html</a></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center ">09.03</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>FAQ</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="html/customer/MCS010.html" target="_blank">MCS010.html</a></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center ">08.29<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">공지사항</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="html/customer/MCS021.html" target="_blank">MCS021.html</a></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">08.27</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="html/customer/MCS022.html" target="_blank">MCS022.html</a></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">08.27<br />08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>1:1문의</td>
+					<td>작성</td>
+					<td></td>
+					<td><a href="html/customer/MCS030.html" target="_blank">MCS030.html</a></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center ">09.30<br />10.10 (v2.0)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>단체관람/대관문의</td>
+					<td>작성</td>
+					<td></td>
+					<td><a href="html/customer/MCS040.html" target="_blank">MCS040.html</a></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center ">09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="4">분실물안내</td>
+					<td>목록</td>
+					<td></td>
+					<td><a href="html/customer/MCS051.html" target="_blank">MCS051.html</a></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">08.27<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td><a href="html/customer/MCS052.html" target="_blank">MCS052.html</a></td>
+					<td class="t_center txt_fin">2019.08.26</td>
+					<td class="t_center ">08.27<br />08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>작성</td>
+					<td></td>
+					<td><a href="html/customer/MCS053.html" target="_blank">MCS053.html</a></td>
+					<td class="t_center txt_fin">2019.08.27</td>
+					<td class="t_center ">08.28<br />09.30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>접수완료</td>
+					<td></td>
+					<td><a href="html/customer/MCS054.html" target="_blank">MCS054.html</a></td>
+					<td class="t_center txt_fin">2019.10.10</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="5">할인안내</td>
+					<td rowspan="4">목록</td>
+					<td>신용카드</td>
+					<td></td>
+					<td rowspan="4"><a href="html/discount/MSA010.html" target="_blank">MSA010.html</a></td>
+					<td rowspan="4" class="t_center "></td>
+					<td rowspan="4" class="t_center txt_fin">2019.09.03</td>
+					<td rowspan="4" class="t_center txt_ing">10.21 (v3.0)</td>
+					<td rowspan="4">10.21 : 광고위치변경 (개발 처리 확인)</td>
+				</tr>
+				<tr>
+					<td>포인트</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>통신사</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>기타결제수단</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>상세</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/discount/MSA021.html" target="_blank">MSA021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.09.03</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td>VOD</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="html/vod/vod.html" target="_blank">vod.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.18</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="14">footer</td>
+					<td>회원약관</td>
+					<td>팝업</td>
+					<td></td>
+					<td><a href="html/common/회원약관.html" target="_blank">회원약관.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.08</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">개인정보처리방침</td>
+					<td>팝업</td>
+					<td></td>
+					<td><a href="html/common/개인정보처리방침.html" target="_blank">개인정보처리방침.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.08</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>팝업(레이어)</td>
+					<td></td>
+					<td><a href="html/common/개인정보처리방침_팝업.html" target="_blank">개인정보처리방침_팝업.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center txt_fin">2019.10.08</td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>이메일무단수집거부</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영상정보처리기기 운영 &middot; 관리방침</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td rowspan="2">L.point 회원안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>가입방법</td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>L.point 안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>배정기준</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>채용안내</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>광고/임대문의</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>기업정보</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>윤리경영</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Family Site</td>
+					<td></td>
+					<td></td>
+					<td><a href="" target="_blank"></a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="7">영화관 목록<br/>(상단리스트와 중복)</td>
+					<td>예매</td>
+					<td>영화별 예매</td>
+					<td></td>
+					<td><a href="html/ticketing/MTI020.html" target="_blank">MTI020.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화</td>
+					<td>영화별 예매</td>
+					<td></td>
+					<td><a href="html/movie/MTH000.html" target="_blank">MTH000.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>마이페이지</td>
+					<td>영화관 선택</td>
+					<td></td>
+					<td><a href="html/member/MMY004.html" target="_blank">MMY004.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>마이페이지</td>
+					<td>사용제외 영화관</td>
+					<td></td>
+					<td><a href="html/member/MME035.html" target="_blank">MME035.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>고객센터</td>
+					<td>사용가능 영화관</td>
+					<td></td>
+					<td><a href="html/customer/MCS001.html" target="_blank">MCS001.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>스토어</td>
+					<td>사용가능 영화관</td>
+					<td></td>
+					<td><a href="html/mall/MSH021.html" target="_blank">MSH021.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>바로팝콘</td>
+					<td>구매 영화관 선택</td>
+					<td></td>
+					<td><a href="html/snack/MBP014.html" target="_blank">MBP014.html</a></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+
+				<!-- 구분선 ================================================================================ -->
+				<tr class="line">
+					<td rowspan="3">상단 고정 탭메뉴<br/>(상단리스트와 중복)</td>
+					<td>스토어</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/mall/MSH010.html" target="_blank">MSH010.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>바로팝콘</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/snack/MBP010.html" target="_blank">MBP010.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>영화</td>
+					<td></td>
+					<td></td>
+					<td><a href="html/movie/MFI010.html" target="_blank">MFI010.html</a></td>
+					<td class="t_center"></td>
+					<td class="t_center "></td>
+					<td class="t_center "></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

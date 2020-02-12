@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KB 컈피탈</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../Content/css/import.css">
+	<script src="../../Content/js/jquery-1.12.3.min.js"></script>
+	<script src="../../Content/js/jquery-ui.min.js"></script>
+	<script src="../../Content/js/plugin.js"></script>
+	<script src="../../Content/js/common.js"></script>
+</head>
+<script>
+	$(function(){
+		function font(){
+			$(".txt_font_size").text($("html").css("font-size"));
+		}
+		font();
+		$(".fontDw").on("click", function(){
+			$("html").css({"font-size" : "-=1"});
+			font();
+		});
+		$(".fontUp").on("click", function(){
+			$("html").css({"font-size" : "+=1"});
+			font();
+		});
+	});
+</script>
+<style>
+	body {line-height:1.2;}
+	.font1 {font-family:"KBFGTextM";}
+	.font2 {font-family:"KBFGTextB";}
+	
+	.section {margin:30px; padding:15px; border:1px solid #DDD;}
+	.article {margin:10px 18px; padding:10px 0; border-top:1px solid #DDD;}
+
+	.font_w100 {font-weight:100;}
+	.font_w300 {font-weight:200;}
+	.font_w400 {font-weight:400;}
+	.font_w500 {font-weight:500;}
+	.font_w700 {font-weight:700;}
+	.font_w900 {font-weight:900;}
+
+	.font_wlighter {font-weight:lighter;}
+	.font_wnormal {font-weight:normal;}
+	.font_wbold {font-weight:bold;}
+	.font_wbolder {font-weight:bolder;}
+
+	.font_px12 {font-size:12px;}
+	.font_px14 {font-size:14px;}
+	.font_px16 {font-size:16px;}
+	.font_px18 {font-size:18px;}
+	.font_px20 {font-size:20px;}
+	.font_px24 {font-size:24px;}
+
+	.font_rem12 {font-size:0.750rem;}
+	.font_rem14 {font-size:0.875rem;}
+	.font_rem16 {font-size:1.000rem;}
+	.font_rem18 {font-size:1.125rem;}
+	.font_rem20 {font-size:1.250rem;}
+	.font_rem24 {font-size:1.500rem;}
+
+	.font_em12 {font-size:0.750em;}
+	.font_em14 {font-size:0.875em;}
+	.font_em16 {font-size:1.000em;}
+	.font_em18 {font-size:1.125em;}
+	.font_em20 {font-size:1.250em;}
+	.font_em24 {font-size:1.500em;}
+
+	.f_w_txt {display:inline-block; width:90px; font-size:12px;}
+</style>
+
+<body>
+	<div style="position:fixed; z-index:9999; right:0; top:0; background:#FFF;">
+		<button class="fontDw">작게</button> |
+		<button class="fontUp">크게</button><br />
+		base : <span class="txt_font_size"></span>
+	</div>
+
+	<div class="container">
+		<div class="contents">
+			<div class="section">
+				<h2>KBFGText M, B 비교</h2>
+				<div class="article">
+					<p class="font1">어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font2">어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+				</div>
+			</div>
+
+			<div class="section font1">
+				<h2>KBFGTextM</h2>
+				<div class="article">
+					<p class="font_w100"><span class="f_w_txt">100 - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_w400"><span class="f_w_txt">400 - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_w700"><span class="f_w_txt">700 - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<br />
+					<p class="font_wlighter"><span class="f_w_txt">lighter - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_wnormal"><span class="f_w_txt">normal - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_wbold"><span class="f_w_txt">bold - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_wbolder"><span class="f_w_txt">bolder - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+				</div>
+			</div>
+
+			<div class="section font2">
+				<h2>KBFGDisplayB</h2>
+				<div class="article">
+					<p class="font_w100"><span class="f_w_txt">100 - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_w400"><span class="f_w_txt">400 - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_w700"><span class="f_w_txt">700 - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<br />
+					<p class="font_wlighter"><span class="f_w_txt">lighter - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_wnormal"><span class="f_w_txt">normal - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_wbold"><span class="f_w_txt">bold - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+					<p class="font_wbolder"><span class="f_w_txt">bolder - </span>어린 시절 비극적 교통사고로 자신의 능력을 알게 된 진 Jasiel Amon Robinson better known by his stage name Yung Joc 0123456789</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

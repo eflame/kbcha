@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KB 컈피탈</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../Content/css/import.css">
+	<script src="../../Content/js/jquery-1.12.3.min.js"></script>
+	<script src="../../Content/js/jquery-ui.min.js"></script>
+	<script src="../../Content/js/plugin.js"></script>
+	<script src="../../Content/js/common.js"></script>
+</head>
+
+<body>
+	<!-- contents -->
+	<div id="contents">
+		<div class="title_top">
+			<h2 class="tit">버튼 가이드</h2>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>활성</h3>
+			<div class="inner">
+				<h4>Tooltip</h4>
+				<span class="tooltip_wrap">
+					<span class="tit">Atmos</span>
+					<button type="button" class="btn_tooltip showTooltip">안내 보기</button>
+					<span class="bx_tooltip">
+						<span class="txt_info">Atmos 관련한 설명입니다.</span>
+					</span>
+				</span>
+				<h4>Tooltipbox</h4>
+				<div class="tooltip_box">
+					<a href="#none" class="ic_question">?</a>
+					<div class="tooltip">
+						<ul class="list_txt ty2">
+							<li>일부 영화관에서는 스위트 콤보 대신 다른 상품이 제공 될 수 있습니다.</li>
+						</ul>
+						<a href="#none" class="btn_close">닫기</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="inner">
+				<h4>기타</h4>
+				<button type="button" class="btnToggle btn_txt_good"><em>좋아요</em>900</button>
+				<button type="button" class="btnToggle btn_txt_good active"><em>좋아요</em>900</button>
+			</div>
+
+			<div class="inner">
+				<h4>하트(15/18/22) - 토글버튼기능(.btnToggle)</h4>
+				<button type="button" class="btnToggle btn_heart">관심등록</button>
+				<button type="button" class="btnToggle btn_heart ty2">관심등록</button>
+				<button type="button" class="btnToggle btn_col8 ty5"><span class="ico_heart"><em>관심등록</em></span>158</button>
+			</div>
+
+			<div class="inner">
+				<h4>하트:라운드(16/26)</h4>
+				<button type="button" class="btnToggle btn_heart_rnd">관심등록</button>
+				<button type="button" class="btnToggle btn_heart_rnd active">관심등록</button>
+				<button type="button" class="btnToggle btn_heart_rnd ty2">관심등록</button>
+				<button type="button" class="btnToggle btn_heart_rnd ty2 active">관심등록</button>
+			</div>
+
+			<div class="inner">
+				<h4>목록 보기 방식 (예매 페이지에서 사용 중)</h4>
+				<div class="list_filter" style="position:relative; width:200px; height:40px;">
+					<div class="bx_btn_view">
+						<span class="hidden">목록 보기 방식</span>
+						<ul>
+							<li><button type="button" class="btn_view_txt viewTxt ">텍스트형</button></li>
+							<li><button type="button" class="btn_view_thm viewThm active">썸네일형</button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="inner">
+				<h4>sorting1</h4>
+				<ul class="sort_list">
+					<li class="active"><button>최신순</button></li>
+					<li><button>공감순</button></li>
+				</ul>
+			</div>
+			<div class="inner">
+				<h4>sorting2 - 공통에서 사용 할 수 있게 수정 요망</h4>
+				<div class="comment_wrap">
+					<div class="bx_category_slct fl_r">
+						<button type="button" class="btn_cmt active">전체보기</button>
+						<button type="button" class="btn_cmt">내글보기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>.btn_col1 + 아이콘</h3>
+			<div class="inner">
+				<a href="#none" class="btn_col3 ty2 rnd"><span class="txt_ic_edit">관람평 등록</span></a>
+				<a href="#none" class="btn_col3 ty2 rnd"><span class="txt_ic_booking">예매하기</span></a>
+				<a href="#none" class="btn_col3 ty2 rnd"><span class="txt_ic_share">공유하기</span></a>
+				<a href="#none" class="btn_col3 ty2 rnd"><span class="txt_ic_check">투표결과</span></a>
+				<a href="#none" class="btn_col3 ty4 rnd"><span class="txt_ic_picture">사진등록</span></a>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>아이콘</h3>
+			<div class="inner">
+				<button type="button" class="btn_setup" title="레이어팝업 열기" >설정</button>
+
+				<a href="#none" class="btn_download1">다운로드</a>
+				<a href="#none" class="btn_download2">첨부파일</a>
+				<button type="button" class="btn_del">삭제</button>
+				<button type="button" class="btn_del2">삭제</button>
+				<a href="#none" class="btn_share">공유</a>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>카테고리 선택 버튼</h3>
+			<div class="inner">
+				<p> ** JS를 위한 마크업, 스타일자유롭게 지정 가능 (이벤트, 쿠폰함에서 사용)</p>
+				<div class="bx_category_slct">
+					<button type="button" class="btn_heart active">관심등록</button>
+					<button type="button" class="btn_heart ty2">관심등록</button>
+					<button type="button" class="btn_heart ty3">관심등록</button>
+					<button type="button" class="btn_heart_rnd ">관심등록</button>
+					<button type="button" class="btn_heart_rnd ty2">관심등록</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>아이콘 + border</h3>
+			<div class="inner">
+				<button type="button" class="btn_bdr_refresh">새로 고침</button>
+				<a href="#none" class="btn_bdr_calendar">달력</a>
+				<a href="#none" class="btn_bdr_more">더보기</a>
+				<a href="#none" class="btn_bdr_more ty2">더보기</a>
+			</div>
+			<div class="inner">
+				<div class="bx_num">
+					<button class="btn_mins">삭제</button>
+					<div class="txt_num">1</div>
+					<button class="btn_plus">추가</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>아이콘 + 텍스트</h3>
+			<div class="inner">
+				<button type="button "class="btn_txt_more"><span>더보기</span></button><br /><br />
+				<button type="button "class="btn_txt_more ty3"><span>더보기</span></button><br /><br />
+				<a href="#none" class="btn_txt_edit">프로필 편집</a> &nbsp;&nbsp;
+				<a href="#none" class="btn_txt_detail">[엑시트] 얼리버드 1+1</a> &nbsp;&nbsp;
+				<a href="#none" class="btn_txt_download">나의 VIP 쿠폰</a> &nbsp;&nbsp;
+				<button type="button" class="btn_txt_del">삭제</button> &nbsp;&nbsp;
+				<button type="button" class="btn_txt_more ty2">더보기</button> &nbsp;&nbsp;
+				<button type="button" class="btn_txt_gift">선물하기</button> &nbsp;&nbsp;
+				<button type="button" class="btn_txt_notice">관람등급안내</button> &nbsp;&nbsp;
+				<button type="button" class="btn_txt_reset">초기화</button> &nbsp;&nbsp;
+				<a href="#none" class="btn_lnk">기본버튼</a> &nbsp;&nbsp;
+				<a href="#none" class="btn_lnk2">기본버튼</a> &nbsp;&nbsp;
+				
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>기타</h3>
+			<div class="inner">
+				<a href="#none" class="btn_col1 ty6">휴대폰번호로 로그인 <span class="txt_col8 ty2">AD</span></a>
+				<a href="#none" class="btn_col3 ty6"><span class="ico_lpay"><em>L.pay</em></span>결제하기</a>
+				<a href="#none" class="btn_col3 ty6"><span class="ico_lpoint"><em>L.POINT</em></span>결제하기</a>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>paginate</h3>
+			<div class="inner">
+				<div class="brd_paginate">
+					<button type="button " class="btn_pg_fist">처음 페이지로 이동</button>
+					<button type="button " class="btn_pg_prev">이전 페이지로 이동</button>
+					<ol>
+						<li><a href="#none">1</a></li>
+						<li><strong title="현재 페이지">2</strong></li>
+						<li><a href="#none">3</a></li>
+						<li><a href="#none">4</a></li>
+						<li><a href="#none">5</a></li>
+						<li><a href="#none">6</a></li>
+						<li><a href="#none">7</a></li>
+						<li><a href="#none">8</a></li>
+						<li><a href="#none">9</a></li>
+						<li><a href="#none">10</a></li>
+					</ol>
+					<button type="button " class="btn_pg_next">다음 페이지로 이동</button>
+					<button type="button " class="btn_pg_last">마지막 페이지로 이동</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>기본 스타일 : .btn_col1.ty1</h3>
+			<div class="inner">
+				<a href="#none" class="btn_col1 ty1">버튼</a>
+				<a href="#none" class="btn_col1 ty2">버튼</a>
+				<a href="#none" class="btn_col1 ty3">버튼</a>
+				<a href="#none" class="btn_col1 ty4">버튼</a>
+				<a href="#none" class="btn_col1 ty5">버튼</a>
+				<a href="#none" class="btn_col1 ty6">버튼</a>
+				<a href="#none" class="btn_col1 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col2 ty1">버튼</a>
+				<a href="#none" class="btn_col2 ty2">버튼</a>
+				<a href="#none" class="btn_col2 ty3">버튼</a>
+				<a href="#none" class="btn_col2 ty4">버튼</a>
+				<a href="#none" class="btn_col2 ty5">버튼</a>
+				<a href="#none" class="btn_col2 ty6">버튼</a>
+				<a href="#none" class="btn_col2 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col3 ty1">버튼</a>
+				<a href="#none" class="btn_col3 ty2">버튼</a>
+				<a href="#none" class="btn_col3 ty3">버튼</a>
+				<a href="#none" class="btn_col3 ty4">버튼</a>
+				<a href="#none" class="btn_col3 ty5">버튼</a>
+				<a href="#none" class="btn_col3 ty6">버튼</a>
+				<a href="#none" class="btn_col3 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col4 ty1">버튼</a>
+				<a href="#none" class="btn_col4 ty2">버튼</a>
+				<a href="#none" class="btn_col4 ty3">버튼</a>
+				<a href="#none" class="btn_col4 ty4">버튼</a>
+				<a href="#none" class="btn_col4 ty5">버튼</a>
+				<a href="#none" class="btn_col4 ty6">버튼</a>
+				<a href="#none" class="btn_col4 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col5 ty1">버튼</a>
+				<a href="#none" class="btn_col5 ty2">버튼</a>
+				<a href="#none" class="btn_col5 ty3">버튼</a>
+				<a href="#none" class="btn_col5 ty4">버튼</a>
+				<a href="#none" class="btn_col5 ty5">버튼</a>
+				<a href="#none" class="btn_col5 ty6">버튼</a>
+				<a href="#none" class="btn_col5 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col6 ty1">버튼</a>
+				<a href="#none" class="btn_col6 ty2">버튼</a>
+				<a href="#none" class="btn_col6 ty3">버튼</a>
+				<a href="#none" class="btn_col6 ty4">버튼</a>
+				<a href="#none" class="btn_col6 ty5">버튼</a>
+				<a href="#none" class="btn_col6 ty6">버튼</a>
+				<a href="#none" class="btn_col6 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col7 ty1">버튼</a>
+				<a href="#none" class="btn_col7 ty2">버튼</a>
+				<a href="#none" class="btn_col7 ty3">버튼</a>
+				<a href="#none" class="btn_col7 ty4">버튼</a>
+				<a href="#none" class="btn_col7 ty5">버튼</a>
+				<a href="#none" class="btn_col7 ty6">버튼</a>
+				<a href="#none" class="btn_col7 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col8 ty1">버튼</a>
+				<a href="#none" class="btn_col8 ty2">버튼</a>
+				<a href="#none" class="btn_col8 ty3">버튼</a>
+				<a href="#none" class="btn_col8 ty4">버튼</a>
+				<a href="#none" class="btn_col8 ty5">버튼</a>
+				<a href="#none" class="btn_col8 ty6">버튼</a>
+				<a href="#none" class="btn_col8 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col9 ty1">버튼</a>
+				<a href="#none" class="btn_col9 ty2">버튼</a>
+				<a href="#none" class="btn_col9 ty3">버튼</a>
+				<a href="#none" class="btn_col9 ty4">버튼</a>
+				<a href="#none" class="btn_col9 ty5">버튼</a>
+				<a href="#none" class="btn_col9 ty6">버튼</a>
+				<a href="#none" class="btn_col9 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<a href="#none" class="btn_col10 ty1">버튼</a>
+				<a href="#none" class="btn_col10 ty2">버튼</a>
+				<a href="#none" class="btn_col10 ty3">버튼</a>
+				<a href="#none" class="btn_col10 ty4">버튼</a>
+				<a href="#none" class="btn_col10 ty5">버튼</a>
+				<a href="#none" class="btn_col10 ty6">버튼</a>
+				<a href="#none" class="btn_col10 ty7">버튼</a>
+			</div>
+			<div class="inner">
+				<h4>라운드 : .rnd</h4>
+				<a href="#none" class="btn_col1 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col2 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col3 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col4 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col5 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col6 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col7 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col8 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col9 ty3 rnd">버튼</a>
+				<a href="#none" class="btn_col10 ty3 rnd">버튼</a>
+			</div>
+			<div class="inner">
+				<h4>비활성 : .disabled</h4>
+				<a href="#none" class="btn_col1 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col2 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col3 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col4 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col5 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col6 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col7 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col8 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col9 ty3 rnd disabled">버튼</a>
+				<a href="#none" class="btn_col10 ty3 rnd disabled">버튼</a>
+			</div>
+		</div>
+	</div>
+	<!-- //contents -->
+</body>
+</html>

@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+@font-face { /*KB금융 본문체 Medium*/
+    font-family:"KBFGTextM";
+    font-style:normal;
+    font-weight:normal;
+    src:url("../../Content/font/KBFGTextM.eot");
+    src:local("※"), url("../../Content/font/KBFGTextM.eot?#iefix") format("embedded-opentype"), url("../../Content/font/KBFGTextM.woff") format("woff")
+}
+
+@font-face { /*KB금융 본문체 B*/
+    font-family:"KBFGTextB";
+    font-style:normal;
+    font-weight:normal;
+    src:url("../../Content/font/KBFGTextB.eot");
+    src:local("※"), url("../../Content/font/KBFGTextB.eot?#iefix") format("embedded-opentype"), url("../../Content/font/KBFGTextB.woff") format("woff")
+}
+
+html {font-size:14px;}
+body, h1, h2, h3, h4, h5, h6, iframe, fieldset, ul, ol, dl, dt, dd, p, button, figure {margin:0; padding:0;}
+body {letter-spacing:-0.03em; -webkit-touch-callout:none; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; text-size-adjust:none; -webkit-overflow-scrolling:touch;}
+body, input, button, select, textarea {font-family:"KBFGTextM", "dotum", "sans-serif"; color:#333; line-height:1.1;}
+h1, h2, h3, h4, h5, h6, input, textarea, select, button {font-size:1.000rem;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+iframe {width:100%; border:none;}
+fieldset {border:none;}
+table {width:100%; border-collapse:collapse; border-spacing:0; border:0; table-layout:fixed;}
+ul, ol {list-style:none;}
+legend, caption, hr {overflow:hidden; position:absolute; width:1px; height:1px; clip:rect(1px, 1px, 1px, 1px);}
+img {width:auto; max-width:100%; border:0; vertical-align:top;}
+address, caption, em, strong, th {font-style:normal; font-weight:normal;}
+a, span, strong, em {display:inline-block;}
+a {text-decoration:none;}
+a {color:#333; text-decoration:none;}
+a:link,
+a:visited,
+a:active,
+a:hover {color:#333;}
+:focus {outline:none;}
+
+/*form*/
+input, select, button {box-sizing:border-box; vertical-align:middle; appearance:none; -webkit-appearance:none; -moz-appearance:none;}
+input::-ms-clear {display:none;}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"] {height:42px; padding:0 10px; border:1px solid #DDD; color:#333; font-size:1.143rem;}
+
+input[type="text"]:readonly,
+input[type="password"]:readonly,
+input[type="number"]:readonly,
+input[type="tel"]:readonly {color:#ababab !important; background-color:#f6f6f6 !important;}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="number"]:disabled,
+input[type="tel"]:disabled {color:#ababab !important; background-color:#f6f6f6 !important;}
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-ms-input-placeholder, :-moz-placeholder {color:#ababab;}
+
+button{height:42px; border:1px solid #DDD; cursor:pointer; background-color:#fff;}
+button > * {position:relative;} /* 클릭시 문자 흔들림 방지(ie) */
+::-webkit-file-upload-button {cursor:pointer;}
+
+select {height:42px; padding:0 30px 0 10px; border:1px solid #e4e4e4; font-size:1.143rem; background:#FFF url("../../Content/images/common/ic_selectbox.png") no-repeat center right 10px; background-size:10px 5px;}
+select:hover, 
+select:active {/*background-image:url('../images/common/form_slct_up.svg'); */}
+select::-ms-expand {display:none;}
+select:disabled{color:#ababab !important; background-color:#f6f6f6 !important;}
+
+textarea {resize:none; width:100%; line-height:1.5; box-sizing:border-box; padding:10px; border:1px solid #DDD; font-size:1.143rem;}
+textarea:disabled{color:#ababab !important; background-color:#f6f6f6 !important;}
+
+input[type="radio"],
+input[type="checkbox"] {position:relative; top:0; left:0; width:0px; height:0px; padding:0; margin:0; overflow:hidden; clip:rect(0, 0, 0, 0); vertical-align:middle; border:none 0;}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {position:relative; display:inline-block; margin-right:20px; vertical-align:middle;}
+
+input[type="radio"] + label:last-of-type,
+input[type="checkbox"] + label:last-of-type {margin-right:0px;}
+
+input[type="radio"]:focus + label,
+input[type="checkbox"]:focus + label {outline:#666 dotted 1px;}
+
+input[type="radio"] + label:before {content:""; display:inline-block; width:21px; height:21px; margin-right:5px; border:1px solid #EEE; border-radius:50%; vertical-align:-5px; background:#FFF;}
+input[type="radio"]:checked + label:before {border-color:#EEE; background:#FFF url("../../Content/images/common/form_rdo_on.png") no-repeat center center;}
+
+input[type="checkbox"] + label:before {content:""; display:inline-block; border:1px solid #EEE; width:21px; height:21px; margin-right:5px; vertical-align:-5px; background-color:#FFF;}
+input[type="checkbox"]:checked + label:before {border-color:#ffba00; background:#ffba00 url("../../Content/images/common/form_chk_on.png") no-repeat center 6px;}
+
+
+
+
+
+/* font-size:14px 기준 rem 단위 */
+.font12 {font-size:0.857rem}	/* 12px */
+.font13 {font-size:0.929rem}	/* 13px */
+.font14 {font-size:1.000rem}	/* 14px */
+.font15 {font-size:1.071rem}	/* 15px */
+.font16 {font-size:1.143rem}	/* 16px */
+.font17 {font-size:1.214rem}	/* 17px */
+.font18 {font-size:1.286rem}	/* 18px */
+.font19 {font-size:1.357rem}	/* 19px */
+.font20 {font-size:1.429rem}	/* 20px */
+.font21 {font-size:1.500rem}	/* 21px */
+.font22 {font-size:1.571rem}	/* 22px */
+.font23 {font-size:1.643rem}	/* 23px */
+.font24 {font-size:1.714rem}	/* 24px */
+.font26 {font-size:1.857rem}	/* 26px */
+.font28 {font-size:2.000rem}	/* 28px */
+
+/* 정렬 */
+.txt_l {text-align:left !important;}
+.txt_r {text-align:right !important;}
+.txt_c {text-align:center !important;}
+.fl_l {float:left !important;}
+.fl_r {float:right !important;}
+.cl_b {clear:both !important;}
+.ver_t {vertical-align:top !important;}
+.ver_m {vertical-align:middle !important;}
+
+.ellipsis {display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
+.hidden {overflow:hidden; position:absolute !important; width:1px !important; height:1px !important; clip:rect(1px, 1px, 1px, 1px);}
+.blind {display:none;}
+
+select.w_full, input.w_full {width:100%;}
+.scroll_fix {width:100%; overflow:hidden; position:fixed; top:0; bottom:0;}
