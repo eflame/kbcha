@@ -1,17 +1,54 @@
 @charset "utf-8";
+/* 공통영역 */
+.ico_tip { margin-top: 11px; padding-left: 16px; color: #ff7e00; font-size: 11px; background: url('../images/icon/ico_tip.png') no-repeat; background-size: 12px auto; }
+.notice_tip {padding: 20px 18px; font-size: 14px; background-color: #f9fafa; }
 
-
+/*  */
 .list_brand {  display: grid; grid-template-columns: 69px 69px 69px 69px; gap: 9px; justify-content: center;  }
 .list_brand li { position: relative; }
 .list_brand li a { display: block; width: 69px; height: 69px; border-radius: 8px; box-sizing: border-box; }
 .list_brand li a.state { background-color: #f0f0f1; }
 .list_brand li a.active { border: 1px solid #ffcc00; }
-.list_brand li a[class*="set"] { background-color: #f0f0f1; }
-.list_brand li .ico_plus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px; background-color: #ffc000;  }
-.list_brand li .ico_plus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
-.list_brand li .ico_plus::before { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 2px; height: 10px; background-color: #fff; }
-.list_brand li .ico_minus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px;background-color: #999; }
-.list_brand li .ico_minus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
+.list_brand .ico_plus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px; background-color: #ffc000;  }
+.list_brand .ico_plus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
+.list_brand .ico_plus::before { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 2px; height: 10px; background-color: #fff; }
+.list_brand .ico_minus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px;background-color: #999; }
+.list_brand .ico_minus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
 
 
+
+/* 만기 차량 확인 */
+.expiry_car_wrap { padding: 18px; }
+.expiry_car_wrap .card_box {display: block; padding: 21px 18px; border-radius: 4px; box-shadow: 0 0 7px rgba(0, 0, 0, 0.2); }
+.expiry_car_wrap .card_box:nth-of-type(1n+2) { margin-top: 10px; }
+.expiry_car_wrap .card_box.active { border: 1px solid #ff7e00; box-shadow: none; background: url('../images/icon/check_on.png') no-repeat right 50%; background-size: auto 11px; background-origin: content-box; }
+.expiry_car_wrap .card_box.active dl { margin-right: 36px; }
+.expiry_car_wrap .card_box dl { display: flex; margin-top: 15px; font-size: 14px; }
+.expiry_car_wrap .card_box dl:nth-of-type(1) { margin-top: 0; }
+.expiry_car_wrap .card_box dt { color: #999; }
+.expiry_car_wrap .card_box dd { flex: 1; text-align: right; color: #333; }
+.expiry_car_wrap .card_box dd strong { color: #ff7e00; }
+.card_box.scelect { box-shadow: none; background-color: #f5f6f7; }
+.card_box.scelect dt { position: relative; padding-left: 8px; }
+.card_box.scelect dt::after { display: block; content: ''; position: absolute; left: 0; top: 6px; width: 2px; height: 2px; background-color: #999; }
+
+/* 만기 처리 선택하기 */
+.request_list { margin-top: 15px; }
+.request_list li:nth-of-type(1n+1) { margin-top: 10px; }
+.request_list a { display: block; padding: 18px 0 0 75px; height: 72px; border: 1px solid #eee; border-radius: 5px; box-sizing: border-box; }
+.request_list a.active { position: relative; border-color: #ffc000; }
+.request_list a.active::after { display: block; content: ''; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 16px; height: 11px; background: url('../images/icon/check_on.png') no-repeat; background-size: auto 11px;  }
+.request_list a > * { display: block; }
+.request_list a strong { color: #333; font-size: 15px; font-weight: bold; }
+.request_list a span { margin-top: 5px; color: #555; font-size: 13px; }
+.request_list .extension a { background: url('../images/icon/ico_extension.png') no-repeat 21px 50%; background-size: auto 29px; }
+.request_list .take a { background: url('../images/icon/ico_take.png') no-repeat 20px 50%; background-size: auto 32px; }
+.request_list .return a { background: url('../images/icon/ico_return.png') no-repeat 23px 50%; background-size: auto 32px; }
+
+
+/* 만기 처리 신청완료 */
+.notice_finish { padding-top: 87px; text-align: center; }
+.notice_finish > p { padding-top: 69px; font-size: 20px; background: url('../images/common/bg_finish.png') no-repeat 50% 0; background-size: 47px auto; }
+.notice_finish > p strong { color: #ffc000; }
+.notice_finish > span { margin-top: 26px; font-size: 14px; line-height: 18px;}
 
