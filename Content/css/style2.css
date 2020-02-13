@@ -1,2 +1,17 @@
 @charset "utf-8";
-.text { background: red; }
+
+
+.list_brand {  display: grid; grid-template-columns: 69px 69px 69px 69px; gap: 9px; justify-content: center;  }
+.list_brand li { position: relative; }
+.list_brand li a { display: block; width: 69px; height: 69px; border-radius: 8px; box-sizing: border-box; }
+.list_brand li a.state { background-color: #f0f0f1; }
+.list_brand li a.active { border: 1px solid #ffcc00; }
+.list_brand li a[class*="set"] { background-color: #f0f0f1; }
+.list_brand li .ico_plus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px; background-color: #ffc000;  }
+.list_brand li .ico_plus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
+.list_brand li .ico_plus::before { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 2px; height: 10px; background-color: #fff; }
+.list_brand li .ico_minus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px;background-color: #999; }
+.list_brand li .ico_minus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
+
+
+
