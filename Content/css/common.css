@@ -13,9 +13,16 @@ ver : 1.00
 .article_pg_guide > .inner > h4 {margin:10px 0; padding:10px; border-bottom:1px solid #555; font-size:15px;}
 .article_pg_guide > .inner > p {margin:20px 0 10px 0; font-size:12px;}
 
-
 .pg_guide_tit {margin-bottom:20px; padding:25px 0 14px; border-bottom:1px solid #EEE;}
 .pg_guide_tit .tit {font-size:24px; color:#000;}
+
+
+
+
+
+
+
+
 
 
 
@@ -146,7 +153,7 @@ ver : 1.00
 
 
 
-
+.btn_ic_src {display:inline-block; width:42px; height:42px; text-indent:-9999rem; vertical-align:middle; background:#f6f6f6 url("../images/icon/heart_btn1_off.svg") no-repeat center center;}
 
 
 /* 버튼_아이콘 */
