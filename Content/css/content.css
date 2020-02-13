@@ -25,40 +25,46 @@ ver : 1.00
 /* 브랜드검색 ============================== */
 .bx_bg {padding:18px; background-color:#f9fafa;}
 
+
+
+
+
 .toggle_wrap {}
 .toggle_wrap .toggle_top {display:flex; justify-content:space-between; padding:10px 0;}
-.toggle_wrap .toggle_top .bx_lft {flex: none;}
-.toggle_wrap .toggle_top .bx_lft strong {display:inline-block; margin-top:6px; font-family:"KBFGTextB"; font-size:1.286rem; color:#222; vertical-align:middle;}
-.toggle_wrap .toggle_top .bx_lft span {display:inline-block; margin-top:6px; font-family:"KBFGTextB"; font-size:0.857rem; vertical-align:middle;}
-.toggle_wrap .toggle_top .bx_lft span:before {content:""; display:inline-block; height:12px; margin:-1px 8px 0 6px; border-left:1px solid #999; vertical-align:middle;}
-.toggle_wrap .toggle_top .bx_rgt {flex:none; margin-left:auto;}
-.toggle_wrap .toggle_top .bx_rgt .btn {float:left;}
-.toggle_wrap .toggle_top .bx_rgt .btn.side {}
-.toggle_wrap .toggle_top .bx_rgt .side:after {content:""; display:inline-block; height:10px; margin:0 8px 0 18px; border-left:1px solid #BBB;}
+.toggle_wrap .toggle_top .bx_tit {flex: none;}
+.toggle_wrap .toggle_top .bx_tit strong {display:inline-block; margin-top:6px; font-family:"KBFGTextB"; font-size:1.286rem; color:#222; vertical-align:middle;}
+.toggle_wrap .toggle_top .bx_tit span {display:inline-block; margin-top:6px; font-family:"KBFGTextB"; font-size:0.857rem; vertical-align:middle;}
+.toggle_wrap .toggle_top .bx_tit span:before {content:""; display:inline-block; height:12px; margin:-1px 8px 0 6px; border-left:1px solid #999; vertical-align:middle;}
+.toggle_wrap .toggle_top .bx_side {flex:none; margin-left:auto;}
+.toggle_wrap .toggle_top .bx_side .btn {float:left;}
+.toggle_wrap .toggle_top .bx_side .btn.side {}
+.toggle_wrap .toggle_top .bx_side .side:after {content:""; display:inline-block; height:10px; margin:0 8px 0 18px; border-left:1px solid #BBB;}
 .toggle_wrap .toggle_con {display:none;}
 .toggle_wrap.active .toggle_con {display:block;}
+.toggle_wrap.active .toggle_con.non_pad {padding:0;}
 
-.toggle_wrap.ty1 {margin-bottom:10px; padding:0 18px; border-radius:4px; box-shadow:0 0 5px rgba(0, 0, 0, .08); background-color:#FFF;}
-.toggle_wrap.ty1 .toggle_top {padding:10px 0;}
-.toggle_wrap.ty1 .toggle_top .bx_lft {}
-.toggle_wrap.ty1 .toggle_top .bx_lft strong {}
-.toggle_wrap.ty1 .toggle_top .bx_lft span {}
-.toggle_wrap.ty1 .toggle_top .bx_lft span:before {}
-.toggle_wrap.ty1 .toggle_top .bx_rgt {}
-.toggle_wrap.ty1 .toggle_top .bx_rgt .btn {}
-.toggle_wrap.ty1 .toggle_top .bx_rgt .btn.side {}
-.toggle_wrap.ty1 .toggle_top .bx_rgt .side:after {}
+.toggle_wrap.ty1 {margin-bottom:10px; border-radius:4px; box-shadow:0 0 5px rgba(0, 0, 0, .08); background-color:#FFF;}
+.toggle_wrap.ty1 .toggle_top {padding:10px 18px;}
+.toggle_wrap.ty1 .toggle_top .bx_tit {}
+.toggle_wrap.ty1 .toggle_top .bx_tit strong {}
+.toggle_wrap.ty1 .toggle_top .bx_tit span {}
+.toggle_wrap.ty1 .toggle_top .bx_tit span:before {}
+.toggle_wrap.ty1 .toggle_top .bx_side {}
+.toggle_wrap.ty1 .toggle_top .bx_side .btn {}
+.toggle_wrap.ty1 .toggle_top .bx_side .btn.side {}
+.toggle_wrap.ty1 .toggle_top .bx_side .side:after {}
+.toggle_wrap.ty1 .toggle_con {padding:24px 18px;}
 
 .toggle_wrap.ty2 {margin-bottom:1px; background-color:#FFF;}
 .toggle_wrap.ty2 .toggle_top {padding:10px 18px; background-color:#ececec;}
-.toggle_wrap.ty2 .toggle_top .bx_lft {}
-.toggle_wrap.ty2 .toggle_top .bx_lft strong {}
-.toggle_wrap.ty2 .toggle_top .bx_lft span {}
-.toggle_wrap.ty2 .toggle_top .bx_lft span:before {}
-.toggle_wrap.ty2 .toggle_top .bx_rgt {}
-.toggle_wrap.ty2 .toggle_top .bx_rgt .btn {}
-.toggle_wrap.ty2 .toggle_top .bx_rgt .btn.side {}
-.toggle_wrap.ty2 .toggle_top .bx_rgt .side:after {}
+.toggle_wrap.ty2 .toggle_top .bx_tit {}
+.toggle_wrap.ty2 .toggle_top .bx_tit strong {}
+.toggle_wrap.ty2 .toggle_top .bx_tit span {}
+.toggle_wrap.ty2 .toggle_top .bx_tit span:before {}
+.toggle_wrap.ty2 .toggle_top .bx_side {}
+.toggle_wrap.ty2 .toggle_top .bx_side .btn {}
+.toggle_wrap.ty2 .toggle_top .bx_side .btn.side {}
+.toggle_wrap.ty2 .toggle_top .bx_side .side:after {}
 .toggle_wrap.ty2 .toggle_con {padding:24px 18px;}
 
 
@@ -76,34 +82,48 @@ ver : 1.00
 
 
 .field_wrap {display:flex; justify-content:space-between; margin:0 -4px 18px;}
+.field_wrap.bdr {padding:20px 0 0; border-top:1px solid #ededed;}
+.toggle_wrap.ty1 .toggle_con .field_wrap.bdr:first-child {margin-top:-24px;}
 .field {flex:1 1 0; align-items:center; margin:0 4px;}
-.field .tit_legend {margin-bottom:8px; font-family:"KBFGTextB"; font-size:0.857rem}
+.field .tit_legend {margin-bottom:8px; font-family:"KBFGTextB"; font-size:0.857rem;}
+.field .tit_legend ~ .txt_side {float:right; font-family:"KBFGTextB"; font-size:0.857rem;}
+.field .tit_legend ~ .txt_side.big {font-size:1.071rem;}
 .field input[type="text"], 
 .field select {width:100%;}
 
-.field > .bx_item {display:flex; margin:0 -2px 8px;}
-.field > .bx_item:last-child {margin-bottom:0}
-.field > .bx_item > * {flex:1 1 auto; align-items:center; margin-right:2px; margin-left:2px;}
-.field > .bx_item .sign {line-height:42px; margin:0 2px; color:#e4e4e4;}
-.field > .bx_item .btn {flex:none;}
+.field > .group_row {display:flex; margin:0 -2px 8px; align-items:center;}
+.field > .group_row:last-child {margin-bottom:0}
+.field > .group_row > * {flex:1 1 auto; margin-right:2px; margin-left:2px;}
+.field > .group_row .sign {line-height:42px; margin:0 2px; color:#e4e4e4;}
+.field > .group_row .btn {flex:none;}
 
-.field .bx_inp {display:flex; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
-.field .bx_inp * {flex:1 1 auto; align-items:center;}
-.field .bx_inp input {height:100%; border:none;}
-.field .bx_inp .btn {flex-shrink:0; flex:none; margin:0 15px 0 10px;}
+.field > .group_row .bx_inp {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
+.field > .group_row .bx_inp * {flex:1 1 auto;}
+.field > .group_row .bx_inp input {height:100%; border:none;}
+.field > .group_row .bx_inp .btn {flex-shrink:0; flex:none; margin:auto 15px auto 10px;}
 
-/*
-.field > .inner {display:flex; margin:0 -2px 8px;}
-.field > .inner:last-child {margin-bottom:0}
-.field > .inner > * {flex:1 1 auto; align-items:center; margin:0 2px;}
-.field > .inner .sign {line-height:42px; margin:0 2px; color:#e4e4e4;}
-.field > .inner .btn {flex:none;}
+.field > .group_row .bx_vol {display:flex; align-items:center;}
+.field > .group_row .bx_vol input[type="text"] {height:50px; border-right:none; border-left:none; text-align:center;}
+.field > .group_row .bx_vol .btn_ic_minus,
+.field > .group_row .bx_vol .btn_ic_plus {flex:none; width:50px; height:50px; }
 
-.field > .inner .bx_inp {display:flex; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
-.field > .inner .bx_inp * {flex:1 1 auto;}
-.field > .inner .bx_inp input {height:100%; border:none;}
-.field > .inner .bx_inp .btn {flex-shrink:0; flex:none; margin:0 15px 0 10px;}
-*/
+.field > .group_row .bx_range .remark {display:flex;}
+.field > .group_row .bx_range .remark .txt_start {flex:1 1 auto; font-size:0.857rem; color:#999;}
+.field > .group_row .bx_range .remark .txt_end {flex:0 1 auto; font-size:0.857rem; color:#999;}
+
+.field_btm {}
+.field_btm a {display:block;}
+
+
+
+
+.bx_notice {box-sizing: border-box; padding: 18px; border:1px solid #DDD; line-height:1.5; font-size:0.857rem; text-align: center;}
+.bx_notice strong {color:#ff7e00;}
+
+
+
+
+
 
 
 .step_progress {}
@@ -118,8 +138,6 @@ ver : 1.00
 
 
 
-.estimate_calculation_step_progress {}
-.estimate_calculation_step_progress {}
 
 
 
@@ -130,30 +148,45 @@ ver : 1.00
 .list_tog_btn li a {}
 .list_tog_btn li a.active {}
 
-
-
-.list_tog_btn.ty1 {margin:1px -18px 0;}
+.list_tog_btn.ty1 {margin:1px 0 0;}
 .list_tog_btn.ty1 li {margin-top:-1px;}
-.list_tog_btn.ty1 li a {display:block; position:relative; padding:15px 10px; border-bottom:1px solid #DDD;}
-.list_tog_btn.ty1 li a.active {z-index:1; border:1px solid #ffc000;}
-.toggle_wrap.ty2 .toggle_con .list_tog_btn.ty1 {margin:-24px -18px;}
+.list_tog_btn.ty1 li a {display:flex; align-items:center; position:relative; padding:15px 10px; border-bottom:1px solid #DDD;}
+.list_tog_btn.ty1 li a.active {z-index:1; border:1px solid #201e15;}
+.list_tog_btn.ty1 li a.active:after {content:"선택"; color:red;}
+.list_tog_btn.ty1 li a strong {flex:1 1 auto;}
+.list_tog_btn.ty1 li a span {flex:none;}
 
 .list_tog_btn.ty2 {display:flex; flex-wrap:wrap; justify-content:flex-start; margin:-2px 0;}
 .list_tog_btn.ty2 li {flex:1; margin:2px;}
-.list_tog_btn.ty2 li a {display:flex; align-items:center; justify-content:center; height:57px; box-sizing:border-box; border:1px solid #DDD; text-align:center;background-color:#FFF;}
+.list_tog_btn.ty2 li a {display:flex; align-items:center; justify-content:center; height:57px; box-sizing:border-box; border:1px solid #DDD; text-align:center; background-color:#FFF;}
 .list_tog_btn.ty2 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
 .list_tog_btn.ty2.case2 li {flex:0 0 calc(50% - 4px);}
 .list_tog_btn.ty2.case3 li {flex:0 0 calc(33.333% - 4px);}
 .list_tog_btn.ty2.case4 li {flex:0 0 calc(25% - 4px);}
 
-.list_tog_btn.ty3 {display:flex; justify-content:flex-start; flex-wrap:wrap; margin:-2px 0;}
-.list_tog_btn.ty3 li {flex:1 1 auto; margin:2px;}
+.list_tog_btn.ty3 {display:flex; flex-wrap:wrap; justify-content:flex-start; margin:-2px 0;}
+.list_tog_btn.ty3 li {flex:1 0 auto; margin:2px;}
 .list_tog_btn.ty3 li a {display:block; height:34px; line-height:34px; box-sizing:border-box; padding:0 16px; border-radius:34px; border:1px solid #e5e5e5; font-family:"KBFGTextB"; font-size:0.929rem; color:#002222; text-align:center; white-space:nowrap;}
-.list_tog_btn.ty3 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
 .list_tog_btn.ty3.case2 li {flex:0 0 calc(50% - 4px);}
 .list_tog_btn.ty3.case3 li {flex:0 0 calc(33.333% - 4px);}
 .list_tog_btn.ty3.case4 li {flex:0 0 calc(25% - 4px);}
 .list_tog_btn.ty3.case5 li {flex:0 0 calc(20% - 4px);}
+.list_tog_btn.ty3.case2 li a,
+.list_tog_btn.ty3.case3 li a,
+.list_tog_btn.ty3.case4 li a,
+.list_tog_btn.ty3.case5 li a {padding:0 4px;}
+.list_tog_btn.ty3 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
+
+.list_tog_btn.ty4 {display:flex; flex-wrap:wrap; justify-content:flex-start; margin:-2px 0;}
+.list_tog_btn.ty4 li {flex:1; margin:2px;}
+.list_tog_btn.ty4 li a {display:flex; align-items:center; justify-content:center; height:57px; box-sizing:border-box; border:1px solid #DDD; text-align:center; background-color:#FFF;}
+.list_tog_btn.ty4 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
+.list_tog_btn.ty4.case2 li {flex:0 0 calc(50% - 4px);}
+.list_tog_btn.ty4.case3 li {flex:0 0 calc(33.333% - 4px);}
+.list_tog_btn.ty4.case4 li {flex:0 0 calc(25% - 4px);}
+
+
+
 
 
 
