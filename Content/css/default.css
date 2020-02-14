@@ -104,7 +104,7 @@ input[type="radio"]:checked + label:before {border-color:#EEE; background:#FFF u
 input[type="checkbox"] + label:before {content:""; display:inline-block; border:1px solid #EEE; width:21px; height:21px; margin-right:5px; vertical-align:-5px; background-color:#FFF;}
 input[type="checkbox"]:checked + label:before {border-color:#ffba00; background:#ffba00 url("../../Content/images/common/form_chk_on.png") no-repeat center center; background-size:16px 13px;}
 */
-  
+
 
 
 /* font-size:14px 기준 rem 단위 */
