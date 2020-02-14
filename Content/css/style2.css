@@ -3,6 +3,8 @@
 .ico_tip { margin-top: 11px; padding-left: 16px; color: #ff7e00; font-size: 11px; background: url('../images/icon/ico_tip.png') no-repeat; background-size: 12px auto; }
 .notice_tip {padding: 20px 18px; font-size: 14px; background-color: #f9fafa; }
 
+.bg_colr { background-color: #f5f6f7; }
+
 /*  */
 .list_brand {  display: grid; grid-template-columns: 69px 69px 69px 69px; gap: 9px; justify-content: center;  }
 .list_brand li { position: relative; }
@@ -48,7 +50,26 @@
 
 /* 만기 처리 신청완료 */
 .notice_finish { padding-top: 87px; text-align: center; }
-.notice_finish > p { padding-top: 69px; font-size: 20px; background: url('../images/common/bg_finish.png') no-repeat 50% 0; background-size: 47px auto; }
+.notice_finish > p { position: relative; padding-top: 69px; font-size: 20px; }
+.notice_finish > p::before { display: block; content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 48px; height: 48px; border-radius: 24px; background: #ffc000 url('../images/icon/ico_check.png') no-repeat 50% 50%;  background-size: auto 11px; }
 .notice_finish > p strong { color: #ffc000; }
 .notice_finish > span { margin-top: 26px; font-size: 14px; line-height: 18px;}
 
+
+
+/* 모바일알림 서비스 */
+.title_area { margin-bottom: 48px; padding-top: 57px; text-align: center; }
+.title_area > .txt { color: #999; font-size: 15px; }
+.title_area > .logo_txt { display: block; margin-top: 11px; height: 33px;  }
+.title_area > .logo_txt img { height: 100%; }
+
+.inp_area { padding: 0 18px; text-align: center; }
+.inp_area > .txt { font-size: 20px; line-height: 30px;  }
+.inp_area > .inp_box { margin-top: 40px; width: 100%; color: #555; border: 0; border-radius: 4px; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+.inp_area > .inp_box::placeholder { color: #999; }
+
+/* 만료 url */
+.notice_expiration { text-align: center;  }
+.notice_expiration > strong { position: relative; padding-top: 69px; color: #333; font-size: 20px; line-height: 30px; }
+.notice_expiration > strong::before { display: block; content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 48px; height: 48px; border-radius: 24px; background: #ffc000 url('../images/icon/ico_exclamation.png') no-repeat 50% 50%;  background-size: auto 21px; }
+.notice_expiration > span { color: #555; font-size: 18px; line-height: 28px; }
