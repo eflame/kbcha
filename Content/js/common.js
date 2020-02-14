@@ -20,19 +20,6 @@ $(function () {
 			$tabCon.eq(n).focus().addClass('active');
 		});
 	});
-
-	//tab : 탭안에탭
-	$('.layerInnerTab').each(function () {
-		$(this).find('.tab_inner_tit li button, .tab_inner_tit li a').each(function (i) {
-			$(this).parent().attr('idx', i);
-		}).on('click', function(){
-			var n = $(this).parent().attr('idx');
-			$tab = $(this).parents('.layerInnerTab');
-			$(this).addClass('active').parent('li').siblings().find('a, button').removeClass('active');
-			$tab.find('.tab_inner_con_wrap .tab_inner_con').removeClass('active');
-			$tab.find('.tab_inner_con_wrap .tab_inner_con').eq(n).addClass('active'); //focus() 삭제함(고객센터문제)
-		});
-	});
 });
 
 
