@@ -57,11 +57,7 @@ ver : 1.00
 
 
 
-.btn_toggle {display:inline-block; width:30px; height:30px; font-size:0; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
-.btn_toggle.ty1.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
-.btn_toggle.ty1.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
-.btn_toggle.ty2.open {background-size:10.5px 5.5px; background-image:url("../images/icon/btn_toggle_gry_dw.png")}
-.btn_toggle.ty2.close {background-size:10.5px 5.5px; background-image:url("../images/icon/btn_toggle_gry_up.png")}
+
 
 
 
@@ -139,22 +135,32 @@ table.tbl_write tbody tr:first-child td {border-top-color:#CCC;}
 /* tab ========================================================================================= */
 /* tab1 ============================== */
 .tab_wrap {}
-.tab_wrap .tab_tit {position:relative; padding:0 14px 0;}
-.tab_wrap .tab_tit:before {content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background-color:#ededed;}
-.tab_wrap .tab_tit > ul {}
-.tab_wrap .tab_tit > ul:after {content:""; display:block; clear:both;}
-.tab_wrap .tab_tit > ul > li {float:left; text-align:center;}
-.tab_wrap .tab_tit > ul > li > a {display:inline-block; position:relative; bottom:0;}
-.tab_wrap .tab_tit > ul > li > a span {display:block; padding:16px 8px 12px; font-family:"KBFGTextB"; font-size:1.214rem; color:#979797;}
-.tab_wrap .tab_tit > ul > li > a.active span {border-bottom:3px solid #ffc000; color:#333;}
-.tab_wrap .tab_tit > ul > li .txt_sml {margin-left:3px; font-size:0.6875rem;}
-.tab_wrap .tab_tit.case2 > ul > li {width:50%;}
-.tab_wrap .tab_tit.case3 > ul > li {width:33.3%;}
-.tab_wrap .tab_tit.case3 > ul > li:first-child {width:33.4%;}
-.tab_wrap .tab_tit.case4 > ul > li {width:25%;}
-.tab_wrap .tab_tit.case5 > ul > li {width:20%;}
-.tab_wrap .tab_tit.case6 > ul > li {width:16.6%;}
-.tab_wrap .tab_tit.case6 > ul > li:first-child {width:17%;}
+.tab_wrap.outer > .tab_tit {position:relative; padding:0 14px 0;}
+.tab_wrap.outer > .tab_tit:before {content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background-color:#ededed;}
+/*
+.tab_wrap.outer > .tab_tit > ul {}
+.tab_wrap.outer > .tab_tit > ul:after {content:""; display:block; clear:both;}
+.tab_wrap.outer > .tab_tit > ul > li {float:left; text-align:center;}
+.tab_wrap.outer > .tab_tit > ul > li > a {display:inline-block; position:relative; bottom:0;}
+.tab_wrap.outer > .tab_tit > ul > li > a span {display:block; padding:16px 8px 12px; font-family:"KBFGTextB"; font-size:1.214rem; color:#979797;}
+.tab_wrap.outer > .tab_tit > ul > li > a.active span {border-bottom:3px solid #ffc000; color:#333;}
+.tab_wrap.outer > .tab_tit > ul > li .txt_sml {margin-left:3px; font-size:0.6875rem;}
+*/
+.tab_wrap.outer > .tab_tit > ul {display:flex; flex-wrap:wrap; justify-content:flex-start; width:100%;}
+.tab_wrap.outer > .tab_tit > ul > li {flex:1;}
+.tab_wrap.outer > .tab_tit > ul > li > a {display:flex; align-items:center; justify-content:center; position:relative; z-index:1;}
+.tab_wrap.outer > .tab_tit > ul > li > a span {display:block; padding:16px 30px 12px; font-family:"KBFGTextB"; font-size:1.214rem; color:#979797;}
+.tab_wrap.outer > .tab_tit > ul > li > a.active span {border-bottom:3px solid #ffc000; color:#333;}
+.tab_wrap.outer > .tab_tit > ul > li .txt_sml {margin-left:3px; font-size:0.6875rem;}
+
+.tab_wrap.inner > .tab_tit {margin:26px 18px;}
+.tab_wrap.inner > .tab_tit > ul {display:flex; flex-wrap:wrap; justify-content:flex-start; width:100%;}
+.tab_wrap.inner > .tab_tit > ul li {flex:1;}
+.tab_wrap.inner > .tab_tit > ul li a {display:flex; align-items:center; justify-content:center; height:50px; box-sizing:border-box; border:1px solid #DDD; border-left-width:0; text-align:center; background-color:#FFF;}
+.tab_wrap.inner > .tab_tit > ul li:first-child a {border-radius:2px 0 0 2px; border-left-width:1px;}
+.tab_wrap.inner > .tab_tit > ul li:last-child a {border-radius:0 2px 2px 0;}
+.tab_wrap.inner > .tab_tit > ul li a.active {border-color:#5e677c; color:#FFF; background-color:#5e677c;}
+
 
 .tab_wrap .tab_con_wrap {}
 .tab_wrap .tab_con {display:none;}
@@ -231,19 +237,23 @@ table.tbl_write tbody tr:first-child td {border-top-color:#CCC;}
 /* layout ========================================================================================= */
 /* header */
 .header {overflow:hidden; height:44px; box-sizing:border-box; border-bottom:1px solid #ececec; background-color:#FFF;}
-.header .tit1 {display:inline-block; line-height:44px; margin:0 0 0 45px; font-family:"KBFGTextM"; font-size:1.357rem; vertical-align:middle;}
-.header .tit2 {display:inline-block; line-height:44px; font-size:0.857rem; color:#555; vertical-align:middle;}
-.header .btn_allmenu {position:absolute; top:0; right:10px; width:40px; height:40px; background:url('../../Content/images/common/btn_home.svg') no-repeat 50% 50%; background-size:20px 20px}
+.header .tit1 {display:inline-block; line-height:45px; margin:0 0 0 43px; font-family:"KBFGTextM"; font-size:1.357rem; vertical-align:middle;}
+.header .tit2 {display:inline-block; line-height:45px; font-size:0.857rem; color:#555; vertical-align:middle;}
+.header .tit2:before {content:""; display:inline-block; height:10px; margin:1px 10px 0 8px; border-left:1px solid #BBB;}
+
+.header .btn_back {position:absolute; top:6px; left:10px; width:30px; height:30px; font-size:0; text-indent:-9999em; background:url('../../Content/images/common/btn_gnb_back.png') no-repeat center center; background-size:11px auto}
+.header .btn_allmenu {position:absolute; top:6px; right:10px; width:30px; height:30px; font-size:0; text-indent:-9999em; background:url('../../Content/images/common/btn_gnb_menu.png') no-repeat center center; background-size:20px auto}
+.header .btn_home {position:absolute; top:6px; right:18px; width:30px; height:30px; font-size:0; text-indent:-9999em; background:url('../../Content/images/common/btn_gnb_home.png') no-repeat center center; background-size:26px auto}
 
 
 /* 본문 */
-.container {padding:56px 0 54px 0;}
-.content {}
+.container {padding:0 0 0 0;}
+.contents {}
 
 
 
 
-
+   
 
 
 /* 팝업 - dim ========================================================================================== */
