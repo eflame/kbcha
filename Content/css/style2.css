@@ -5,6 +5,11 @@
 
 .bg_colr { background-color: #f5f6f7; }
 
+/* 버튼 */
+.btn_wrap { display: flex; }
+.btn_wrap > * { flex: 1;  }
+.btn_wrap.fixed { position: fixed; left: 0; bottom: 0; width: 100%; }
+
 /*  */
 .list_brand {  display: grid; grid-template-columns: 69px 69px 69px 69px; gap: 9px; justify-content: center;  }
 .list_brand li { position: relative; }
@@ -58,7 +63,7 @@
 
 
 /* 모바일알림 서비스 */
-.title_area { margin-bottom: 48px; padding-top: 57px; text-align: center; }
+.title_area { margin-bottom: 48px; text-align: center; }
 .title_area > .txt { color: #999; font-size: 15px; }
 .title_area > .logo_txt { display: block; margin-top: 11px; height: 33px;  }
 .title_area > .logo_txt img { height: 100%; }
@@ -73,3 +78,34 @@
 .notice_expiration > strong { position: relative; padding-top: 69px; color: #333; font-size: 20px; line-height: 30px; }
 .notice_expiration > strong::before { display: block; content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 48px; height: 48px; border-radius: 24px; background: #ffc000 url('../images/icon/ico_exclamation.png') no-repeat 50% 50%;  background-size: auto 21px; }
 .notice_expiration > span { color: #555; font-size: 18px; line-height: 28px; }
+
+/* 팝업 */
+.pop_alert { z-index: 100; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding-bottom: 50px; width: 285px; text-align: center; background-color: #fff; box-sizing: border-box; }
+.pop_alert > .cont { padding: 37px 18px; color: #333; font-size: 16px; line-height: 23px; }
+.pop_alert > .cont > .num { margin-top: 6px; }
+.pop_alert > .cont > .num strong { color: #ffc000; }
+.pop_alert .btn_wrap { position: absolute; left: 0; bottom: 0; width: 100%; }
+.pop_alert .btn_wrap > * { height: 50px; line-height: 50px; }
+
+/* 견적산출 step */
+.step_progress_area { display: flex; justify-content: space-between; align-items: center; padding: 0 18px; height: 53px; border-top: 1px solid #ececec; border-bottom: 1px solid #ececec; background-color: #fff; }
+.step_progress_area .tit { color: #333; font-size: 16px; }
+.step_state { display: flex; height: 28px; }
+.step_state li { position: relative; }
+.step_state li:nth-of-type(1n+2) { margin-left: 10px; }
+.step_state li:nth-of-type(1n+2):after { content:""; position:absolute; top:50%; left:-10px; width:10px; height:2px; margin-top:-2px; background-color:#DDD;}
+.step_state li a { display: block;  width:27px; height:27px; color: #fff; line-height:28px; border-radius:50%; text-align:center; background-color:#DDD; }
+.step_state li.on a { background-color:#ffba00; }
+.step_state li.active a { font-size: 0; text-indent: -9999px; background:#ffba00 url('../images/icon/ico_check.png') no-repeat 50% 50%; background-size: auto 11px;;  }
+.step_state li.on:after, 
+.step_state li.active:after {background-color:#ffba00; }
+
+/* 상품선택 리스트 */
+.quote_product_list { padding: 40px 18px; }
+.quote_product_list > strong { color: #555; font-size: 17px; line-height: 19px; }
+.quote_product_list .quote_product { margin-top: 21px; }
+.quote_product_list .quote_product a { display: flex; align-items: center; padding-left: 27px; height: 50px; color: #333; font-size: 16px; border: 1px solid #ececec; border-radius: 3px; box-sizing: border-box; }
+.quote_product_list .quote_product a:nth-of-type(1n+2) { margin-top: 8px; }
+.quote_product_list .quote_product a.active { position: relative; border-color: #ffba00; }
+.quote_product_list .quote_product a.active::after { display: block; content: ''; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); width: 16px; height: 11px; background: url('../images/icon/check_on.png') no-repeat; background-size: auto 11px; }
+.quote_product_list .quote_product a img { margin-right: 15px; height: 22px; }
