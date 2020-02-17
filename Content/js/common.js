@@ -1,5 +1,19 @@
 
-$(function () {
+
+$(window).on('load', function(){
+	if ($('.contents .section_btm_fixed').length > 0){
+		var btmFixedHgt = $('.contents .section_btm_fixed').innerHeight();
+		$('.contents').css({'padding-bottom' : btmFixedHgt});
+	};
+	if ($('.layer_contents .section_btm_fixed').length > 0){
+		var btmFixedHgt = $('.layer_contents .section_btm_fixed').innerHeight();
+		$('.layer_contents').css({'padding-bottom' : btmFixedHgt});
+	};
+});
+
+$(function(){
+	
+
 	$('input[type=range]').on('input', function(){
 		var val = $(this).val();
 		$(this).css('background', 'linear-gradient(to right, #ffba00 0%, #ffba00 '+ val +'%, #DDD ' + val + '%, #DDD 100%)');
@@ -38,6 +52,30 @@ $(function () {
 	});
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(function(){
+	$("a.btn_accodion").on('click',function(){
+		$(this).siblings(".price_list").slideToggle(300);
+	});
+	// function myFunction(event) {
+	// 	var windowHeight = $( window ).height(); //디바이스 크기
+	// 	var y = event.touches[0].screenY; //터치이벤트 위치값
+	// 	alert(y);
+	// }
+});
 
 
 

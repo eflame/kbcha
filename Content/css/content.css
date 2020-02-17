@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* ==============================
-ver : 1.00
+ver :1.00
 ============================== */
 
 
@@ -23,7 +23,6 @@ ver : 1.00
 
 /* 차량검색 ========================================================================================= */
 /* 브랜드검색 ============================== */
-.bx_bg {padding:18px; background-color:#f9fafa;}
 .section {}
 .section.bg {padding:18px; background-color:#f9fafa;}
 .article {margin:10px 18px;}
@@ -170,7 +169,7 @@ ver : 1.00
 
 
 
-.bx_notice {box-sizing: border-box; padding: 18px; border:1px solid #DDD; line-height:1.5; font-size:0.857rem; text-align: center;}
+.bx_notice {box-sizing:border-box; padding:18px; border:1px solid #DDD; line-height:1.5; font-size:0.857rem; text-align:center;}
 .bx_notice strong {color:#ff7e00;}
 
 
@@ -231,6 +230,60 @@ ver : 1.00
 .list_tog_btn.ty3 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
 
 
+
+
+
+
+
+
+
+
+
+
+.layer_btm_wrap {display:none; position:fixed; z-index:200; left:0; right:0; bottom:0; box-sizing:border-box; padding:30px 18px 0; border-radius:21px 21px 0 0; box-shadow:0 0 15px rgba(0, 0, 0, 0.2); background-color:#FFF;}
+.layer_btm_wrap.active {display:block;}
+.layer_btm_header {display:flex; align-items:center; padding-bottom:10px; border-bottom:1px solid #ececec;}
+.layer_btm_header .bx_tit {flex:1;}
+.layer_btm_header .bx_tit .tit {}
+.layer_btm_header .bx_side {}
+.layer_btm_header .bx_side .txt_cnt {}
+.layer_btm_header .bx_side .txt_cnt strong {color:#ff7e00;}
+.layer_btm_contents {}
+
+
+
+.opt_list_wrap {overflow-y:scroll;}
+.opt_list_wrap.size1 {height:134px;}
+.opt_list_wrap ul {}
+.opt_list_wrap ul li {}
+.opt_list_wrap ul li a {display:block; padding:10px 12px; color:#222;}
+.opt_list_wrap ul li a:hover {color:#FFF; background:#ffc000;}
+
+
+
+
+
+
+
+.section_btm_fixed {position:fixed; left:0; right:0; bottom:0;}
+.section_btm_fixed {}
+
+/* 버튼 */
+.section_btm_fixed .btn_wrap2 { display: flex; }
+.section_btm_fixed .btn_wrap2 > * { flex: 1;  }
+.section_btm_fixed .btn_wrap2.fixed {}
+
+/* 옵션 가격표 */
+.section_btm_fixed .option_wrap { padding: 30px 18px 0; border-radius: 21px 21px 0 0; background-color: #fff; box-sizing: border-box; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+.section_btm_fixed .option_wrap > .price_list { display: none; padding-bottom: 12px; border-bottom: 1px solid #ececec; }
+.section_btm_fixed .option_wrap dl { display: flex; line-height: 25px; align-items: center; justify-content: space-between; color: #333; font-size: 14px; }
+.section_btm_fixed .option_wrap dt::before { display: inline-block; content: ""; margin-right: 9px; width: 3px; height: 3px; vertical-align: middle; background-color: #000; }
+.section_btm_fixed .option_wrap dl.total { line-height: 52px; }
+.section_btm_fixed .option_wrap dl.total dt,
+.section_btm_fixed .option_wrap dl.total dd { font-weight: bold; }
+.section_btm_fixed .option_wrap dl.total dd strong { color: #ffba00; font-size: 16px; font-weight: bold; }
+.section_btm_fixed .option_wrap > .btn_accodion { position: absolute; left: 0; top: 0; width: 100%; height: 24px; font-size: 0; text-indent: -9999px; border-radius: 21px 21px 0 0; }
+.section_btm_fixed .option_wrap > .btn_accodion::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 42px; height: 4px; border-radius: 2px; background-color: #ddd; }
 
 
 
