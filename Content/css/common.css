@@ -70,6 +70,8 @@ a.btn_txt {font-family:"KBFGTextB"; font-size:0.714rem; font-weight:bold; color:
 
 .btn_ic2_sorting {display:inline-block; height:30px; box-sizing:border-box; padding:0 20px; border-radius:30px; border:1px solid #DDD; text-indent:-9999rem; vertical-align:middle; background-color:#FFF; background-size:auto 14px; background-repeat:no-repeat; background-position:center center; background-image:url("../images/icon/btn_sorting.png");}
 
+.btn_ic2_del {display:inline-block; width:30px; height:30px; box-sizing:border-box;text-indent:-9999rem; vertical-align:middle; background-size:auto 10.5px; background-repeat:no-repeat; background-position:center center; background-image:url("../images/icon/btn_del.png");}
+
 
 
 
