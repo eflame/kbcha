@@ -51,13 +51,14 @@
 						<a href="#none" class="btn_toggle open">펼쳐보기</a>
 					</div>
 					<div class="toggle_con">
+						<h4 class="tit_article">상세정보 <span>(단위 원)</span></h4>
 						<div class="article">
 							<h5 class="tit_caption">옵션</h5>
 							<table class="tbl_write">
 								<colgroup>
-									<col style="width: 30%">
-									<col style="width: auto">
-									<col style="width: 35%">
+									<col style="width: 33%">
+									<col style="width: 34%">
+									<col style="width: 33%">
 								</colgroup>
 								<tbody>
 									<tr>
@@ -70,7 +71,7 @@
 									</tr>
 									<tr>
 										<th>외장색상</th>
-										<td>플라티늄 그라파...</td>
+										<td>플라티늄 그라파이트</td>
 										<td class="txt_r">500,000</td>
 									</tr>
 									<tr>
@@ -81,15 +82,113 @@
 								</tbody>
 							</table>
 						</div>
+						<div class="article">
+							<h5 class="tit_caption">상품</h5>
+							<table class="tbl_write">
+								<colgroup>
+									<col style="width: 33%">
+									<col style="width: 34%">
+									<col style="width: 33%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>상품구분</th>
+										<td colspan="2">운용</td>
+									</tr>
+									<tr>
+										<th>출고/할인금액</th>
+										<td>대리점</td>
+										<td class="txt_r">0</td>
+									</tr>
+									<tr>
+										<th>탁송방식</th>
+										<td>위탁사 탁송</td>
+										<td class="txt_r">0</td>
+									</tr>
+									<tr>
+										<th>출하장</th>
+										<td colspan="2">화성</td>
+									</tr>
+									<tr>
+										<th>탁송지</th>
+										<td colspan="2">서울</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="article">
+							<h5 class="tit_caption">용품</h5>
+							<table class="tbl_write">
+								<colgroup>
+									<col style="width: 33%">
+									<col style="width: 34%">
+									<col style="width: 33%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>측후면 썬팅</th>
+										<td colspan="2">3,000,000</td>
+									</tr>
+									<tr>
+										<th>블랙박스</th>
+										<td colspan="2">200,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 
 					</div>
 				</div>
 				<!-- //toggle_wrap -->
 			</div>
+			<!-- 옵션 가격 플로팅바 -->
+			<div class="option_price_wrap">
+				<div class="price_list">
+					<dl>
+						<dt>차량가격</dt>
+						<dd>280,000,000 원</dd>
+					</dl>
+					<dl>
+						<dt>옵션/색상 설정 가격</dt>
+						<dd>1,000,000 원</dd>
+					</dl>
+					<dl>
+						<dt>용품설정가격</dt>
+						<dd>3,200,000 원</dd>
+					</dl>
+					<dl>
+						<dt>할인가격</dt>
+						<dd>1,000,000 원</dd>
+					</dl>
+					<dl>
+						<dt>합계 (할인 미반영)</dt>
+						<dd>284,200,000 원</dd>
+					</dl>
+				</div>
+				<dl class="total">
+					<dt>총 취득원가</dt>
+					<dd><strong>284,200,000</strong> 원</dd>
+				</dl>
+				<a href="#none" class="btn_accodion" >닫기</a>
+			</div>
+			<!-- //옵션 가격 플로팅바 -->
+
 			<div class="btn_wrap fixed">
+				<a href="#none" class="btn_col2 ty4">임시저장</a>
 				<a href="#none" class="btn_col3 ty4">다음</a>
 			</div>
 		</div>
 	</div>
 </body>
+<script>
+	$("a.btn_accodion").on('click',function(){
+		$(this).siblings(".price_list").slideToggle(300);
+	});
+	// function myFunction(event) {
+	// 	var windowHeight = $( window ).height(); //디바이스 크기
+	// 	var y = event.touches[0].screenY; //터치이벤트 위치값
+	// 	alert(y);
+	// }
+	
+</script>
 </html>
