@@ -1,19 +1,19 @@
 @charset "utf-8";
 
 @font-face { /*KB금융 본문체 Medium*/
-    font-family:"KBFGTextM";
-    font-style:normal;
-    font-weight:normal;
-    src:url("../../Content/font/KBFGTextM.eot");
-    src:local("※"), url("../../Content/font/KBFGTextM.eot?#iefix") format("embedded-opentype"), url("../../Content/font/KBFGTextM.woff") format("woff")
+	font-family:"KBFGTextM";
+	font-style:normal;
+	font-weight:normal;
+	src:url("../../Content/font/KBFGTextM.eot");
+	src:local("※"), url("../../Content/font/KBFGTextM.eot?#iefix") format("embedded-opentype"), url("../../Content/font/KBFGTextM.woff") format("woff")
 }
 
 @font-face { /*KB금융 본문체 B*/
-    font-family:"KBFGTextB";
-    font-style:normal;
-    font-weight:normal;
-    src:url("../../Content/font/KBFGTextB.eot");
-    src:local("※"), url("../../Content/font/KBFGTextB.eot?#iefix") format("embedded-opentype"), url("../../Content/font/KBFGTextB.woff") format("woff")
+	font-family:"KBFGTextB";
+	font-style:normal;
+	font-weight:normal;
+	src:url("../../Content/font/KBFGTextB.eot");
+	src:local("※"), url("../../Content/font/KBFGTextB.eot?#iefix") format("embedded-opentype"), url("../../Content/font/KBFGTextB.woff") format("woff")
 }
 
 html {font-size:14px;}
@@ -39,7 +39,7 @@ a:hover {color:#333;}
 :focus {outline:none;}
 
 /*form*/
-input, select, button {appearance:none; -moz-appearance:none; -ms-appearance:none; -webkit-appearance:none;  box-sizing:border-box; vertical-align:middle;}
+input, select, button {appearance:none; -moz-appearance:none; -ms-appearance:none; -webkit-appearance:none; box-sizing:border-box; vertical-align:middle;}
 input::-ms-clear {display:none;}
 
 input[type="text"],
@@ -61,7 +61,7 @@ input[type="tel"]:disabled {color:#ababab !important; background-color:#f6f6f6 !
 
 button{height:42px; border:1px solid #DDD; cursor:pointer; background-color:#fff;}
 button > * {position:relative;} /* 클릭시 문자 흔들림 방지(ie) */
-::-webkit-file-  -button {cursor:pointer;}
+::-webkit-file- -button {cursor:pointer;}
 
 select {height:42px; padding:0 30px 0 10px; border:1px solid #DDD; font-size:1.143rem; background:#FFF url("../../Content/images/common/form_selectbox.png") no-repeat center right 10px; background-size:10px 5px;}
 select:hover, 
