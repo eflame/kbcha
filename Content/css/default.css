@@ -31,11 +31,11 @@ img {width:auto; max-width:100%; border:0; vertical-align:top;}
 address, caption, em, strong, th {font-style:normal; font-weight:normal;}
 a, span, strong, em {display:inline-block;}
 a {text-decoration:none;}
-a {color:#333; text-decoration:none;}
+a {color:inherit; text-decoration:none;}
 a:link,
 a:visited,
 a:active,
-a:hover {color:#333;}
+a:hover {color:inherit;}
 :focus {outline:none;}
 
 /*form*/
@@ -108,6 +108,8 @@ input[type="checkbox"]:checked + label:before {border-color:#ffba00; background:
 
 
 /* font-size:14px 기준 rem 단위 */
+.font10 {font-size:0.714rem}	/* 10px */
+.font11 {font-size:0.786rem}	/* 11px */
 .font12 {font-size:0.857rem}	/* 12px */
 .font13 {font-size:0.929rem}	/* 13px */
 .font14 {font-size:1.000rem}	/* 14px */

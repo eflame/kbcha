@@ -96,7 +96,7 @@
 				</table>
 			</div>
 
-			<div class="bx_bg">
+			<div class="section bg">
 				<!-- toggle_wrap -->
 				<div class="toggle_wrap ty3 active">
 					<div class="toggle_top">
@@ -111,7 +111,7 @@
 								bbb
 							</div>
 						</div>
-						<a href="#none" class="btn_toggle open">펼쳐보기</a>
+						<a href="#none" class="btn_toggle close">접어보기</a>
 					</div>
 					<div class="toggle_con">
 						내용
@@ -131,7 +131,7 @@
 						</div>
 						<div class="bx_side">
 							<span class="btn side"><a href="#none" class="btn_col1 rnd ty1">설정</a></span>
-							<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
 					<div class="toggle_con">
@@ -165,12 +165,53 @@
 				<div class="toggle_wrap ty1 active">
 					<div class="toggle_top">
 						<div class="bx_tit">
+							<input type="text" placeholder="차종 입력">
+						</div>
+						<div class="bx_side">
+							<span class="btn side"><a href="#none" class="btn_col1 rnd ty1">설정</a></span>
+							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
+						</div>
+					</div>
+					<div class="toggle_con">
+						<div class="field_wrap bdr">
+							<div class="field">
+								<strong class="tit_legend">금액(만원)/유종</strong>
+								<div class="group_row">
+									<span class="bx_inp">
+										<input type="text">
+										<a href="#none" class="btn btn_txt">복사입력</a>
+									</span>
+									<span class="sign">-</span>
+									<input type="text">
+								</div>
+								<div class="group_row">
+									<ul class="list_tog_btn ty3 case5">
+										<li><a href="#none">가솔린</a></li>
+										<li><a href="#none" class="active">디젤</a></li>
+										<li><a href="#none">LPG</a></li>
+										<li><a href="#none">EV</a></li>
+										<li><a href="#none">HEV</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="field_btm">
+							<a href="#none" class="btn_col4 ty3">결과 내 재검색</a></li>
+						</div>
+					</div>
+				</div>
+				<!-- //toggle_wrap -->
+
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty1 active">
+					<div class="toggle_top">
+						<div class="bx_tit">
 							<strong>선호브랜드</strong>
 							<span>등록순</span>
 						</div>
 						<div class="bx_side">
 							<span class="btn side"><a href="#none" class="btn_col1 rnd ty1">설정</a></span>
-							<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
 					<div class="toggle_con">
@@ -197,26 +238,38 @@
 				<!-- //toggle_wrap -->
 			</div>
 			
-			<!-- toggle_wrap -->
-			<div class="toggle_wrap ty2 active">
-				<div class="toggle_top">
+			<div class="section">
+				<div class="list_top">
 					<div class="bx_tit">
-						<strong>list_tog_btn ty1</strong>
+						<strong>차종 선택(원)</strong>
 					</div>
 					<div class="bx_side">
-						<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+						<span class="tit_side">금액</span>
+						<a href="#none" class="btn_ic2_sorting">정렬</a>
 					</div>
 				</div>
-				<div class="toggle_con non_pad">
-					<ul class="list_tog_btn ty1">
-						<li><a href="#none"><strong>K7 2.4 GDI 프레스티지</strong><span>30,530,000</span></a></li>
-						<li><a href="#none" class="active"><strong>K7 2.3 GDI 프레스티지</strong><span>29,530,000</span></a></li>
-						<li><a href="#none"><strong>K7 2.2 GDI <br>프레스티지</strong><span>28,530,000</span></a></li>
-						<li><a href="#none"><strong>K7 2.1 GDI 프레스티지</strong><span>27,530,000</span></a></li>
-					</ul>
+			
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty2 active">
+					<div class="toggle_top">
+						<div class="bx_tit">
+							<strong>list_tog_btn ty1</strong>
+						</div>
+						<div class="bx_side">
+							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
+						</div>
+					</div>
+					<div class="toggle_con non_pad">
+						<ul class="list_tog_btn ty1">
+							<li><a href="#none"><strong>K7 2.4 GDI 프레스티지</strong><span>30,530,000</span></a></li>
+							<li><a href="#none" class="active"><strong>K7 2.3 GDI 프레스티지</strong><span>29,530,000</span></a></li>
+							<li><a href="#none"><strong>K7 2.2 GDI <br>프레스티지</strong><span>28,530,000</span></a></li>
+							<li><a href="#none"><strong>K7 2.1 GDI 프레스티지</strong><span>27,530,000</span></a></li>
+						</ul>
+					</div>
 				</div>
+				<!-- //toggle_wrap -->
 			</div>
-			<!-- //toggle_wrap -->
 
 			<!-- toggle_wrap -->
 			<div class="toggle_wrap ty2 active">
@@ -225,7 +278,7 @@
 						<strong>list_tog_btn ty2</strong>
 					</div>
 					<div class="bx_side">
-						<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+						<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 					</div>
 				</div>
 				<div class="toggle_con">
@@ -299,7 +352,7 @@
 						<strong>list_tog_btn ty3</strong>
 					</div>
 					<div class="bx_side">
-						<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+						<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 					</div>
 				</div>
 				<div class="toggle_con">
@@ -390,7 +443,7 @@
 					</div>
 					<div class="bx_side">
 						<span class="btn side"><a href="#none" class="btn_col1 rnd ty1">설정</a></span>
-						<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+						<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 					</div>
 				</div>
 				<div class="toggle_con">
@@ -535,7 +588,7 @@
 						<strong>선호브랜드</strong>
 					</div>
 					<div class="bx_side">
-						<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+						<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 					</div>
 				</div>
 				<div class="toggle_con">
@@ -623,7 +676,7 @@
 						<strong>선호브랜드</strong>
 					</div>
 					<div class="bx_side">
-						<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
+						<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 					</div>
 				</div>
 				<div class="toggle_con">
