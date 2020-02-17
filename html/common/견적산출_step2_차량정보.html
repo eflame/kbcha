@@ -141,6 +141,7 @@
 				</div>
 				<!-- //toggle_wrap -->
 			</div>
+			<!-- 옵션 가격 플로팅바 -->
 			<div class="option_price_wrap">
 				<div class="price_list">
 					<dl>
@@ -168,12 +169,26 @@
 					<dt>총 취득원가</dt>
 					<dd><strong>284,200,000</strong> 원</dd>
 				</dl>
-				<a href="#none" class="btn">닫기</a>
+				<a href="#none" class="btn_accodion" >닫기</a>
 			</div>
+			<!-- //옵션 가격 플로팅바 -->
+
 			<div class="btn_wrap fixed">
+				<a href="#none" class="btn_col2 ty4">임시저장</a>
 				<a href="#none" class="btn_col3 ty4">다음</a>
 			</div>
 		</div>
 	</div>
 </body>
+<script>
+	$("a.btn_accodion").on('click',function(){
+		$(this).siblings(".price_list").slideToggle(300);
+	});
+	// function myFunction(event) {
+	// 	var windowHeight = $( window ).height(); //디바이스 크기
+	// 	var y = event.touches[0].screenY; //터치이벤트 위치값
+	// 	alert(y);
+	// }
+	
+</script>
 </html>
