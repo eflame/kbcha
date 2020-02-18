@@ -10,6 +10,7 @@
 
 .tit_caption { margin-bottom: 6px; }
 
+.txt_nodata { display: flex; align-items: center; justify-content: center; color: #555; font-size: 12px; line-height: 18px; height: 80px; text-align: center }
 
 /*  */
 .list_brand.swiper-container { margin: 0 18px; padding: 4px 0 0px; }

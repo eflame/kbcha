@@ -38,7 +38,7 @@
 						<!-- tab_con : 브랜드검색 -->
 						<div class="tab_con active">
 							<div class="section bg">
-								<div class="toggle_wrap ty1 ">
+								<div class="toggle_wrap ty1 active">
 									<div class="toggle_top">
 										<div class="bx_tit">
 											<strong>선호브랜드</strong>
@@ -50,7 +50,7 @@
 										</div>
 									</div>
 									<div class="toggle_con non_pad">
-										내용
+										<p class="txt_nodata">선호브랜드를 자유롭게 설정하여 <br>편리하게 이용해보세요</p>
 									</div>
 								</div>
 
@@ -68,12 +68,12 @@
 										<div class="swiper-container list_brand ty1">
 											<div class="swiper-wrapper">
 												<!-- 추가및삭제 -->
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
 											</div>
 											<div class="swiper-pagination"></div>
 										</div>
@@ -90,7 +90,8 @@
 														clickable: true,
 													},
 													observer: true,
-													observeParents: true
+													observeParents: true,
+													observeSlideChildren: true
 												});
 											} else if( brand_length > 3 && winWidth < 375 ) {
 												var swiper = new Swiper('.swiper-container.list_brand.ty1', {
@@ -101,7 +102,8 @@
 														clickable: true,
 													},
 													observer: true,
-													observeParents: true
+													observeParents: true,
+													observeSlideChildren: true
 												});
 											}
 										</script>
@@ -193,7 +195,8 @@
 															clickable: true,
 														},
 														observer: true,
-														observeParents: true
+														observeParents: true,
+														observeSlideChildren: true
 													});
 												}
 											</script>
