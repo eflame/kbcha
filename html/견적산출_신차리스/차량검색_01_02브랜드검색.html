@@ -49,7 +49,7 @@
 											<span class="btn side"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
 										</div>
 									</div>
-									<div class="toggle_con">
+									<div class="toggle_con non_pad">
 										<div>
 											<ul class="list_brand">
 												<!-- 기본상태 on 이미지만 바뀜 -->
@@ -82,7 +82,7 @@
 											<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
 										</div>
 									</div>
-									<div class="toggle_con">
+									<div class="toggle_con non_pad">
 										<div class="swiper-container list_brand ty1">
 											<div class="swiper-wrapper">
 												<!-- 추가및삭제 -->
@@ -106,7 +106,9 @@
 													pagination: {
 														el: '.swiper-pagination',
 														clickable: true,
-													}
+													},
+													observer: true,
+													observeParents: true
 												});
 											} else if( brand_length > 3 && winWidth < 375 ) {
 												var swiper = new Swiper('.swiper-container.list_brand.ty1', {
@@ -115,7 +117,9 @@
 													pagination: {
 														el: '.swiper-pagination',
 														clickable: true,
-													}
+													},
+													observer: true,
+													observeParents: true
 												});
 											}
 										</script>
@@ -133,7 +137,7 @@
 										</div>
 									</div>
 									<div class="toggle_con">
-										<div class="toggle_con">
+										<div class="toggle_con non_pad">
 											<div class="swiper-container list_brand ty2">
 												<div class="swiper-wrapper">
 													<!-- 기본상태 on 이미지만 바뀜 -->
@@ -206,6 +210,8 @@
 															el: '.swiper-pagination',
 															clickable: true,
 														},
+														observer: true,
+														observeParents: true
 													});
 												}
 											</script>

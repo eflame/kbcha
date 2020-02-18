@@ -275,7 +275,7 @@ table.tbl_write tbody tr:first-child td {border-top-color:#CCC;}
 
 .layer_wrap .layer_header {overflow:hidden; position:relative; height:45px; box-sizing:border-box; border-bottom:1px solid #ededed; background-color:#FFF;}
 .layer_wrap .layer_header .tit1 {display:inline-block; line-height:45px; margin:0 0 0 18px; font-family:"KBFGTextM"; font-size:1.357rem; vertical-align:middle;}
-.layer_wrap .layer_header .tit2 {display:inline-block; line-height:45px; font-size:0.857rem; color:#555; vertical-align:middle;}
+.layer_wrap .layer_header .tit2 {display:inline-block; line-height:45px; font-size:1.143rem; color:#555; vertical-align:middle;}
 .layer_wrap .layer_header .tit2:before {content:""; display:inline-block; height:10px; margin:1px 10px 0 8px; border-left:1px solid #BBB;}
 .layer_wrap .layer_header .btn_close {position:absolute; top:3px; right:12px; width:19px; height:19px; padding:10px ;text-indent:-9999em; background:url('../../Content/images/icon/btn_close_blk_37.png') no-repeat center center; background-size:19px 19px}
 
