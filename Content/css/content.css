@@ -92,8 +92,9 @@ ver :1.00
 .toggle_wrap.ty1 .toggle_top .bx_side .btn {}
 .toggle_wrap.ty1 .toggle_top .bx_side .btn.side {}
 .toggle_wrap.ty1 .toggle_top .bx_side .side:after {}
-.toggle_wrap.ty1 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../../Content/images/icon/btn_toggle_blk_dw.png")}
-.toggle_wrap.ty1 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../../Content/images/icon/btn_toggle_blk_up.png")}
+
+.toggle_wrap.ty1 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
+.toggle_wrap.ty1 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
 .toggle_wrap.ty1 .toggle_con {padding:24px 18px;}
 
 .toggle_wrap.ty2 {margin-bottom:1px; background-color:#FFF;}
