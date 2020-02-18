@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KB 캐피탈</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../Content/css/import.css">
+	<script src="../../Content/js/jquery-1.12.3.min.js"></script>
+	<script src="../../Content/js/jquery-ui.min.js"></script>
+	<script src="../../Content/js/jquery.easing.min.js"></script>
+	<script src="../../Content/js/swiper.min.js"></script>
+	<script src="../../Content/js/slick.min.js"></script>
+	<script src="../../Content/js/common.js"></script>
+	
+	<style>
+		.bx_slick {}
+		.bx_slick a {display:block; padding:50px; text-align:center; background:#EEE;}
+	</style>
+	<script>
+		$(document).on('ready', function(){
+			/*
+			$('.your-element').slick({
+				accessibility: true,
+				initialSlide: 3, //Slide to start on
+				pauseOnFocus: true,
+				pauseOnHover: true,
+				pauseOnDotsHover: true,
+
+				rows: 1, //Setting this to more than 1 initializes grid mode. Use slidesPerRow to set how many slides should be in each row.
+				slidesPerRow: 3, //With grid mode intialized via the rows option, this sets how many slides are in each grid row. dver
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				swipeToSlide: true, //Allow users to drag or swipe directly to a slide irrespective of slidesToScroll
+				swipe:false, //Enable swiping
+				
+				touchMove: ture, //Enable slide motion with touch
+				touchThreshold: 5, //To advance slides, the user must swipe a length of (1/touchThreshold) * the width of the slider
+
+				vertical: false, //Vertical slide mode
+				verticalSwiping: false, //Vertical swipe mode
+				zIndex: 1000,
+
+				infinite: true,
+				speed: 300,
+				autoplay: true,
+				autoplaySpeed: 2000,
+				dots: true,
+				arrows: false,
+
+				centerMode: true,
+				centerPadding: '60px',
+				variableWidth: true,
+				adaptiveHeight: true,
+
+				fade: true,
+				cssEase: 'linear',
+				asNavFor: '.slider-nav',
+				dotsClass:'bn-controller', // 사용자 css class ( 버튼들의 부모 엘리먼트 클래스를 가르킨다 )
+
+				focusOnSelect: true,
+				rtl: true,
+
+				responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 600,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+				],
+				
+				//customPaging
+				customPaging: function(slide, i) {
+					//아래 마크업처럼 적용할 버튼들의 마크업을 대입하면 된다.
+					//slick내부에서 슬라이드 개수 만큼 for문으로 생성 ( 슬라이드 개수 만큼 복제된다. )
+
+					console.log( slide.$slider[0] )
+					return '<div class="slide-banner">'+
+						'<div class="bn-item">'+
+						'<img src="이미지경로'+(i+1)+'.jpg" alt="">'+
+						'</div>'+
+						'</div>'
+				}
+			});
+			*/
+
+			//Events ==================================================
+			// On swipe event
+			$('.your-element').on('swipe', function(event, slick, direction){
+			console.log(direction);
+			// left
+			});
+
+			// On edge hit
+			$('.your-element').on('edge', function(event, slick, direction){
+			console.log('edge was hit')
+			});
+
+			// On before slide change
+			$('.your-element').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+			console.log(nextSlide);
+			});
+
+			$('.your-element').slick('slickAdd',"<div></div>");
+
+			// Get the current slide
+			var currentSlide = $('.your-element').slick('slickCurrentSlide');
+
+			// Manually refresh positioning of slick
+			$('.your-element').slick('setPosition');
+
+			//Methods ==================================================
+			// Add a slide
+			$('.your-element').slick('slickAdd',"<div></div>");
+
+			// Get the current slide
+			var currentSlide = $('.your-element').slick('slickCurrentSlide');
+
+			// Manually refresh positioning of slick
+			$('.your-element').slick('setPosition');
+
+
+
+
+
+
+
+			
+			
+			//customPaging click
+			$('.bn-controller>li').on('click', function (e) {
+				$('.multiple-items').slick("slickGoTo", $(e.currentTarget).index() );
+			});
+			
+
+
+
+			var slickInfoObj={
+				variableWidth: true,
+				dots: false,
+				swipe: false,
+				cssEase: 'ease-out',
+				infinite: true,
+				slidesToShow: 6,
+				slidesToScroll: 1,
+			}
+
+			//슬릭이 진행중인지 css로 체크
+			if( $('.multiple-items').hasClass('slick-initialized') ){
+				$('.multiple-items').slick('unslick');//슬릭해제
+			}else{
+				$('.multiple-items').slick(slickInfoObj);
+			}
+
+
+
+
+
+
+
+
+			$(".regular").slick({
+				dots: true,
+				infinite: true,
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				rows: 3,
+			});
+
+			$(".test1").slick({
+				dots: true,
+				rows: 3,
+				slidesPerRow: 4,
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="contents">
+			<div class="bx_slick test1">
+				<div>
+					<a href="#none">1</a>
+				</div>
+				<div>
+					<a href="#none">2</a>
+				</div>
+				<div>
+					<a href="#none">3</a>
+				</div>
+				<div>
+					<a href="#none">4</a>
+				</div>
+				<div>
+					<a href="#none">5</a>
+				</div>
+				<div>
+					<a href="#none">6</a>
+				</div>
+				<div>
+					<a href="#none">7</a>
+				</div>
+				<div>
+					<a href="#none">8</a>
+				</div>
+				<div>
+					<a href="#none">9</a>
+				</div>
+				<div>
+					<a href="#none">10</a>
+				</div>
+				<div>
+					<a href="#none">11</a>
+				</div>
+				<div>
+					<a href="#none">12</a>
+				</div>
+				<div>
+					<a href="#none">13</a>
+				</div>
+				<div>
+					<a href="#none">14</a>
+				</div>
+				<div>
+					<a href="#none">15</a>
+				</div>
+				<div>
+					<a href="#none">16</a>
+				</div>
+			</div>
+
+			<section class="regular slider">
+				<div>
+					<img src="http://placehold.it/350x300?text=1">
+				</div>
+				<div>
+					<img src="http://placehold.it/350x300?text=2">
+				</div>
+				<div>
+					<img src="http://placehold.it/350x300?text=3">
+				</div>
+				<div>
+					<img src="http://placehold.it/350x300?text=4">
+				</div>
+				<div>
+					<img src="http://placehold.it/350x300?text=5">
+				</div>
+				<div>
+					<img src="http://placehold.it/350x300?text=6">
+				</div>
+			</section>
+
+
+
+		</div>
+	</div>
+</body>
+</html>
