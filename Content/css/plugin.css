@@ -48,12 +48,12 @@
 .swiper-button-next.swiper-button-black,
 .swiper-container-rtl .swiper-button-prev.swiper-button-black {background-image:url("data:image/svg+xml; charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");}
 .swiper-button-lock {display:none;}
-.swiper-pagination {position:absolute; text-align:center; -webkit-transition:300ms opacity; -o-transition:300ms opacity; transition:300ms opacity; -webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); z-index:10;}
+.swiper-pagination { text-align:center; -webkit-transition:300ms opacity; -o-transition:300ms opacity; transition:300ms opacity; -webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); z-index:10;}
 .swiper-pagination.swiper-pagination-hidden {opacity:0;}
 /* Common Styles */
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-container-horizontal > .swiper-pagination-bullets {bottom:20px; left:0; width:100%;}
+.swiper-container-horizontal > .swiper-pagination-bullets { width:100%;}
 /* Bullets */
 .swiper-pagination-bullets-dynamic {overflow:hidden; font-size:0;}
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {-webkit-transform:scale(0.33); -ms-transform:scale(0.33); transform:scale(0.33); position:relative;}

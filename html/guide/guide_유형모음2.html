@@ -54,7 +54,7 @@
 							<span class="btn side"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
-					<div class="toggle_con">
+					<div class="toggle_con non_pad">
 						<div class="swiper-container list_brand ty1">
 							<div class="swiper-wrapper">
 								<!-- 추가및삭제 -->
@@ -73,7 +73,6 @@
 				<script>
 					var winWidth = $(window).width(); // 디바이스 사이즈
 					var brand_length = $('.list_brand.ty1').find('.swiper-slide').length;
-					console.log(winWidth);
 					if( brand_length > 4 && winWidth > 374 ){
 						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
 							slidesPerGroup: 4, // 슬라이드 넘어가는 갯수
@@ -81,7 +80,9 @@
 							pagination: {
 								el: '.swiper-pagination',
 								clickable: true,
-							}
+							},
+							observer: true,
+							observeParents: true
 						});
 					} else if( brand_length > 3 && winWidth < 375 ) {
 						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
@@ -90,7 +91,9 @@
 							pagination: {
 								el: '.swiper-pagination',
 								clickable: true,
-							}
+							},
+							observer: true,
+							observeParents: true
 						});
 					}
 				</script>
@@ -106,7 +109,7 @@
 							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
-					<div class="toggle_con">
+					<div class="toggle_con non_pad">
 						<div class="swiper-container list_brand ty2">
 							<div class="swiper-wrapper">
 								<!-- 기본상태 on 이미지만 바뀜 -->
@@ -181,6 +184,8 @@
 								el: '.swiper-pagination',
 								clickable: true,
 							},
+							observer: true,
+							observeParents: true
 						});
 					}
 				</script>
