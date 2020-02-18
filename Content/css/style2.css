@@ -12,7 +12,7 @@
 
 
 /*  */
-.list_brand.swiper-container { padding: 4px 0 30px; }
+.list_brand.swiper-container { padding: 4px 0 58px; }
 .list_brand .swiper-slide { width: 25%; text-align: left; }
 .list_brand .swiper-slide a { display: inline-block;; width: 69px; height: 69px; border-radius: 8px; box-sizing: border-box; }
 .list_brand .swiper-slide a.state { background-color: #f0f0f1; }
