@@ -42,6 +42,7 @@
 			<!-- //견적산출 step 상태 영역 -->
 			
 			<div class="section">
+
 				<!-- toggle_wrap -->
 				<div class="toggle_wrap ty1 active">
 					<div class="toggle_top">
@@ -62,8 +63,11 @@
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+								<!-- 37 -->
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
+								<div class="swiper-slide"></div>
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
@@ -72,31 +76,36 @@
 				</div>
 				<!-- //toggle_wrap -->
 				<script>
-					var winWidth = $(window).width(); // 디바이스 사이즈
 					var brand_length = $('.list_brand.ty1').find('.swiper-slide').length;
-					if( brand_length > 4 && winWidth > 374 ){
-						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
-							slidesPerGroup: 4, // 슬라이드 넘어가는 갯수
-							slidesPerView: 4, // 슬라이드 고정값 정하기
-							pagination: {
-								el: '.swiper-pagination',
-								clickable: true,
+					var swiper = new Swiper('.swiper-container.list_brand.ty1', {
+						breakpoints: {
+							// when window width is >= 320px
+							320: {
+								slidesPerGroup: 3, 
+								slidesPerView: 3,
+								allowTouchMove: brand_length > 3 ? true: false,
+								centerInsufficientSlides: true,
+								pagination: {
+									el:  brand_length > 3 ? '.swiper-pagination': false,
+									clickable: true,
+								},
 							},
-							observer: true,
-							observeParents: true
-						});
-					} else if( brand_length > 3 && winWidth < 375 ) {
-						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
-							slidesPerGroup: 3, // 슬라이드 넘어가는 갯수
-							slidesPerView: 3, // 슬라이드 고정값 정하기
-							pagination: {
-								el: '.swiper-pagination',
-								clickable: true,
-							},
-							observer: true,
-							observeParents: true
-						});
-					}
+							// when window width is >= 375px
+							375: {
+								slidesPerGroup: 4, 
+								slidesPerView: 4,
+								allowTouchMove: brand_length > 3 ? true: false,
+								centerInsufficientSlides: true,
+								pagination: {
+									el: brand_length > 4 ? '.swiper-pagination': false,
+									clickable: true,
+								},
+							}
+						},
+						observer: true,
+						observeParents: true,
+						observeSlideChildren: true,
+					});
 				</script>
 
 				<!-- toggle_wrap -->
@@ -174,21 +183,20 @@
 				<!-- //toggle_wrap -->
 				<script>
 					var brand_length2 = $('.list_brand.ty2').find('.swiper-slide').length
-					if( brand_length2 > 12){
-						var swiper = new Swiper('.swiper-container.list_brand.ty2', {
-							direction: 'horizontal',
-							slidesPerView: 4,
-							slidesPerColumn: 3,
-							slidesPerColumnFill: 'row',
-							slidesPerGroup: 4,
-							pagination: {
-								el: '.swiper-pagination',
-								clickable: true,
-							},
-							observer: true,
-							observeParents: true
-						});
-					}
+					var swiper = new Swiper('.swiper-container.list_brand.ty2', {
+						direction: 'horizontal',
+						slidesPerView: 4,
+						slidesPerColumn: 3,
+						slidesPerColumnFill: 'row',
+						slidesPerGroup: 4,
+						allowTouchMove: brand_length2 > 12 ? true: false,
+						pagination: {
+							el:  brand_length2 > 12 ? '.swiper-pagination': false,
+							clickable: true,
+						},
+						observer: true,
+						observeParents: true
+					});
 				</script>
 			</div>
 
