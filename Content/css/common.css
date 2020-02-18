@@ -133,7 +133,7 @@ table.tbl_list .txt_r {padding-right:15px;}
 table.tbl_write {}
 table.tbl_write tbody th, 
 table.tbl_write tbody td {height:38px; padding:4px 8px; border:1px solid #e4e4e4; font-size:1.071rem; color:#555; text-align:left;}
-table.tbl_write tbody th {font-weight:bold; text-align:center; background:#f6f6f6;}
+table.tbl_write tbody th {text-align:center; background:#f6f6f6;}
 table.tbl_write tbody tr:first-child th,
 table.tbl_write tbody tr:first-child td {border-top-color:#CCC;}
 

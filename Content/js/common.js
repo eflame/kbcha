@@ -4,6 +4,8 @@ $(window).on('load', function(){
 	fixedBtmPopup();
 });
 
+
+
 $(function(){  
 	$('input[type=range]').on('input', function(){
 		var val = $(this).val();
@@ -68,14 +70,8 @@ easeInOutBack
 
 
 $(function(){
-	$("a.btn_accodion").on('click',function(){
-		$(this).siblings(".price_list").slideToggle(300);
-	});
-	// function myFunction(event) {
-	// 	var windowHeight = $( window ).height(); //디바이스 크기
-	// 	var y = event.touches[0].screenY; //터치이벤트 위치값
-	// 	alert(y);
-	// }
+	//
+
 });
 
 
@@ -133,3 +129,97 @@ function closeLayer(){
 	removeOverlay();
 	$(".layer_wrap.active").removeClass("active");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(function(){
+	$('.section_btm_fixed .btn_toggle').on('click',function(){
+		var $fixedArea = $(this).parents('.section_btm_fixed');
+		$fixedArea.find('.price_list').slideToggle(300);
+		$fixedArea.toggleClass('active');
+		if ($fixedArea.find('.btn_wrap2').css('display') == 'block'){
+			$fixedArea.find('.btn_wrap2').slideDown();
+		} else {
+			$fixedArea.find('.btn_wrap2').slideDown();
+		}
+	});
+});
+
+
+
+var headerAni = function(){
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 5;
+	var navbarHeight = $('.header').outerHeight();
+
+	$(window).on('scroll', function(event){
+		didScroll = true;
+	});
+
+	setInterval(function(){
+		if (didScroll) {
+			hasScrolled();
+			didScroll = false;
+		}
+	}, 100);
+
+	function hasScrolled(){
+		var st = $(this).scrollTop();
+		if (Math.abs(lastScrollTop - st) <= delta)
+			return;
+		if (st > lastScrollTop && st > navbarHeight) {
+			$('.header').removeClass('header_dw').addClass('header_up');
+			//$('.section_btm_fixed').removeClass('btm');
+			if ($('.section_btm_fixed').hasClass('active') == false){
+				$('.section_btm_fixed .btn_wrap2').slideUp();
+			}
+			
+
+			console.log('dw');
+		} else {
+			if (st + $(window).height() < $(document).height()) {
+				$('.header').removeClass('header_up').addClass('header_dw');
+				//$('.section_btm_fixed').removeClass('btm');
+
+				if ($('.section_btm_fixed').hasClass('active') == false){
+					$('.section_btm_fixed .btn_wrap2').slideUp();
+				}
+				
+
+				console.log('up');
+			}
+		}
+		if (st == 0 || st == $(document).height() - $(window).height()) {
+			$('.header').removeClass('header_up, header_dw');
+			//$('.section_btm_fixed').addClass('btm');
+			$('.section_btm_fixed .btn_wrap2').slideDown();
+
+			console.log('?');
+		}
+		//$(".list_float").text("last:" + lastScrollTop + " , st:" + st + ", " );
+		lastScrollTop = st;
+		
+	}
+}
+
+$(window).on('scroll', headerAni());
