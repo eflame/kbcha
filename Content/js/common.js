@@ -4,8 +4,6 @@ $(window).on('load', function(){
 	fixedBtmPopup();
 });
 
-
-
 $(function(){  
 	$('input[type=range]').on('input', function(){
 		var val = $(this).val();
@@ -115,20 +113,15 @@ function createDim(){
 	}
 }
 
-function removeOverlay(){
+function removeDim(){
 	$("body").css({'overflow' : ''});
 	$(".dim").remove();
 };
 
-function openLayerReserve(obj, btn){
-	$(obj).addClass("active");
-	$(btn).addClass("btnFocus");
-}
 
-function closeLayer(){
-	removeOverlay();
-	$(".layer_wrap.active").removeClass("active");
-}
+
+
+
 
 
 
@@ -164,8 +157,6 @@ $(function(){
 	});
 });
 
-
-
 var headerAni = function(){
 	var didScroll;
 	var lastScrollTop = 0;
@@ -195,7 +186,7 @@ var headerAni = function(){
 			}
 			
 
-			alert('a');
+			console.log('down');
 		} else {
 			if (st + $(window).height() < $(document).height()) {
 				$('.header').removeClass('header_up').addClass('header_dw');

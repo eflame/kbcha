@@ -282,6 +282,7 @@ ver :1.00
 .section_btm_fixed .option_wrap dl.total dt,
 .section_btm_fixed .option_wrap dl.total dd { font-weight: bold; }
 .section_btm_fixed .option_wrap dl.total dd strong { color: #ff7e00; font-size: 16px; font-weight: bold; }
+
 .section_btm_fixed .btn_toggle { position: absolute; left: 0; top: 0; width: 100%; height: 24px; font-size: 0; text-indent: -9999px; border-radius: 21px 21px 0 0; }
 .section_btm_fixed .btn_toggle::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 42px; height: 4px; border-radius: 2px; background-color: #ddd; }
 
