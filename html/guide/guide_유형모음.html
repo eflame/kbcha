@@ -232,7 +232,6 @@
 				<!-- //toggle_wrap -->
 				<script>
 					var brand_length = $('.list_brand.ty1').find('.swiper-slide').length
-					console.log(brand_length);
 					if( brand_length > 4){
 						$('.list_brand.ty1')
 						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
@@ -274,13 +273,10 @@
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_05_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_06_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_05_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_06_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
@@ -288,17 +284,20 @@
 				</div>
 				<!-- //toggle_wrap -->
 				<script>
-					var swiper = new Swiper('.swiper-container.list_brand.ty2', {
-						direction: 'horizontal',
-						slidesPerView: 4,
-						slidesPerColumn: 3,
-						slidesPerColumnFill: 'row',
-						slidesPerGroup: 4,
-						pagination: {
-							el: '.swiper-pagination',
-							clickable: true,
-						},
-					});
+					var brand_length2 = $('.list_brand.ty2').find('.swiper-slide').length
+					if( brand_length2 > 12){
+						var swiper = new Swiper('.swiper-container.list_brand.ty2', {
+							direction: 'horizontal',
+							slidesPerView: 4,
+							slidesPerColumn: 3,
+							slidesPerColumnFill: 'row',
+							slidesPerGroup: 4,
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+							},
+						});
+					}
 				</script>
 			</div>
 

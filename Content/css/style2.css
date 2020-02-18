@@ -13,11 +13,12 @@
 
 /*  */
 .list_brand.swiper-container { padding: 4px 0 30px; }
-.list_brand .swiper-wrapper {  }
 .list_brand .swiper-slide { width: 25%; text-align: left; }
 .list_brand .swiper-slide a { display: inline-block;; width: 69px; height: 69px; border-radius: 8px; box-sizing: border-box; }
 .list_brand .swiper-slide a.state { background-color: #f0f0f1; }
 .list_brand .swiper-slide a.active { border: 1px solid #ffcc00; }
+.list_brand.ty2 .swiper-wrapper { flex-wrap: wrap;  }
+.list_brand.ty2 .swiper-wrapper .swiper-slide:nth-of-type(1n+5) { margin-top: 10px; }
 .list_brand + .swiper-pagination .swiper-pagination-bullets { bottom: 0; }
 .list_brand .ic_plus { position: absolute; left: 54px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px; background-color: #ffc000;  }
 .list_brand .ic_plus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
