@@ -195,7 +195,7 @@ var headerAni = function(){
 			}
 			
 
-			console.log('dw');
+			alert('a');
 		} else {
 			if (st + $(window).height() < $(document).height()) {
 				$('.header').removeClass('header_up').addClass('header_dw');
