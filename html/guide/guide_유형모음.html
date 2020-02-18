@@ -222,8 +222,9 @@
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_72_on.png" alt=""></a></div>
-								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_55_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
@@ -231,17 +232,26 @@
 				</div>
 				<!-- //toggle_wrap -->
 				<script>
-					var brand_length = $('.list_brand.ty1').find('.swiper-slide').length
-					if( brand_length > 4){
-						$('.list_brand.ty1')
+					var winWidth = $(window).width(); // 디바이스 사이즈
+					var brand_length = $('.list_brand.ty1').find('.swiper-slide').length;
+					console.log(winWidth);
+					if( brand_length > 4 && winWidth > 374 ){
 						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
 							slidesPerGroup: 4, // 슬라이드 넘어가는 갯수
 							slidesPerView: 4, // 슬라이드 고정값 정하기
-							//spaceBetween: 10, // 슬라이드 간격
 							pagination: {
 								el: '.swiper-pagination',
 								clickable: true,
-							},
+							}
+						});
+					} else if( brand_length > 3 && winWidth < 375 ) {
+						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
+							slidesPerGroup: 3, // 슬라이드 넘어가는 갯수
+							slidesPerView: 3, // 슬라이드 고정값 정하기
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+							}
 						});
 					}
 				</script>
