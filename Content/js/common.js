@@ -99,3 +99,37 @@ function fixedBtmPopup(){
 		$('.layer_contents').css({'padding-bottom' : btmFixedHgt});
 	};
 }
+
+function openLayerBtm(){
+	var pop = $('.layer_btm_wrap');
+	obj = pop;
+	createDim(pop);
+	pop.slideDown(500, "easeInOutQuart");
+}
+function closeLayerBtm(){
+	$('.layer_btm_wrap').slideUp(300, "easeInOutQuart", function(){
+		$(this).prev('.dim').remove();
+	});
+}
+
+function createDim(){
+	if ($('.dim').length < 1){
+		$('body').css({'overflow' : 'hidden'});
+		$(obj).before('<div class="dim"></div>');
+	}
+}
+
+function removeOverlay(){
+	$("body").css({'overflow' : ''});
+	$(".dim").remove();
+};
+
+function openLayerReserve(obj, btn){
+	$(obj).addClass("active");
+	$(btn).addClass("btnFocus");
+}
+
+function closeLayer(){
+	removeOverlay();
+	$(".layer_wrap.active").removeClass("active");
+}

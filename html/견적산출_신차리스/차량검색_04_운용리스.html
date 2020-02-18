@@ -87,8 +87,8 @@
 									<strong class="tit_legend">판매처 지점</strong>
 									<div class="group_row">
 										<span class="bx_inp">
-											<input type="text" placeholder="지점명/지명" 입력">
-											<a href="#none" class="btn btn_col1 ty1 rnd">검색</a>
+											<input type="text" placeholder="지점명/지명 입력">
+											<a href="#none" class="btn btn_col1 ty1 rnd" onclick="openLayerBtm();">검색</a>
 										</span>
 									</div>
 									<div class="group_row">
@@ -253,6 +253,9 @@
 		</div>
 		
 		<!-- layer_btm_wrap -->
+		<!-- ==============================
+			활성 : .layer_btm_wrap.active
+		============================== -->
 		<div class="layer_btm_wrap ">
 			<div class="layer_btm_header">
 				<div class="bx_tit">
@@ -265,7 +268,7 @@
 			<div class="layer_btm_contents">
 				<div class="opt_list_wrap size1">
 					<ul>
-						<li><a href="#none">지프 JEEP CH0011111 서초전시장</a></li>
+						<li><a href="#none" onclick="closeLayerBtm();">지프 JEEP CH0011111 서초전시장</a></li>
 						<li><a href="#none">지프 JEEP CH0022222서초전시장</a></li>
 						<li><a href="#none">지프 JEEP CH0033333 서초전시장</a></li>
 						<li><a href="#none">지프 JEEP CH0011111 서초전시장</a></li>
