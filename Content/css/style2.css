@@ -31,7 +31,7 @@
 .list_brand .ic_minus { position: absolute; left: 52px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px;background-color: #999; }
 .list_brand .ic_minus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
 
-
+.slick-dots { display: flex; flex-wrap: wrap; }
 
 /* 만기 차량 확인 */
 .expiry_car_wrap { padding: 18px; }

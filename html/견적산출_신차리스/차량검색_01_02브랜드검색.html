@@ -78,34 +78,36 @@
 											<div class="swiper-pagination"></div>
 										</div>
 										<script>
-											var winWidth = $(window).width(); // 디바이스 사이즈
 											var brand_length = $('.list_brand.ty1').find('.swiper-slide').length;
-											console.log(winWidth);
-											if( brand_length > 4 && winWidth > 374 ){
-												var swiper = new Swiper('.swiper-container.list_brand.ty1', {
-													slidesPerGroup: 4, // 슬라이드 넘어가는 갯수
-													slidesPerView: 4, // 슬라이드 고정값 정하기
-													pagination: {
-														el: '.swiper-pagination',
-														clickable: true,
+											var swiper = new Swiper('.swiper-container.list_brand.ty1', {
+												breakpoints: {
+													// when window width is >= 320px
+													320: {
+														slidesPerGroup: 3, 
+														slidesPerView: 3,
+														allowTouchMove: brand_length > 3 ? true: false,
+														centerInsufficientSlides: true,
+														pagination: {
+															el:  brand_length > 3 ? '.swiper-pagination': false,
+															clickable: true,
+														},
 													},
-													observer: true,
-													observeParents: true,
-													observeSlideChildren: true
-												});
-											} else if( brand_length > 3 && winWidth < 375 ) {
-												var swiper = new Swiper('.swiper-container.list_brand.ty1', {
-													slidesPerGroup: 3, // 슬라이드 넘어가는 갯수
-													slidesPerView: 3, // 슬라이드 고정값 정하기
-													pagination: {
-														el: '.swiper-pagination',
-														clickable: true,
-													},
-													observer: true,
-													observeParents: true,
-													observeSlideChildren: true
-												});
-											}
+													// when window width is >= 375px
+													375: {
+														slidesPerGroup: 4, 
+														slidesPerView: 4,
+														allowTouchMove: brand_length > 3 ? true: false,
+														centerInsufficientSlides: true,
+														pagination: {
+															el: brand_length > 4 ? '.swiper-pagination': false,
+															clickable: true,
+														},
+													}
+												},
+												observer: true,
+												observeParents: true,
+												observeSlideChildren: true,
+											});
 										</script>
 									</div>
 								</div>
@@ -120,87 +122,83 @@
 											<span class="btn"><a href="#none" class="btn_toggle open">펼쳐보기</a></span>
 										</div>
 									</div>
-									<div class="toggle_con">
-										<div class="toggle_con non_pad">
-											<div class="swiper-container list_brand ty2">
-												<div class="swiper-wrapper">
-													<!-- 기본상태 on 이미지만 바뀜 -->
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_01_on.png" alt=""></a></div>
-													<!-- 기본상태 off 이미지만 바뀜 -->
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_01_off.png" alt=""></a></div>
-													<!-- 선택시 -->
-													<div class="swiper-slide"><a href="#none" class="active"><img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
-													<!-- 추가및삭제 -->
-													<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_02_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_03_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_05_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_06_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_11_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_12_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_13_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_14_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_15_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_16_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_17_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_18_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_19_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_20_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_21_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_22_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_23_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_24_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_25_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_26_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_27_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_28_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_29_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_30_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_31_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_32_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_33_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_34_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_35_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_36_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_37_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_38_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_39_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_40_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_41_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_42_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_43_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_44_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_45_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_46_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_47_on.png" alt=""></a></div>
-													<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_48_on.png" alt=""></a></div>
-												</div>
-												<div class="swiper-pagination"></div>
+									<div class="toggle_con non_pad">
+										<div class="swiper-container list_brand ty2">
+											<div class="swiper-wrapper">
+												<!-- 기본상태 on 이미지만 바뀜 -->
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_01_on.png" alt=""></a></div>
+												<!-- 기본상태 off 이미지만 바뀜 -->
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_01_off.png" alt=""></a></div>
+												<!-- 선택시 -->
+												<div class="swiper-slide"><a href="#none" class="active"><img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
+												<!-- 추가및삭제 -->
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_02_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_03_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_05_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_06_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_11_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_12_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_13_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_14_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_15_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_16_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_17_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_18_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_19_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_20_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_21_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_22_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_23_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_24_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_25_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_26_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_27_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_28_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_29_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_30_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_31_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_32_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_33_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_34_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_35_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_36_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_37_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_38_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_39_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_40_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_41_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_42_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_43_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_44_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_45_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_46_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_47_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_48_on.png" alt=""></a></div>
 											</div>
-
-											<script>
-												var brand_length2 = $('.list_brand.ty2').find('.swiper-slide').length
-												if( brand_length2 > 12){
-													var swiper = new Swiper('.swiper-container.list_brand.ty2', {
-														direction: 'horizontal',
-														slidesPerView: 4,
-														slidesPerColumn: 3,
-														slidesPerColumnFill: 'row',
-														slidesPerGroup: 4,
-														pagination: {
-															el: '.swiper-pagination',
-															clickable: true,
-														},
-														observer: true,
-														observeParents: true,
-														observeSlideChildren: true
-													});
-												}
-											</script>
+											<div class="swiper-pagination"></div>
 										</div>
+
+										<script>
+											var brand_length2 = $('.list_brand.ty2').find('.swiper-slide').length
+											var swiper = new Swiper('.swiper-container.list_brand.ty2', {
+												direction: 'horizontal',
+												slidesPerView: 4,
+												slidesPerColumn: 3,
+												slidesPerColumnFill: 'row',
+												slidesPerGroup: 4,
+												allowTouchMove: brand_length2 > 12 ? true: false,
+												pagination: {
+													el:  brand_length2 > 12 ? '.swiper-pagination': false,
+													clickable: true,
+												},
+												observer: true,
+												observeParents: true
+											});
+										</script>
 									</div>
 								</div>
 							</div>
