@@ -4,7 +4,7 @@ $(window).on('load', function(){
 	fixedBtmPopup();
 });
 
-$(function(){
+$(function(){  
 	$('input[type=range]').on('input', function(){
 		var val = $(this).val();
 		$(this).css('background', 'linear-gradient(to right, #ffba00 0%, #ffba00 '+ val +'%, #DDD ' + val + '%, #DDD 100%)');
@@ -15,7 +15,6 @@ $(function(){
 		$(this).children('.tab_tit').find('li a').each(function (i) {
 			$(this).parent('li').attr('idx', i);
 		}).on('click', function(obj){
-			console.log('a');
 			var n = $(this).parent('li').attr('idx');
 			var $tab = $(this).closest('.tab_wrap');
 			var $tabTit = $tab.children('.tab_tit');
@@ -45,6 +44,14 @@ $(function(){
 		}
 	});
 });
+
+/*
+easeOutElastic
+easeInOutQuart
+easeOutBounce
+easeOutQuad
+easeInOutBack
+*/
 
 
 

@@ -35,16 +35,6 @@
 
 			<div class="section">
 				<div class="article">
-					<ol class="step_progress">
-						<li class="active">1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li>5</li>
-					</ol>
-				</div>
-
-				<div class="article">
 					<h5 class="tit_caption">타이틀</h5>
 					<table class="tbl_write">
 						<colgroup>
@@ -158,8 +148,8 @@
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
 										<li><a href="#none">HEV</a></li>
+										<li><a href="#none">기타</a></li>
 									</ul>
 								</div>
 							</div>
@@ -199,8 +189,8 @@
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
 										<li><a href="#none">HEV</a></li>
+										<li><a href="#none">기타</a></li>
 									</ul>
 								</div>
 							</div>
@@ -254,8 +244,7 @@
 						<strong>차종 선택(원)</strong>
 					</div>
 					<div class="bx_side">
-						<span class="tit_side">금액</span>
-						<a href="#none" class="btn_ic2_sorting">정렬</a>
+						<span class="bx_sorting"><span class="tit">금액 오름차순</span><a href="#none" class="btn_ic2_sorting">정렬</a></span>
 					</div>
 				</div>
 			
@@ -375,8 +364,8 @@
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
 										<li><a href="#none">HEV</a></li>
+										<li><a href="#none">기타</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
@@ -393,8 +382,8 @@
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
 										<li><a href="#none">HEV</a></li>
+										<li><a href="#none">기타</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
@@ -411,8 +400,8 @@
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
 										<li><a href="#none">HEV</a></li>
+										<li><a href="#none">기타</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
@@ -610,8 +599,8 @@
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
 										<li><a href="#none">HEV</a></li>
+										<li><a href="#none">기타</a></li>
 									</ul>
 								</div>
 								<div class="group_row">
@@ -691,10 +680,27 @@
 					</div>
 					<div class="toggle_con">
 						<div class="article">
-							<div class="bx_notice">
-								<p>‘위탁사 탁송’</p>
-								<p>당사(KB캐피탈)에서 모든 탁송 과정을 수행합니다.</p>									
+							<div class="bx_notice2">
+								<strong class="tit">위탁사 탁송</strong>
+								<p class="txt">당사(KB캐피탈)에서 모든 탁송 과정을 <br>수행합니다.</p>
 							</div>
+							<div class="bx_notice2 ic">
+								<strong class="tit">위탁사 탁송</strong>
+								<p class="txt">당사(KB캐피탈)에서 모든 탁송 과정을 <br>수행합니다.</p>
+							</div>
+							<div class="bx_notice2 ic">
+								<strong class="tit">메이커 탁송 추가/위탁사 탁송</strong>
+								<p class="txt">당사(KB캐피탈)에서 모든 탁송 과정을 <br>수행하지만, 추가 탁송료가 발생합니다.</p>
+							</div>
+							<div class="bx_notice2 ic">
+								<strong class="tit">1차 메이커 탁송/2차 위탁사 탁송</strong>
+								<p class="txt">메이커 사에서 KB집하장으로 차량 탁송 후, <br>KB집하장에서 고객 배송지까지 탁송합니다.</p>
+							</div>
+							<div class="bx_notice2 ic">
+								<strong class="tit">번호판 배송</strong>
+								<p class="txt">당사(KB캐피탈)에서 차량 등록만 관여하고, <br>번호판만 차량이 있는 곳으로 배송합니다.</p>
+							</div>
+							
 						</div>
 
 						<div class="article">
@@ -721,6 +727,49 @@
 									<tr>
 										<td><input type="checkbox"></td>
 										<td class="txt_l">기본옵션</td>
+										<td class="txt_r">500,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="article">
+							<h5 class="tit_caption">기타용품</h5>
+							<table class="tbl_list">
+								<colgroup>
+									<col style="width: 40px">
+									<col style="width: 40px">
+									<col style="width: auto">
+									<col style="width: 35%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th><input type="checkbox"></th>
+										<th colspan="2" class="txt_l">용품명</th>
+										<th class="txt_r">가격(원)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td colspan="2" class="txt_l">기타용품1</td>
+										<td class="txt_r">500,000</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><input type="checkbox"></td>
+										<td class="txt_l">기타용품1-1</td>
+										<td class="txt_r">500,000</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><input type="checkbox"></td>
+										<td class="txt_l">기타용품1-2</td>
+										<td class="txt_r">500,000</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td colspan="2" class="txt_l">기본옵션</td>
 										<td class="txt_r">500,000</td>
 									</tr>
 								</tbody>

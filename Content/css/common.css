@@ -73,7 +73,9 @@ a.btn_txt {font-family:"KBFGTextB"; font-size:0.714rem; font-weight:bold; color:
 .btn_ic2_del {display:inline-block; width:30px; height:30px; box-sizing:border-box;text-indent:-9999rem; vertical-align:middle; background-size:auto 10.5px; background-repeat:no-repeat; background-position:center center; background-image:url("../images/icon/btn_del.png");}
 
 
-
+.bx_sorting {}
+.bx_sorting .tit {display:inline-block; margin-right:8px;}
+.bx_sorting .btn_ic2_sorting {}
 
 
 /* 목록 ========================================================================================= */
