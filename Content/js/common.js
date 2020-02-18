@@ -12,15 +12,13 @@ $(window).on('load', function(){
 });
 
 $(function(){
-	
-
 	$('input[type=range]').on('input', function(){
 		var val = $(this).val();
 		$(this).css('background', 'linear-gradient(to right, #ffba00 0%, #ffba00 '+ val +'%, #DDD ' + val + '%, #DDD 100%)');
 	});
 
 	//tab : event
-	$('.tab_wrap').each(function () {
+	$('.layerTab.tab_wrap').each(function () {
 		$(this).children('.tab_tit').find('li a').each(function (i) {
 			$(this).parent('li').attr('idx', i);
 		}).on('click', function(obj){
@@ -34,6 +32,7 @@ $(function(){
 			$tabCon.eq(n).focus().addClass('active');
 		});
 	});
+
 	$('.list_tog_btn a').on('click', function(){
 		var $btns = $(this).parent('li').siblings().find('a');
 		$(this).addClass('active');
@@ -44,7 +43,7 @@ $(function(){
 		var $toggle = $(this).closest('.toggle_wrap');
 		if($(this).hasClass('open')){
 			$(this).removeClass('open').addClass('close').text('접어보기');
-			$toggle.addClass('active');
+			$toggle.find('.toggle_con').slideDown();
 		} else if($(this).hasClass('close')) {
 			$(this).removeClass('close').addClass('open').text('펼쳐보기');
 			$toggle.removeClass('active');

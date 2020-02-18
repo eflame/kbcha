@@ -272,8 +272,7 @@ ver :1.00
 
 
 
-.section_btm_fixed {position:fixed; left:0; right:0; bottom:0;}
-.section_btm_fixed {}
+.section_btm_fixed {position:fixed; z-index:9; left:0; right:0; bottom:0;}
 
 /* 버튼 */
 .section_btm_fixed .btn_wrap2 { display: flex; }
