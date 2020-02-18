@@ -216,8 +216,52 @@
 						</div>
 					</div>
 					<div class="toggle_con">
-						<div class="swiper-container">
-							<div class="list_brand swiper-wrapper">
+						<div class="swiper-container list_brand ty1">
+							<div class="swiper-wrapper">
+								<!-- 추가및삭제 -->
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_72_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_55_on.png" alt=""></a></div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+				<!-- //toggle_wrap -->
+				<script>
+					var brand_length = $('.list_brand.ty1').find('.swiper-slide').length
+					console.log(brand_length);
+					if( brand_length > 4){
+						$('.list_brand.ty1')
+						var swiper = new Swiper('.swiper-container.list_brand.ty1', {
+							slidesPerGroup: 4, // 슬라이드 넘어가는 갯수
+							slidesPerView: 4, // 슬라이드 고정값 정하기
+							//spaceBetween: 10, // 슬라이드 간격
+							pagination: {
+								el: '.swiper-pagination',
+								clickable: true,
+							},
+						});
+					}
+				</script>
+
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty1 active">
+					<div class="toggle_top">
+						<div class="bx_tit">
+							<strong>선호브랜드</strong>
+							<span>등록순</span>
+						</div>
+						<div class="bx_side">
+							<span class="btn side"><a href="#none" class="btn_col1 rnd ty1">설정</a></span>
+							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
+						</div>
+					</div>
+					<div class="toggle_con">
+						<div class="swiper-container list_brand ty2">
+							<div class="swiper-wrapper">
 								<!-- 기본상태 on 이미지만 바뀜 -->
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_01_on.png" alt=""></a></div>
 								<!-- 기본상태 off 이미지만 바뀜 -->
@@ -232,23 +276,32 @@
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
 								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_05_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_06_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
+								<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
 							</div>
 							<div class="swiper-pagination"></div>
 						</div>
 					</div>
 				</div>
 				<!-- //toggle_wrap -->
+				<script>
+					var swiper = new Swiper('.swiper-container.list_brand.ty2', {
+						direction: 'horizontal',
+						slidesPerView: 4,
+						slidesPerColumn: 3,
+						slidesPerColumnFill: 'row',
+						slidesPerGroup: 4,
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true,
+						},
+					});
+				</script>
 			</div>
-			<script>
-				var swiper = new Swiper('.swiper-container', {
-					slidesPerView: 4,
-					spaceBetween: 36,
-					pagination: {
-						el: '.swiper-pagination',
-						clickable: true,
-					},
-				});
-			</script>
+
 			<div class="section">
 				<div class="list_top">
 					<div class="bx_tit">

@@ -10,21 +10,19 @@
 
 .tit_caption { margin-bottom: 6px; }
 
-/* 버튼 */
-.btn_wrap { display: flex; }
-.btn_wrap > * { flex: 1;  }
-.btn_wrap.fixed { position: fixed; left: 0; bottom: 0; width: 100%; }
 
 /*  */
-.list_brand {  display: grid; grid-template-columns: 69px 69px 69px 69px; gap: 9px; justify-content: center;  }
-.list_brand li { position: relative; }
-.list_brand li a { display: block; width: 69px; height: 69px; border-radius: 8px; box-sizing: border-box; }
-.list_brand li a.state { background-color: #f0f0f1; }
-.list_brand li a.active { border: 1px solid #ffcc00; }
-.list_brand .ic_plus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px; background-color: #ffc000;  }
+.list_brand.swiper-container { padding: 4px 0 30px; }
+.list_brand .swiper-wrapper {  }
+.list_brand .swiper-slide { width: 25%; text-align: left; }
+.list_brand .swiper-slide a { display: inline-block;; width: 69px; height: 69px; border-radius: 8px; box-sizing: border-box; }
+.list_brand .swiper-slide a.state { background-color: #f0f0f1; }
+.list_brand .swiper-slide a.active { border: 1px solid #ffcc00; }
+.list_brand + .swiper-pagination .swiper-pagination-bullets { bottom: 0; }
+.list_brand .ic_plus { position: absolute; left: 54px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px; background-color: #ffc000;  }
 .list_brand .ic_plus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
 .list_brand .ic_plus::before { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 2px; height: 10px; background-color: #fff; }
-.list_brand .ic_minus { position: absolute; right: -9px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px;background-color: #999; }
+.list_brand .ic_minus { position: absolute; left: 54px; top: -4px; width: 20px; height: 20px; font-size: 0; border-radius: 10px;background-color: #999; }
 .list_brand .ic_minus::after { display: block; content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 10px; height: 2px; background-color: #fff; }
 
 
@@ -119,17 +117,5 @@
 .total_pay_area { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; padding: 0 18px; height: 42px; color: #555; font-size: 14px; line-height: 16px; border-radius: 2px; background-color: #f4f4f4; }
 .total_pay_area dt { padding-left: 18px; background: url('../images/icon/ic_cash.png') no-repeat 0 0; background-size: 15px auto; }
 .total_pay_area dd strong { color: #ffba00; font-size: 16px; font-weight: bold; }
-
-/* 옵션 가격표 */
-.option_price_wrap { position: fixed; left: 0; bottom: 57px; padding: 30px 18px 0;  width: 100%; border-radius: 21px 21px 0 0; background-color: #fff; box-sizing: border-box; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
-.option_price_wrap > .price_list { display: none; padding-bottom: 12px; border-bottom: 1px solid #ececec; }
-.option_price_wrap dl { display: flex; line-height: 25px; align-items: center; justify-content: space-between; color: #333; font-size: 14px; }
-.option_price_wrap dt::before { display: inline-block; content: ""; margin-right: 9px; width: 3px; height: 3px; vertical-align: middle; background-color: #000; }
-.option_price_wrap dl.total { line-height: 52px; }
-.option_price_wrap dl.total dt,
-.option_price_wrap dl.total dd { font-weight: bold; }
-.option_price_wrap dl.total dd strong { color: #ffba00; font-size: 16px; font-weight: bold; }
-.option_price_wrap > .btn_accodion { position: absolute; left: 0; top: 0; width: 100%; height: 24px; font-size: 0; text-indent: -9999px; border-radius: 21px 21px 0 0; }
-.option_price_wrap > .btn_accodion::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 42px; height: 4px; border-radius: 2px; background-color: #ddd; }
 
 

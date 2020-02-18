@@ -89,7 +89,7 @@ ver :1.00
 .toggle_wrap.ty1 .toggle_top .bx_side .side:after {}
 .toggle_wrap.ty1 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
 .toggle_wrap.ty1 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
-.toggle_wrap.ty1 .toggle_con {padding:24px 18px;}
+.toggle_wrap.ty1 .toggle_con {padding: 10px 10px 0 18px;}/* 슬라이더 부분때문에 우측 10px 적용 협의필요 */
 
 .toggle_wrap.ty2 {margin-bottom:1px; background-color:#FFF;}
 .toggle_wrap.ty2.active {margin-bottom:0;}
