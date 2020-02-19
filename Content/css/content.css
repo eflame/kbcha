@@ -202,7 +202,7 @@ ver :1.00
 .list_tog_btn.ty1 li {margin-top:-1px;}
 .list_tog_btn.ty1 li a {display:flex; align-items:center; position:relative; padding:15px 10px; border-bottom:1px solid #DDD;}
 .list_tog_btn.ty1 li a.active {z-index:1; border:1px solid #ffc000;}
-.list_tog_btn.ty1 li a.active:after {content:"선택"; display:inline-block; width:15px; height:11px; margin:-2px 0 0 10px; font-size:0; background:url("../../Content/images/icon/check_on.png") no-repeat center center; background-size:auto 11px;}
+.list_tog_btn.ty1 li a.active:after {content:"선택"; display:inline-block; width:15px; height:11px; margin:-2px 0 0 10px; font-size:0; background:url("../../Content/images/icon/ic_selected.png") no-repeat center center; background-size:16px auto;}
 .list_tog_btn.ty1 li a strong {flex:1 1 auto; line-height:1.5; font-size:0.929rem}
 .list_tog_btn.ty1 li a span {flex:none;}
 
