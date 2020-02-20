@@ -151,7 +151,8 @@
 .field_wrap:last-child {margin-bottom:0;}
 .field_wrap.bdr {padding:20px 0 0; border-top:1px solid #ededed;}
 .toggle_wrap.ty1 .toggle_con .field_wrap.bdr:first-child {margin-top:-24px;}
-.field {flex:1 1 0; align-items:center; margin:0 2px;}
+.field_wrap > .field { margin:0 2px; }
+.field {flex:1 1 0; align-items:center;}
 .field .tit_legend {margin-bottom:6px; font-family:"KBFGTextB"; font-size:0.857rem;}
 .field .tit_legend ~ .txt_side {float:right; font-family:"KBFGTextB"; font-size:0.857rem;}
 .field .tit_legend ~ .txt_side.big {font-size:1.071rem;}
