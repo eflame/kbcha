@@ -45,23 +45,38 @@ input::-ms-clear {display:none;}
 input[type="text"],
 input[type="password"],
 input[type="number"],
-input[type="tel"] {height:42px; padding:0 10px; border:1px solid #DDD; color:#333; font-size:1.143rem;}
+input[type="tel"],
+input[type="date"] {height:42px; padding:0 10px; border:1px solid #DDD; color:#333; font-size:1.143rem;}
 
 input[type="text"]:read-only,
 input[type="password"]:read-only,
 input[type="number"]:read-only,
-input[type="tel"]:read-only {color:#ababab !important; background-color:#f6f6f6 !important;}
+input[type="tel"]:read-only,
+input[type="date"]:read-only {color:#ababab !important; background-color:#f6f6f6 !important;}
 
 input[type="text"]:disabled,
 input[type="password"]:disabled,
 input[type="number"]:disabled,
-input[type="tel"]:disabled {color:#ababab !important; background-color:#f6f6f6 !important;}
+input[type="tel"]:disabled,
+input[type="date"]:disabled {color:#ababab !important; background-color:#f6f6f6 !important;}
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {display:none;}
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button {display:none;}
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {color:#2c3e50;}
+/* A few custom styles for date inputs */
+input[type="date"] {display:inline-block !important; visibility:visible !important;}
+input[type="date"]:focus {box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;}
 
 ::placeholder {color:#ababab;}
 
-button{height:42px; border:1px solid #DDD; cursor:pointer; background-color:#fff;}
+input[type="button"],
+input[type="submit"],
+button {height:42px; padding:0 5px; border:1px solid #DDD; cursor:pointer; background-color:#fff;}
 button > * {position:relative;} /* 클릭시 문자 흔들림 방지(ie) */
-::-webkit-file-  -button {cursor:pointer;}
+::-webkit-file- -button {cursor:pointer;}
 
 select {height:42px; padding:0 30px 0 10px; border:1px solid #DDD; font-size:1.143rem; background:#FFF url("../../Content/images/common/form_selectbox.png") no-repeat center right 10px; background-size:10px 5px;}
 select:hover, 
