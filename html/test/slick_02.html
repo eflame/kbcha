@@ -12,6 +12,48 @@
 	<script src="../../Content/js/swiper.min.js"></script>
 	<script src="../../Content/js/slick.min.js"></script>
 	<script src="../../Content/js/common.js"></script>
+	<script>
+		$(function(){  
+			$(".slick_brand1").slick({
+				dots: true,
+				dotsClass: 'aaa',
+				arrows: false,
+				infinite: false,
+				slidesToShow: 4,
+				slidesToScroll: 4,
+			});
+
+			$(".slick_brand2").slick({
+				dots: true,
+				rows: 3,
+				infinite: false,
+				slidesPerRow: 4,
+
+				responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesPerRow: 3,
+                        rows: 3,
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        rows: 1,
+                        slidesPerRow: 1,
+                        slidesToScroll: 1,
+                        slidesToShow: 1,
+                        dots: true
+                    }
+                }
+            ]
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -40,7 +82,7 @@
 							<span class="btn side"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
-					<div class="toggle_con">
+					<div class="toggle_con non_pad">
 						<div class="slick_brand1 list_brand2">
 							<div>
 								<a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a>
@@ -67,7 +109,7 @@
 
 				<!-- toggle_wrap -->
 				<div class="toggle_wrap ty1 active">
-					<div class="toggle_top">
+					<div class="toggle_top ">
 						<div class="bx_tit">
 							<strong>수입차</strong>
 							<span>이름순</span>
@@ -76,7 +118,7 @@
 							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
-					<div class="toggle_con">
+					<div class="toggle_con non_pad">
 						<div class="slick_brand2 list_brand2">
 							<div>
 								<a href="#none"><img src="../../Content/images/brand/brand_logo_01_on.png" alt=""></a>

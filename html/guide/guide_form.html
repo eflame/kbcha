@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KB 캐피탈</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../Content/css/import.css">
+	<script src="../../Content/js/jquery-1.12.3.min.js"></script>
+	<script src="../../Content/js/jquery-ui.min.js"></script>
+	<script src="../../Content/js/jquery.easing.min.js"></script>
+	<script src="../../Content/js/swiper.min.js"></script>
+	<script src="../../Content/js/slick.min.js"></script>
+	<script src="../../Content/js/common.js"></script>
+</head>
+
+<body>
+	<!-- contents -->
+	<div id="contents">
+		<div class="pg_guide_tit">
+			<h2 class="tit">폼 가이드</h2>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>Input 입력</h3>
+			<div class="inner">
+				<h4>Input["text"]</h4>
+				<input type="text" placeholder="압력">
+				<input type="text" disabled placeholder="압력">
+				<input type="text" readonly placeholder="압력">
+				<input type="text" class="txt_r" placeholder="압력">
+			</div>
+			<div class="inner">
+				<h4>Input["password"]</h4>
+				<input type="password" placeholder="압력">
+				<input type="password" disabled placeholder="압력">
+				<input type="password" readonly placeholder="압력">
+			</div>
+			<div class="inner">
+				<h4>Input["date"]</h4>
+				<input type="date" placeholder="압력" placeholder="ddd" value="xxx" min="yyy" max="zzz">
+				<input type="date" disabled placeholder="압력">
+				<input type="date" readonly placeholder="압력">
+			</div>
+			<div class="inner">
+				<h4>Input["number"]</h4>
+				<input type="number" placeholder="압력">
+				<input type="number" disabled placeholder="압력">
+				<input type="number" readonly placeholder="압력">
+			</div>
+			<div class="inner">
+				<h4>Input["tel"]</h4>
+				<input type="tel" placeholder="압력">
+				<input type="tel" disabled placeholder="압력">
+				<input type="tel" readonly placeholder="압력">
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>Select</h3>
+			<div class="inner">
+				<select>
+					<option selected disabled hidden>제목</option>
+					<option>option 01</option>
+				</select>
+				<input type="text" placeholder="압력">
+				<select disabled>
+					<option selected disabled hidden>제목</option>
+					<option>option 01</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>Checkbox, Radio</h3>
+			<div class="inner">
+				<div class="group_rdo">
+					<label><input type="checkbox" checked>체크1</label>
+					<label><input type="checkbox">체크2</label>
+					<label><input type="checkbox">체크3</label>
+				</div>
+				<div class="group_rdo">
+					<label><input type="radio" checked>라디오1</label>
+					<label><input type="radio">라디오2</label>
+					<label><input type="radio">라디오3</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>button</h3>
+			<div class="inner">
+				<button>button</button>
+				<input type="button" value="input button">
+				<input type="submit" value="input submit">
+			</div>
+		</div>
+		<div class="article_pg_guide">
+			<h3>input file</h3>
+			<div class="inner">
+				<label><input type="file" id="file01" /></label>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>조합</h3>
+			<div class="inner">
+				<select>
+					<option selected disabled hidden>DEFAULT</option>
+					<option>option 01</option>
+				</select>
+				<input type="text" placeholder="압력">
+				<input type="number" placeholder="압력">
+				<input type="date" placeholder="압력">
+				<input type="tel" placeholder="압력">
+				<button>button</button>
+				<input type="button" value="input button">
+				<input type="submit" value="input submit">
+				<label><input type="checkbox">체크2</label>
+				<label><input type="radio">라디오3</label>
+			</div>
+		</div>
+
+		<div class="article_pg_guide">
+			<h3>textarea</h3>
+			<div class="inner">
+				<div class="bx_textarea">
+					<textarea cols="10" rows="3" placeholder="입력"></textarea>
+					<span class="txt_count">0 / 220 (한글110자 / 영문 2200자)</span>
+				</div>
+			</div>
+			<div class="inner">
+				<textarea cols="10" rows="3" disabled>가나다라 마바사</textarea>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
