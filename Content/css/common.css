@@ -51,7 +51,7 @@ ver : 1.00
 /* round */
 .btn_col1.rnd, .btn_col2.rnd, .btn_col3.rnd, .btn_col4.rnd {border-radius:57px;}
 /* disabled */
-.btn_col1.disabled, .btn_col2.disabled, .btn_col3.disabled, .btn_col4.disabled {border-color:#ADADAD; color:#ffffff !important; cursor:default; pointer-events:none; background-color:#ADADAD;}
+.btn_col1.disabled, .btn_col2.disabled, .btn_col3.disabled, .btn_col4.disabled { color:#ffffff !important; cursor:default; pointer-events:none; border-color:#ddd; background-color:#ddd;}
 /* active */cv
 .btn_col1.disabled.active, .btn_col2.disabled.active, .btn_col3.disabled.active, .btn_col4.disabled.active {cursor:pointer; pointer-events:inherit;}
 
