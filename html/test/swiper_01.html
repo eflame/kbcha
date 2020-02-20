@@ -207,10 +207,50 @@
 			mySwiper.removeSlide($(this).parent().index());
 		})
 
-		
+
+		// Prev button
+		jQuery('#lifestream').find('.lifestream-prev').click(function (e) {
+			$lifestreamswiper.swipeNext();
+		});
+
+		// Next button
+		jQuery('#lifestream').find('.lifestream-next').click(function (e) {
+			$lifestreamswiper.swipePrev();
+		});
 
 
-		
+
+
+
+
+
+
+		/*
+
+		var mySwiper = new Swiper('.list_brand2.ty1.swiper-container', {
+			slidesPerGroup: 3, 
+			slidesPerView: 3,
+
+			loopFillGroupWithBlank: true,
+			loop: true,
+			loopedSlides: 2,
+
+			direction: 'horizontal',
+
+			observer: true,
+			observeParents: true,
+			observeSlideChildren: true,
+
+			allowTouchMove: brand_length > 3 ? true: false,
+			centerInsufficientSlides: true,
+			pagination: {
+				el:  brand_length > 3 ? '.swiper-pagination': false,
+				clickable: true,
+			},
+		});
+		*/
+
+
 
 		/*
 		var brand_length = $('.list_brand.ty1').find('.swiper-slide').length;

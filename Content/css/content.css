@@ -1,9 +1,12 @@
 @charset "utf-8";
 
-/* ==============================
-ver :1.00
-============================== */
 
+
+.swiper-pagination {position:static; margin:15px 0; padding:0;}
+
+.swiper-pagination-bullet {opacity:1; background:#EEE;}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {background:#ffcc00;}
 
 
 /* main ========================================================================================= */
@@ -93,8 +96,8 @@ ver :1.00
 .toggle_wrap .toggle_top .btn_toggle {display:inline-block; width:30px; height:30px; font-size:0; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
 .toggle_wrap .toggle_con {display:none;}
 .toggle_wrap.active .toggle_con {display:block;}
-.toggle_wrap.active .toggle_con.non_pad {padding:0;}
-.toggle_wrap.active .toggle_con .list_opt {padding:5px 18px 10px;}
+.toggle_wrap .toggle_con.non_pad {padding:0 !important;}
+.toggle_wrap .toggle_con .list_opt {padding:5px 18px 10px;}
 
 .toggle_wrap.ty1 {margin-bottom:10px; border-radius:4px; box-shadow:0 0 5px rgba(0, 0, 0, .08); background-color:#FFF;}
 .toggle_wrap.ty1 .toggle_top {padding:10px 18px;}

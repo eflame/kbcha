@@ -32,6 +32,7 @@
 							<li><a href="#none" class="active"><span>키워드 검색</span></a></li>
 							<li><a href="#none" class=""><span>브랜드 검색</span></a></li>
 						</ul>
+						<span class="bar"></span>
 					</div>
 
 					<div class="tab_con_wrap">
@@ -89,11 +90,37 @@
 										</div>
 									</div>
 									<div class="toggle_con non_pad">
-										<ul class="list_tog_btn ty1">
-											<li><a href="#none"><strong>현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
-											<li><a href="#none" class="active"><strong>현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
-											<li><a href="#none"><strong>현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
-										</ul>
+										<div class="swiper-container swiperSearchKeyword">
+											<div class="swiper-wrapper list_tog_btn ty1">
+												<li class="swiper-slide"><a href="#none"><strong>1현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+												<li class="swiper-slide"><a href="#none"><strong>2현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+												<li class="swiper-slide"><a href="#none"><strong>3현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+
+												<li class="swiper-slide"><a href="#none"><strong>4현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+												<li class="swiper-slide"><a href="#none"><strong>5현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+												<li class="swiper-slide"><a href="#none"><strong>6현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+												<li class="swiper-slide"><a href="#none"><strong>7현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+												<li class="swiper-slide"><a href="#none"><strong>8현대 2017 포터 현대 포터2 초장축 더블캡<br>내장 탑차 SUP</strong><span>3,040 만원</span></a></li>
+											</div>
+											<div class="swiper-pagination"></div>
+										</div>
+
+										<script>
+											var brand_length2 = $('.swiperSearchKeyword').find('.swiper-slide').length;
+											var swiper = new Swiper('.swiperSearchKeyword', {
+												direction: 'horizontal',
+												slidesPerView: 1,
+												slidesPerColumn: 3,
+												slidesPerColumnFill: 'row',
+												slidesPerGroup: 1,
+												pagination: {
+													el:  brand_length2 > 3 ? '.swiper-pagination': false,
+													clickable: true,
+												},
+												observer: true,
+												observeParents: true
+											});
+										</script>
 									</div>
 								</div>
 								<div class="article_btm_area">

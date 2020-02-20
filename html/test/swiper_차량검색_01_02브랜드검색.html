@@ -32,7 +32,6 @@
 							<li><a href="#none" class=""><span>키워드 검색</span></a></li>
 							<li><a href="#none" class="active"><span>브랜드 검색</span></a></li>
 						</ul>
-						<span class="bar"></span>
 					</div>
 
 					<div class="tab_con_wrap">
@@ -66,7 +65,7 @@
 										</div>
 									</div>
 									<div class="toggle_con non_pad">
-										<div class="swiper-container list_brand ty1">
+										<div class="swiper-container list_brand swiperBrand1">
 											<div class="swiper-wrapper">
 												<!-- 추가및삭제 -->
 												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_01_on.png" alt=""></a></div>
@@ -76,21 +75,25 @@
 												
 												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_06_on.png" alt=""></a></div>
 												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
+
 											</div>
 											<div class="swiper-pagination"></div>
+										
 										</div>
 										<script>
-											var brand_length = $('.list_brand.ty1').find('.swiper-slide').length;
-											var swiper = new Swiper('.swiper-container.list_brand.ty1', {
+											var brand_length = $('.swiperBrand1').find('.swiper-slide').length;
+											var swiper = new Swiper('.swiperBrand1', {
+												loop: true,
+												loopFillGroupWithBlank: true,
+												observer: true,
+												observeParents: true,
+												observeSlideChildren: true,
 												breakpoints: {
 													// when window width is >= 320px
 													320: {
-														slidesPerGroup: 3, 
 														slidesPerView: 3,
+														slidesPerGroup: 3, 
 														allowTouchMove: brand_length > 3 ? true: false,
-														centerInsufficientSlides: true,
 														pagination: {
 															el:  brand_length > 3 ? '.swiper-pagination': false,
 															clickable: true,
@@ -98,19 +101,15 @@
 													},
 													// when window width is >= 375px
 													375: {
-														slidesPerGroup: 4, 
 														slidesPerView: 4,
-														allowTouchMove: brand_length > 3 ? true: false,
-														centerInsufficientSlides: true,
+														slidesPerGroup: 4, 
+														allowTouchMove: brand_length > 4 ? true: false,
 														pagination: {
 															el: brand_length > 4 ? '.swiper-pagination': false,
 															clickable: true,
 														},
 													}
 												},
-												observer: true,
-												observeParents: true,
-												observeSlideChildren: true,
 											});
 										</script>
 									</div>
@@ -127,20 +126,20 @@
 										</div>
 									</div>
 									<div class="toggle_con non_pad">
-										<div class="swiper-container list_brand ty2">
+										<div class="swiper-container list_brand swiperBrand2">
 											<div class="swiper-wrapper">
 												<!-- 기본상태 on 이미지만 바뀜 -->
-												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_44_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none">1<img src="../../Content/images/brand/brand_logo_44_on.png" alt=""></a></div>
 												<!-- 기본상태 off 이미지만 바뀜 -->
-												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_45_off.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none">2<img src="../../Content/images/brand/brand_logo_45_off.png" alt=""></a></div>
 												<!-- 선택시 -->
-												<div class="swiper-slide"><a href="#none" class="active"><img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="active">3<img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
 												<!-- 추가및삭제 -->
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span><img src="../../Content/images/brand/brand_logo_46_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span><img src="../../Content/images/brand/brand_logo_47_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_48_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_49_on.png" alt=""></a></div>
-												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_plus">추가</span>4<img src="../../Content/images/brand/brand_logo_46_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none" class="state"><span class="ic_minus">제거</span>5<img src="../../Content/images/brand/brand_logo_47_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none">6<img src="../../Content/images/brand/brand_logo_48_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none">7<img src="../../Content/images/brand/brand_logo_49_on.png" alt=""></a></div>
+												<div class="swiper-slide"><a href="#none">8<img src="../../Content/images/brand/brand_logo_07_on.png" alt=""></a></div>
 												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_08_on.png" alt=""></a></div>
 												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_09_on.png" alt=""></a></div>
 												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_10_on.png" alt=""></a></div>
@@ -186,36 +185,21 @@
 												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_47_on.png" alt=""></a></div>
 												
 												<div class="swiper-slide"><a href="#none"><img src="../../Content/images/brand/brand_logo_48_on.png" alt=""></a></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
-												<div class="swiper-slide"></div>
 											</div>
 											<div class="swiper-pagination"></div>
 										</div>
 
 										<script>
-											var brand_length2 = $('.list_brand.ty2').find('.swiper-slide').length
-											var swiper = new Swiper('.swiper-container.list_brand.ty2', {
-												direction: 'horizontal',
-												slidesPerView: 4,
+											var brand2_length = $('.swiperBrand2').find('.swiper-slide').length
+											var swiper = new Swiper('.swiperBrand2', {
+												slidesPerView : 4,
+												slidesPerGroup : 4,
 												slidesPerColumn: 3,
 												slidesPerColumnFill: 'row',
-												slidesPerGroup: 4,
-												allowTouchMove: brand_length2 > 12 ? true: false,
 												pagination: {
-													el:  brand_length2 > 12 ? '.swiper-pagination': false,
+													el:  brand2_length > 12 ? '.swiper-pagination': false,
 													clickable: true,
 												},
-												observer: true,
-												observeParents: true
 											});
 										</script>
 									</div>

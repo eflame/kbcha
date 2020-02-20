@@ -89,9 +89,13 @@ textarea:disabled{color:#ababab !important; background-color:#f6f6f6 !important;
 
 input[type="radio"] {width:24px; height:24px; border:1px solid #EEE; border-radius:50%; background:#FFF;}
 input[type="radio"]:checked {border-color:#EEE; background:#FFF url("../../Content/images/common/form_rdo_on.png") no-repeat center center; background-size:12px 12px;}
+input[type="radio"]:disabled {border-color:#DDD; background:#DDD;}
+input[type="radio"]:disabled:checked {border-color:#DDD; background:#DDD url("../../Content/images/common/form_rdo_on.png") no-repeat center center; background-size:16px 13px;}
 
 input[type="checkbox"] {width:21px; height:21px; border:1px solid #EEE; background:#FFF;}
 input[type="checkbox"]:checked {border-color:#ffba00; background:#ffba00 url("../../Content/images/common/form_chk_on.png") no-repeat center center; background-size:16px 13px;}
+input[type="checkbox"]:disabled {border-color:#DDD; background:#DDD;}
+input[type="checkbox"]:disabled:checked {border-color:#DDD; background:#DDD url("../../Content/images/common/form_chk_on.png") no-repeat center center; background-size:16px 13px;}
 
 label input[type="radio"],
 label input[type="checkbox"] {margin-right:5px; vertical-align:-7px;}
