@@ -19,8 +19,10 @@
 	</style>
 	<script>
 		$(document).on('ready', function(){
-			/*
+			
+			
 			$('.your-element').slick({
+
 				accessibility: true,
 				initialSlide: 3, //Slide to start on
 				pauseOnFocus: true,
@@ -104,32 +106,62 @@
 						'</div>'
 				}
 			});
-			*/
+
 
 			//Events ==================================================
-			// On swipe event
-			$('.your-element').on('swipe', function(event, slick, direction){
-			console.log(direction);
-			// left
+			/* 최초 초기화 */
+			$('.slick01').on('init', function(event, slick, direction, currentSlide){
+				console.log('init')
 			});
 
-			// On edge hit
-			$('.your-element').on('edge', function(event, slick, direction){
-			console.log('edge was hit')
+			$('.slick01').on('reInit', function(event, slick, direction, currentSlide){
+				console.log('reInit')
 			});
 
-			// On before slide change
-			$('.your-element').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-			console.log(nextSlide);
+			/* 위치/크기 변경 후 */
+			$('.slick01').on('setPosition', function(event, slick, direction, currentSlide){
+				console.log('setPosition')
 			});
 
-			$('.your-element').slick('slickAdd',"<div></div>");
+			$('.slick01').on('swipe', function(event, slick, direction){
+				console.log(direction);
+			});
 
-			// Get the current slide
-			var currentSlide = $('.your-element').slick('slickCurrentSlide');
+			$('.slick01').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+				console.log(nextSlide);
+			});
 
-			// Manually refresh positioning of slick
-			$('.your-element').slick('setPosition');
+			$('.slick01').on('afterChange', function(event, slick, currentSlide, nextSlide){
+				console.log(nextSlide);
+			});
+
+			$('.slick01').on('edge', function(event, slick, direction){
+				console.log('edge was hit')
+			});
+
+			/* 브레이크 포인트에 맞은 후 */
+			$('.slick01').on('breakpoint', function (event, slick, breakpoint){
+				console.log('breakpoint');
+			});
+
+			/* 슬라이더가 파괴되거나 클릭되지 않은 경우. */
+			$('.slick01').on('destroy', function (event, slick){
+				console.log('destroy');
+			});
+
+			$('.slick01').on('lazyLoaded', function (event, slick, image, imageSource){
+				console.log('lazyLoaded');
+			});
+
+			$('.slick01').on('lazyLoadError', function (event, slick, image, imageSource){
+				console.log('lazyLoadError');
+			});
+
+
+
+
+
+
 
 			//Methods ==================================================
 			// Add a slide
@@ -141,18 +173,54 @@
 			// Manually refresh positioning of slick
 			$('.your-element').slick('setPosition');
 
+			$("#overlayCarousel").slick("unslick");
 
 
 
 
 
+$('.slider').on('init', function(event, slick){
+	console.log('slider was initialized');
+}).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+	console.log('before change');
+})
 
-			
-			
-			//customPaging click
-			$('.bn-controller>li').on('click', function (e) {
-				$('.multiple-items').slick("slickGoTo", $(e.currentTarget).index() );
-			});
+
+
+$('.slider').slick({
+	autoplay: true,
+	autoplaySpeed: 5000,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: true,
+	lazyLoad: 'ondemand',
+	onInit: function() {
+		// let's do this after we init the banner slider
+		console.log('slider was initialized');
+	},
+	onBeforeChange: function() {
+		// then let's do this before changing slides
+		console.log('before change');
+	},
+	onAfterChange: function() {
+		// finally let's do this after changing slides
+		console.log('after change');
+	}
+});
+
+
+/*
+$('.slick01').on('afterChange', function(ev, instance, current) {
+// other stuff
+if (inserting) {
+// a tiny hack makes the earth spin again
+// hint: without this, Slick will advance backwards to newly inserted slide.
+instance.currentSlide = current + 1;
+//instance.currentSlide = current + slickInstance.options.slidesToScroll
+}
+instance.slickAdd(html, current, inserting);
+});
+*/
 			
 
 
@@ -167,20 +235,49 @@
 				slidesToScroll: 1,
 			}
 
-			//슬릭이 진행중인지 css로 체크
-			if( $('.multiple-items').hasClass('slick-initialized') ){
-				$('.multiple-items').slick('unslick');//슬릭해제
-			}else{
-				$('.multiple-items').slick(slickInfoObj);
-			}
+//슬릭이 진행중인지 css로 체크
+if( $('.multiple-items').hasClass('slick-initialized') ){
+	$('.multiple-items').slick('unslick');//슬릭해제
+}else{
+	$('.multiple-items').slick(slickInfoObj);
+}
 
 
 
 
-			$("#overlayCarousel").slick("unslick");
+// Get the current slide
+var currentSlide = $('.slick01').slick('slickCurrentSlide');
 
 
 
+
+
+
+var slideIndex = 1;
+var atIndex = 0;
+$('.btn_slick_add').on('click', function() {
+	slideIndex++;
+	$('.slick01').slick('slickAdd', '<h3>Hey ' + slideIndex + '</h3>', atIndex);
+});
+
+$('.btn_slick_remove').on('click', function() {
+	$('.slick01').slick('slickRemove',slideIndex - 1);
+	if (slideIndex !== 0){
+		slideIndex--;
+	}
+});
+
+
+
+
+
+
+
+
+//customPaging click
+$('.bn-controller>li').on('click', function (e) {
+	$('.multiple-items').slick("slickGoTo", $(e.currentTarget).index() );
+});
 
 
 
