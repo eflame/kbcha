@@ -47,17 +47,18 @@ $(function(){
 		$btns.removeClass('active');
 	});
 
-	$('.toggle_wrap .toggle_top .btn_toggle').on('click', function(){
+	$('.toggle_wrap > .toggle_top .btn_toggle').on('click', function(){
 		var $toggle = $(this).closest('.toggle_wrap');
+		var $togCon = $toggle.children('.toggle_con')
 		if($(this).hasClass('open')){
 			$(this).removeClass('open').addClass('close').text('접어보기');
-			$toggle.find('.toggle_con').slideDown(500, 'easeInOutQuart', function(){
+			$togCon.slideDown(500, 'easeInOutQuart', function(){
 				$toggle.addClass('active');
 			});
 			//$toggle.find('.toggle_con').slideDown(1000, "easeOutElastic");
 		} else if($(this).hasClass('close')) {
 			$(this).removeClass('close').addClass('open').text('펼쳐보기');
-			$toggle.find('.toggle_con').slideUp(500, 'easeInOutQuart', function(){
+			$togCon.slideUp(500, 'easeInOutQuart', function(){
 				$toggle.removeClass('active');
 			});
 			
