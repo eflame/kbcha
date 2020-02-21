@@ -50,18 +50,9 @@
 								<td colspan="2">500,000</td>
 							</tr>
 							<tr>
-								<th>컴포트</th>
-								<td colspan="2">500,000</td>
-							</tr>
-							<tr>
 								<th>외장색상</th>
 								<td>플라티늄 그라파...</td>
 								<td class="txt_r">500,000</td>
-							</tr>
-							<tr>
-								<th>내장색상</th>
-								<td>블랙</td>
-								<td class="txt_r">0</td>
 							</tr>
 						</tbody>
 					</table>
@@ -78,8 +69,8 @@
 						<thead>
 							<tr>
 								<th><input type="checkbox"></th>
-								<th class="txt_l">옵션명</th>
-								<th class="txt_r">가격</th>
+								<th>옵션명</th>
+								<th>가격</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -100,31 +91,6 @@
 
 			<div class="section bg">
 				<!-- toggle_wrap -->
-				<div class="toggle_wrap ty3 active">
-					<div class="toggle_top">
-						<div class="bx_pen">
-							<a href="#none" class="btn_pen">견적을 산출할 차량을 선택해주세요.</a>
-						</div>
-						<div class="bx_pen">
-							<a href="#none" class="btn_pen active">현대 2017 포터 현대 포터2</a>
-						</div>
-						<div class="bx_con">
-							<div>
-								상단 내용
-							</div>
-						</div>
-						<a href="#none" class="btn_toggle close">접어보기</a>
-					</div>
-					<div class="toggle_con">
-						하단 내용
-						<div class="field_btm">
-							<a href="#none" class="btn_col4 ty3">다음</a></li>
-						</div>
-					</div>
-				</div>
-				<!-- //toggle_wrap -->
-
-				<!-- toggle_wrap -->
 				<div class="toggle_wrap ty1 active">
 					<div class="toggle_top">
 						<div class="bx_tit">
@@ -142,6 +108,14 @@
 								<strong class="tit_legend">금액(만원)/유종</strong>
 								<div class="group_row">
 									<input type="text">
+									<span class="sign">-</span>
+									<input type="text">
+								</div>
+								<div class="group_row">
+									<span class="bx_inp">
+										<input type="text">
+										<a href="#none" class="btn btn_txt">복사입력</a>
+									</span>
 									<span class="sign">-</span>
 									<input type="text">
 								</div>
@@ -174,31 +148,57 @@
 							<span class="btn side"><a href="#none" class="btn_toggle close">접어보기</a></span>
 						</div>
 					</div>
-					<div class="toggle_con">
-						<div class="field_wrap bdr">
-							<div class="field">
-								<strong class="tit_legend">금액(만원)/유종</strong>
-								<div class="group_row">
-									<span class="bx_inp">
-										<input type="text">
-										<a href="#none" class="btn btn_txt">복사입력</a>
-									</span>
-									<span class="sign">-</span>
-									<input type="text">
-								</div>
-								<div class="group_row">
-									<ul class="list_tog_btn ty3 case5">
-										<li><a href="#none">가솔린</a></li>
-										<li><a href="#none" class="active">디젤</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">HEV</a></li>
-										<li><a href="#none">기타</a></li>
-									</ul>
-								</div>
+					<div class="toggle_con non_pad">
+						내용 (padding:0)
+					</div>
+				</div>
+				<!-- //toggle_wrap -->
+
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty1 active">
+					<div class="toggle_top">
+						<div class="bx_tit">
+							<a href="#none">K7 2.4 GDI 프레스티지</a>
+						</div>
+						<div class="bx_side">
+							<span class="btn side"><a href="#none" class="btn_toggle close">접어보기</a></span>
+						</div>
+					</div>
+					<div class="toggle_con non_pad">
+						<ul class="list_opt">
+							<li><a href="#none">옵션 2종</a></li>
+							<li><a href="#none">플라티늄 그라파이트</a></li>
+							<li><a href="#none">블랙</a></li>
+							<li><a href="#none">옵션 2종</a></li>
+							<li><a href="#none">플라티늄 그라파이트</a></li>
+							<li><a href="#none">블랙</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //toggle_wrap -->
+			</div>
+
+			<div class="section">
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty3 active">
+					<div class="toggle_top">
+						<div class="bx_pen">
+							<a href="#none" class="btn_pen">견적을 산출할 차량을 선택해주세요.</a>
+						</div>
+						<div class="bx_pen">
+							<a href="#none" class="btn_pen active">현대 2017 포터 현대 포터2</a>
+						</div>
+						<div class="bx_con">
+							<div>
+								상단 내용
 							</div>
 						</div>
+						<a href="#none" class="btn_toggle close">접어보기</a>
+					</div>
+					<div class="toggle_con">
+						하단 내용
 						<div class="field_btm">
-							<a href="#none" class="btn_col4 ty3">결과 내 재검색</a></li>
+							<a href="#none" class="btn_col4 ty3">다음</a></li>
 						</div>
 					</div>
 				</div>
@@ -251,21 +251,6 @@
 					<div class="toggle_con">
 						<div class="field_wrap">
 							<div class="field">
-								<strong class="tit_legend">case0</strong>
-								<div class="group_row">
-									<ul class="list_tog_btn ty2">
-										<li><a href="#none">플라티늄 그라파이트</a></li>
-										<li><a href="#none" class="active">스노우 화이트 펄<br>(80,000)</a></li>
-										<li><a href="#none">오로라 블랙 펄</a></li>
-										<li><a href="#none">실키 실버</a></li>
-										<li><a href="#none">플라티늄 그라파이트</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="field_wrap">
-							<div class="field">
 								<strong class="tit_legend">case2</strong>
 								<div class="group_row">
 									<ul class="list_tog_btn ty2 case2">
@@ -283,110 +268,12 @@
 							<div class="field">
 								<strong class="tit_legend">case3</strong>
 								<div class="group_row">
-									<ul class="list_tog_btn ty2 case3">
-										<li><a href="#none">플라티늄 그라파이트</a></li>
-										<li><a href="#none" class="active">스노우 화이트 펄<br>(80,000)</a></li>
-										<li><a href="#none">오로라 블랙 펄</a></li>
-										<li><a href="#none">실키 실버</a></li>
-										<li><a href="#none">플라티늄 그라파이트</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="field_wrap">
-							<div class="field">
-								<strong class="tit_legend">case4</strong>
-								<div class="group_row">
-									<ul class="list_tog_btn ty2 case4">
-										<li><a href="#none">플라티늄 그라파이트</a></li>
-										<li><a href="#none" class="active">스노우 화이트 펄<br>(80,000)</a></li>
-										<li><a href="#none">오로라 블랙 펄</a></li>
-										<li><a href="#none">실키 실버</a></li>
-										<li><a href="#none">플라티늄 그라파이트</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //toggle_wrap -->
-
-				<!-- toggle_wrap -->
-				<div class="toggle_wrap ty2 active">
-					<div class="toggle_top">
-						<div class="bx_tit">
-							<strong>타이틀</strong>
-						</div>
-						<div class="bx_side">
-							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
-						</div>
-					</div>
-					<div class="toggle_con">
-						<div class="field_wrap">
-							<div class="field">
-								<strong class="tit_legend">case0</strong>
-								<div class="group_row">
-									<ul class="list_tog_btn ty3">
-										<li><a href="#none">가솔린</a></li>
-										<li><a href="#none" class="active">디젤</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">HEV</a></li>
-										<li><a href="#none">기타</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">LPG</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="field_wrap">
-							<div class="field">
-								<strong class="tit_legend">case3</strong>
-								<div class="group_row">
 									<ul class="list_tog_btn ty3 case3">
 										<li><a href="#none">가솔린</a></li>
 										<li><a href="#none" class="active">디젤</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">HEV</a></li>
 										<li><a href="#none">기타</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">LPG</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="field_wrap">
-							<div class="field">
-								<strong class="tit_legend">case4</strong>
-								<div class="group_row">
-									<ul class="list_tog_btn ty3 case4">
-										<li><a href="#none">가솔린</a></li>
-										<li><a href="#none" class="active">디젤</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">HEV</a></li>
-										<li><a href="#none">기타</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">LPG</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<div class="field_wrap">
-							<div class="field">
-								<strong class="tit_legend">case5</strong>
-								<div class="group_row">
-									<ul class="list_tog_btn ty3 case5">
-										<li><a href="#none">가솔린</a></li>
-										<li><a href="#none" class="active">디젤</a></li>
-										<li><a href="#none">LPG</a></li>
-										<li><a href="#none">EV</a></li>
-										<li><a href="#none">HEV</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>
 										<li><a href="#none">LPG</a></li>

@@ -34,7 +34,7 @@
 
 .toggle_wrap .toggle_con .article.area_btn {margin-top:30px; text-align:center;}
 
-.section_top {display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding:10px 18px;}
+.section_top {display:flex; justify-content:space-between; align-items:center; margin:20px 0 10px; padding:0 18px;}
 .section_top .bx_tit {}
 .section_top .bx_tit .tit {display:inline-block; font-size:1.143rem;}
 .section_top .bx_tit strong {display:inline-block; font-size:1.143rem;}
@@ -75,10 +75,10 @@
 
 .group_rdo {}
 
-.group_rdo label {margin-right:20px;}
+.group_rdo label {margin-right:12px;}
 
 .group_rdo.rtl {text-align:right;}
-.group_rdo.rtl label {margin-right:0; margin-left:20px;}
+.group_rdo.rtl label {margin-right:0; margin-left:12px;}
 
 
 .toggle_wrap {}
@@ -92,7 +92,7 @@
 .toggle_wrap .toggle_top .bx_side {flex:0 0 auto; margin-left:auto;}
 .toggle_wrap .toggle_top .bx_side .btn {}
 .toggle_wrap .toggle_top .bx_side .btn.side {}
-.toggle_wrap .toggle_top .bx_side .side:before {content:""; display:inline-block; height:10px; margin:0 8px 0 12px; border-left:1px solid #BBB;}
+.toggle_wrap .toggle_top .bx_side .side:before {content:""; display:inline-block; height:10px; margin:0 8px 0 12px; border-left:1px solid #BBB; vertical-align:middle;}
 .toggle_wrap .toggle_top .btn_toggle {display:inline-block; width:30px; height:30px; font-size:0; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
 .toggle_wrap .toggle_con {display:none;}
 .toggle_wrap.active .toggle_con {display:block;}
@@ -144,6 +144,24 @@
 
 
 
+.toggle_wrap.ty5 {margin-bottom:1px; background-color:#FFF;}
+.toggle_wrap.ty5 .toggle_top {padding:5px 18px; border:1px solid #DDD;}
+.toggle_wrap.ty5 .toggle_top .bx_tit {}
+.toggle_wrap.ty5 .toggle_top .bx_tit strong {font-family:"KBFGTextM"; font-size:1.143rem; color:#555;}
+.toggle_wrap.ty5 .toggle_top .bx_tit span {}
+.toggle_wrap.ty5 .toggle_top .bx_tit span:before {}
+.toggle_wrap.ty5 .toggle_top .bx_side {}
+.toggle_wrap.ty5 .toggle_top .bx_side .btn {}
+.toggle_wrap.ty5 .toggle_top .bx_side .btn.side {}
+.toggle_wrap.ty5 .toggle_top .bx_side .side:after {}
+
+.toggle_wrap.ty5 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
+.toggle_wrap.ty5 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
+.toggle_wrap.ty5 .toggle_con {padding:18px 16px; border:1px solid #DDD; border-top:none; background-color:#f9f9f9;}
+
+
+
+
 
 
 
@@ -156,39 +174,51 @@
 .field .tit_legend {margin-bottom:6px; font-family:"KBFGTextB"; font-size:0.857rem;}
 .field .tit_legend ~ .txt_side {float:right; font-family:"KBFGTextB"; font-size:0.857rem;}
 .field .tit_legend ~ .txt_side.big {font-size:1.071rem;}
-.field input[type="text"], 
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="number"],
+.field input[type="tel"],
+.field input[type="date"],
 .field select {width:100%;}
 
-.field > .group_row {display:flex; margin:0 -2px 8px; align-items:center;}
-.field > .group_row:last-child {margin-bottom:0}
-.field > .group_row > * {flex:1 1 auto; margin-right:2px; margin-left:2px;}
-.field > .group_row .sign {line-height:42px; margin:0 2px; color:#e4e4e4;}
-.field > .group_row .btn {flex:none;}
+.field .group_row {display:flex; margin:0 -2px 8px; align-items:center;}
+.field .group_row:last-child {margin-bottom:0}
+.field .group_row > * {flex:1 1 auto; margin-right:2px; margin-left:2px;}
+.field .group_row .sign {line-height:42px; margin:0 2px; color:#e4e4e4;}
+.field .group_row .btn {flex:none;}
 
-.field > .group_row .bx_inp {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
-.field > .group_row .bx_inp * {flex:1 1 auto;}
-.field > .group_row .bx_inp input {height:100%; border:none;}
-.field > .group_row .bx_inp .btn {flex-shrink:0; flex:none; margin:auto 15px auto 10px;}
+.field .group_row .bx_inp {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
+.field .group_row .bx_inp * {flex:1 1 auto;}
+.field .group_row .bx_inp input {height:100%; border:none;}
+.field .group_row .bx_inp .btn {flex-shrink:0; flex:none; margin:auto 15px auto 10px;}
 
-.field > .group_row .bx_vol {display:flex; align-items:center;}
-.field > .group_row .bx_vol input[type="text"] {height:50px; border-right:none; border-left:none; text-align:center;}
-.field > .group_row .bx_vol .btn_ic_minus,
-.field > .group_row .bx_vol .btn_ic_plus {flex:none; width:50px; height:50px;}
+.field .group_row .bx_vol {display:flex; align-items:center;}
+.field .group_row .bx_vol input[type="text"] {height:50px; border-right:none; border-left:none; text-align:center;}
+.field .group_row .bx_vol .btn_ic_minus,
+.field .group_row .bx_vol .btn_ic_plus {flex:none; width:50px; height:50px;}
 
-.field > .group_row .bx_range .remark {display:flex;}
-.field > .group_row .bx_range .remark .txt_start {flex:1 1 auto; font-size:0.857rem; color:#999;}
-.field > .group_row .bx_range .remark .txt_end {flex:0 1 auto; font-size:0.857rem; color:#999;}
+.field .group_row .bx_range .remark {display:flex;}
+.field .group_row .bx_range .remark .txt_start {flex:1 1 auto; font-size:0.857rem; color:#999;}
+.field .group_row .bx_range .remark .txt_end {flex:0 1 auto; font-size:0.857rem; color:#999;}
 
-.field > .group_row .bx_chk {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
-.field > .group_row .bx_chk .chk {flex:1 0 42px; box-sizing:border-box; text-align:center;}
-.field > .group_row .bx_chk input[type="text"] {height:100%; border:none; border-left:1px solid #DDD;}
+.field .group_row .bx_chk {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; border:1px solid #DDD;}
+.field .group_row .bx_chk .chk {flex:1 0 42px; box-sizing:border-box; text-align:center;}
+.field .group_row .bx_chk input[type="text"] {height:100%; border:none; border-left:1px solid #DDD;}
 
-.field > .group_row .bx_selected {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; padding:0 10px; background-color:#ffc000;}
-.field > .group_row .bx_selected .tit {flex:1 1 auto; font-size:1.071rem; color:#FFF;}
-.field > .group_row .bx_selected .btn {flex-shrink:0; flex:none;}
+.field .group_row .bx_selected {display:flex; align-items:center; width:100%; height:42px; box-sizing:border-box; padding:0 10px; background-color:#ffc000;}
+.field .group_row .bx_selected .tit {flex:1 1 auto; font-size:1.071rem; color:#FFF;}
+.field .group_row .bx_selected .btn {flex-shrink:0; flex:none;}
+
+.field .group_row .bx_txt_lft {flex:1;}
+.field .group_row .bx_txt_rgt {flex:0 0 auto;}
 
 .field_btm {}
 .field_btm a {display:block;}
+
+.wdh_20per {width:20%;}
+.wdh_40per {width:40%;}
+.wdh_60per {width:60%;}
+
 
 
 
