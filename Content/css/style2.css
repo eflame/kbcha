@@ -2,6 +2,8 @@
 /* 공통영역 */
 .ic_tip { margin-top: 11px; padding-left: 16px; color: #ff7e00; font-size: 0.786rem; background: url('../images/icon/ic_tip.png') no-repeat; background-size: 12px auto; }
 .notice_tip {padding: 20px 18px; font-size: 1.000rem; background-color: #f9fafa; }
+.ic_essential { position: relative; padding-left: 8px; }
+.ic_essential::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 3px; border-radius: 3px; background-color: #ff7e00;  }
 
 .bg_colr { background-color: #f9fafa; }
 /* 타이틀*/
