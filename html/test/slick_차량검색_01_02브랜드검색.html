@@ -10,7 +10,7 @@
 	<script src="../../Content/js/jquery-ui.min.js"></script>
 	<script src="../../Content/js/jquery.easing.min.js"></script>
 	<script src="../../Content/js/swiper.min.js"></script>
-	<script src="../../Content/js/slick.min.js"></script>
+	<script src="../../Content/js/slick_custom.js"></script>
 	<script src="../../Content/js/common.js"></script>
 	<style>
 		.text_slick {}
@@ -22,11 +22,21 @@
 	<script>
 		$(function(){
 
-$('.slick01').on('init', function(event, slick, direction, slidesToShow){
-	//console.log(init);
-})
 
-$(".slick01").slick({
+
+
+$('.slick01').on('init', function(event, slick, direction, slidesToShow){
+	console.log('init');
+	var totalSlide = $('.slick01 .slick-slide').length;
+	var activeSlide = $('.slick01 .slick-slide.slick-active').length;
+
+	var remainder = totalSlide % activeSlide;
+	
+	for(var i=0; i<remainder; i++) {
+		//console.log(totalSlide, activeSlide, remainder);
+		//$(this).slick('slickAdd',"<div></div>");
+	}
+}).slick({
 	slidesToShow: 4,
 	slidesToScroll: 4,
 
@@ -37,26 +47,31 @@ $(".slick01").slick({
 	swipe: true,
 	touchMove: true,
 	touchThreshold: 20,
+	blank: true,
 	onAfterChange: function(){
-		console.log('after change');
+		console.log('???');
 	}
+}).on('setPosition', function(event, slick, direction, currentSlide){
+	//console.log('setPosition');
+}).on('afterChange', function(event, slick, direction, currentSlide){
+	//console.log('afterChange');
+
+}).on('reInit', function(event, slick, direction, currentSlide){
+	console.log('reInit')
 });
 
-$('.slick01').on('setPosition', function(event, slick, direction, currentSlide){
+
+$(window).on('load', function(){
 	var totalSlide = $('.slick01 .slick-slide').length;
 	var activeSlide = $('.slick01 .slick-slide.slick-active').length;
 
 	var remainder = totalSlide % activeSlide;
 	
-	for(var i=0; i<5; i++) {
-		console.log(totalSlide, activeSlide, remainder);
+	for(var i=0; i<remainder; i++) {
+		//console.log(totalSlide, activeSlide, remainder);
 		//$('.slick01').slick('slickAdd',"<div></div>");
 	}
-}).on('afterChange', function(event, slick, direction, currentSlide){
-	console.log('afterChange');
-
-});
-
+})
 
 
 
