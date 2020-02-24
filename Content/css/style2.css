@@ -5,6 +5,8 @@
 .ic_essential { position: relative; padding-left: 8px; }
 .ic_essential::before { content: ''; position: absolute; left: 0; top: 0; width: 3px; height: 3px; border-radius: 3px; background-color: #ff7e00;  }
 
+.btn_ic_phone { display: inline-block; width: 42px; height: 42px; text-indent: -9999rem; vertical-align: middle; border-radius: 6px; background-color: #f6f6f6; background-size: auto 25px; background-repeat: no-repeat; background-position: center center; background-image: url('../images/icon/ic_phone.png'); }
+
 .bg_colr { background-color: #f9fafa; }
 /* 타이틀*/
 .tit_article { margin-bottom: 14px; color: #333; font-size: 1.143rem; line-height: 1.286rem; }
@@ -142,7 +144,6 @@
 /* step3 금융정보 */
 .estimate_seting { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; }
 .estimate_seting .tit { color: #333; font-size: 1.143rem;  }
-.estimate_list {  }
 .estimate_list .toggle_wrap.ty4 { border: 1px solid #ddd; border-radius: 4px; background-color: #fff; }
 .estimate_list .toggle_wrap.ty4:nth-of-type(1n+2) { margin-top: 8px; }
 .toggle_wrap.ty4.active { border-color: #ffc000; }
@@ -155,6 +156,7 @@
 .toggle_wrap.ty4 > .toggle_top > .btn_del { position: relative; z-index: 5; margin-left: 12px; width: 24px; height: 24px; font-size: 0; text-indent: -9999px; border-radius: 2px; background: #f6f6f6 url('../images/icon/btn_del2.png') no-repeat 50% 50%; background-size: 12px auto; }
 .toggle_wrap.ty4 > .toggle_con { position: relative; padding: 22px 18px; }
 .toggle_wrap.ty4 > .toggle_con:after { content: ''; position: absolute; left: 18px; top: 0; width: calc(100% - 36px); height: 1px; background-color: #ededed; }
+.toggle_wrap.ty4 .toggle_con > .article_btm_area:last-child { margin-bottom: 0; }
 
 .toggle_con .tit_caption { font-size: 0.857rem; }
 
@@ -179,12 +181,18 @@
 .txt_sml { color: #777; }
 
 
+.shadow_bx { padding: 18px 0; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+.shadow_bx > .field_wrap { margin-bottom: 0; }
+.shadow_bx > .field_wrap:first-child { margin-bottom: 18px; border-bottom: 1px solid #ededed; }
+.shadow_bx > .field_wrap .field,
+.shadow_bx > .field_btm { margin-bottom: 18px; padding: 0 18px; }
+.shadow_bx > .field_wrap:last-child .field,
+.shadow_bx > .field_btm:last-child { margin-bottom: 0; }
 
 
-
-
-
-
-
-
-
+/* table_fixed */
+.tb_fixed_bx { position: relative; height: 210px; overflow-x: hidden; overflow-y: auto; border-right: 1px solid #ccc;  }
+.tb_fixed_bx > table.tbl_list th { border: 0; }
+.tb_fixed_bx > table.tbl_list th, .tb_fixed_bx > table.tbl_list td { height: 33px; }
+.tb_fixed_bx > table.tbl_list thead th { position: sticky; top: 0; box-shadow: inset 1px 1px #ccc, 0 1px #ccc; }
+.tb_fixed_bx > table.tbl_list tr.active td { background-color: #fff8e5; }
