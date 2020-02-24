@@ -187,6 +187,7 @@
 .shadow_bx > .field_btm { margin-bottom: 18px; padding: 0 18px; }
 .shadow_bx > .field_wrap .field:last-child,
 .shadow_bx > .field_btm:last-child { margin-bottom: 0; }
+.shadow_bx > .article:first-child { margin-top: 0; }
 
 
 /* table_fixed */
