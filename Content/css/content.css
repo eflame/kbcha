@@ -229,8 +229,9 @@
 .bx_notice {box-sizing:border-box; padding:18px; border:1px solid #DDD; line-height:1.5; font-size:0.857rem; text-align:center;}
 .bx_notice strong {color:#ff7e00;}
 
-.bx_notice2 {line-height:1.5; padding:15px 30px; background-color:#f6f6f6;}
-.bx_notice2.ic {padding-left:82px; background:#f6f6f6 url("../../Content/images/icon/ic_notice.png") no-repeat 44px center; background-size:auto 18px;}
+.bx_notice2 {line-height:1.5; padding:15px 10px; text-align:center; background-color:#f6f6f6;}
+.bx_notice2 > .inner {display:inline-block; margin:0 auto; text-align:left;}
+.bx_notice2.ic > .inner {padding-left:38px; background:#f6f6f6 url("../../Content/images/icon/ic_notice.png") no-repeat left center; background-size:auto 18px;}
 .bx_notice2 .tit {font-size:0.857rem; color:#555;}
 .bx_notice2 .txt {font-size:0.857rem; color:#999;}
 
