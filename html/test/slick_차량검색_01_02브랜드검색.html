@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KB 캐피탈</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../Content/css/import.css">
+	<script src="../../Content/js/jquery-1.12.3.min.js"></script>
+	<script src="../../Content/js/jquery-ui.min.js"></script>
+	<script src="../../Content/js/jquery.easing.min.js"></script>
+	<script src="../../Content/js/swiper.min.js"></script>
+	<script src="../../Content/js/slick.min.js"></script>
+	<script src="../../Content/js/common.js"></script>
+	<style>
+		.text_slick {}
+		.text_slick .slick-slide {box-sizing:border-box; border:1px solid #999; background:#EEE;}
+		.text_slick .slick-slide.slick-active {background:khaki;}
+		.text_slick .slick-slide.slick-current.slick-active {background:darkslategrey;}
+		.text_slick .slick-slide a {display:block; padding:30px 0; text-align:center; color:darkorange;}
+	</style>
+	<script>
+		$(function(){
+
+$('.slick01').on('init', function(event, slick, direction, slidesToShow){
+	//console.log(init);
+})
+
+$(".slick01").slick({
+	slidesToShow: 4,
+	slidesToScroll: 4,
+
+	dots: true,
+	arrows: false,
+	infinite: false,
+
+	swipe: true,
+	touchMove: true,
+	touchThreshold: 20,
+	onAfterChange: function(){
+		console.log('after change');
+	}
+});
+
+$('.slick01').on('setPosition', function(event, slick, direction, currentSlide){
+	var totalSlide = $('.slick01 .slick-slide').length;
+	var activeSlide = $('.slick01 .slick-slide.slick-active').length;
+
+	var remainder = totalSlide % activeSlide;
+	
+	for(var i=0; i<5; i++) {
+		console.log(totalSlide, activeSlide, remainder);
+		//$('.slick01').slick('slickAdd',"<div></div>");
+	}
+}).on('afterChange', function(event, slick, direction, currentSlide){
+	console.log('afterChange');
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			$(".slick02").slick({
+				rows: 3,
+				slidesPerRow: 4,
+
+				dots: true,
+				arrows: false,
+				infinite: false,
+				speed: 500,
+
+				swipe: true,
+				touchMove: true,
+				touchThreshold: 20,
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<div class="header">
+		<h1 class="tit1">견적정보설정</h1>
+		<h2 class="tit2">렌트</h2>
+		<a href="#none" class="btn_home">홈</a>
+		<a href="#none" class="btn_back">뒤로</a>
+	</div>
+	<!-- //header -->
+	<button class="btn_slick_add">add</button>
+	<button class="btn_slick_remove">remove</button>
+
+
+	<div class="container">
+		<!-- contents -->
+		<div class="contents">
+			<div class="section bg">
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty1 active">
+					<div class="toggle_top">
+						<div class="bx_tit">
+							<strong>선호브랜드</strong>
+							<span>등록순</span>
+						</div>
+						<div class="bx_side">
+							<span class="btn"><a href="#none" class="btn_col1 rnd ty1">설정</a></span>
+							<span class="btn side"><a href="#none" class="btn_toggle close">접어보기</a></span>
+						</div>
+					</div>
+					<div class="toggle_con non_pad">
+						<div class="text_slick slick01">
+							<div>
+								<a href="#none">1</a>
+							</div>
+							<div>
+								<a href="#none">2</a>
+							</div>
+							<div>
+								<a href="#none">3</a>
+							</div>
+							<div>
+								<a href="#none">4</a>
+							</div>
+							<div>
+								<a href="#none">5</a>
+							</div>
+							<div>
+								<a href="#none">6</a>
+							</div>
+							<div>
+								<a href="#none">7</a>
+							</div>
+							<div>
+								<a href="#none">8</a>
+							</div>
+							<div>
+								<a href="#none">9</a>
+							</div>
+							<div>
+								<a href="#none">10</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //toggle_wrap -->
+
+				<!-- toggle_wrap -->
+				<div class="toggle_wrap ty1 active">
+					<div class="toggle_top ">
+						<div class="bx_tit">
+							<strong>수입차</strong>
+							<span>이름순</span>
+						</div>
+						<div class="bx_side">
+							<span class="btn"><a href="#none" class="btn_toggle close">접어보기</a></span>
+						</div>
+					</div>
+					<div class="toggle_con non_pad">
+						<div class="text_slick slick02">
+							<div>
+								<a href="#none">1</a>
+							</div>
+							<div>
+								<a href="#none">2</a>
+							</div>
+							<div>
+								<a href="#none">3</a>
+							</div>
+							<div>
+								<a href="#none">4</a>
+							</div>
+							<div>
+								<a href="#none">5</a>
+							</div>
+							<div>
+								<a href="#none">6</a>
+							</div>
+							<div>
+								<a href="#none">7</a>
+							</div>
+							<div>
+								<a href="#none">8</a>
+							</div>
+							<div>
+								<a href="#none">9</a>
+							</div>
+							<div>
+								<a href="#none">10</a>
+							</div>
+
+							<div>
+								<a href="#none">11</a>
+							</div>
+							<div>
+								<a href="#none">12</a>
+							</div>
+							<div>
+								<a href="#none">13</a>
+							</div>
+							<div>
+								<a href="#none">14</a>
+							</div>
+							<div>
+								<a href="#none">15</a>
+							</div>
+							<div>
+								<a href="#none">16</a>
+							</div>
+							<div>
+								<a href="#none">17</a>
+							</div>
+							<div>
+								<a href="#none">18</a>
+							</div>
+							<div>
+								<a href="#none">19</a>
+							</div>
+							<div>
+								<a href="#none">20</a>
+							</div>
+
+							<div>
+								<a href="#none">21</a>
+							</div>
+							<div>
+								<a href="#none">22</a>
+							</div>
+							<div>
+								<a href="#none">23</a>
+							</div>
+							<div>
+								<a href="#none">24</a>
+							</div>
+							<div>
+								<a href="#none">25</a>
+							</div>
+							<div>
+								<a href="#none">26</a>
+							</div>
+							<div>
+								<a href="#none">27</a>
+							</div>
+							<div>
+								<a href="#none">28</a>
+							</div>
+							<div>
+								<a href="#none">29</a>
+							</div>
+							<div>
+								<a href="#none">30</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //toggle_wrap -->
+			</div>
+		</div>
+		<!-- //contents -->
+	</div>
+</body>
+</html>
