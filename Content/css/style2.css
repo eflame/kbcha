@@ -178,15 +178,14 @@
 .tit_area.between { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
 
 /**/
-.txt_sml { color: #777; }
+.txt_sml { opacity: .5; color: #777; }
 
 
 .shadow_bx { padding: 18px 0; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
-.shadow_bx > .field_wrap { margin-bottom: 0; }
-.shadow_bx > .field_wrap:first-child { margin-bottom: 18px; border-bottom: 1px solid #ededed; }
+.shadow_bx > .field_wrap {margin-bottom:18px;}
 .shadow_bx > .field_wrap .field,
 .shadow_bx > .field_btm { margin-bottom: 18px; padding: 0 18px; }
-.shadow_bx > .field_wrap:last-child .field,
+.shadow_bx > .field_wrap .field:last-child,
 .shadow_bx > .field_btm:last-child { margin-bottom: 0; }
 
 
