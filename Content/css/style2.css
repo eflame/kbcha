@@ -144,7 +144,6 @@
 /* step3 금융정보 */
 .estimate_seting { display: flex; align-items: center; justify-content: space-between; margin-bottom: 13px; }
 .estimate_seting .tit { color: #333; font-size: 1.143rem;  }
-.estimate_list {  }
 .estimate_list .toggle_wrap.ty4 { border: 1px solid #ddd; border-radius: 4px; background-color: #fff; }
 .estimate_list .toggle_wrap.ty4:nth-of-type(1n+2) { margin-top: 8px; }
 .toggle_wrap.ty4.active { border-color: #ffc000; }
@@ -182,12 +181,18 @@
 .txt_sml { color: #777; }
 
 
+.shadow_bx { padding: 18px 0; border-radius: 4px; background-color: #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+.shadow_bx > .field_wrap { margin-bottom: 0; }
+.shadow_bx > .field_wrap:first-child { margin-bottom: 18px; border-bottom: 1px solid #ededed; }
+.shadow_bx > .field_wrap .field,
+.shadow_bx > .field_btm { margin-bottom: 18px; padding: 0 18px; }
+.shadow_bx > .field_wrap:last-child .field,
+.shadow_bx > .field_btm:last-child { margin-bottom: 0; }
 
 
-
-
-
-
-
-
-
+/* table_fixed */
+.tb_fixed_bx { position: relative; height: 210px; overflow-x: hidden; overflow-y: auto; border-right: 1px solid #ccc;  }
+.tb_fixed_bx > table.tbl_list th { border: 0; }
+.tb_fixed_bx > table.tbl_list th, .tb_fixed_bx > table.tbl_list td { height: 33px; }
+.tb_fixed_bx > table.tbl_list thead th { position: sticky; top: 0; box-shadow: inset 1px 1px #ccc, 0 1px #ccc; }
+.tb_fixed_bx > table.tbl_list tr.active td { background-color: #fff8e5; }
