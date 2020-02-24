@@ -4,8 +4,8 @@ $(window).on('load', function(){
 	fixedBtmPopup();
 
 	tabActiveBar();
+	inputRange();
 });
-
 
 function tabActiveBar(){
 	if ($('.tab_wrap.outer').length > 0){
@@ -16,13 +16,20 @@ function tabActiveBar(){
 	}
 }
 
+function inputRange(){
+	if ($('input[type=range]').length > 0){
+		$('input[type=range]').each(function(){
+			var val = $(this).val();
+			$(this).css('background', 'linear-gradient(to right, #ffba00 0%, #ffba00 '+ val +'%, #DDD ' + val + '%, #DDD 100%)');
+		})
+	}
+}
+
 $(function(){  
+	//input : range
 	$('input[type=range]').on('input', function(){
-		var val = $(this).val();
-		$(this).css('background', 'linear-gradient(to right, #ffba00 0%, #ffba00 '+ val +'%, #DDD ' + val + '%, #DDD 100%)');
+		inputRange();
 	});
-	
-	
 
 	//tab : event
 	$('.layerTab.tab_wrap').each(function () {
@@ -216,19 +223,14 @@ var headerAni = function(){
 		lastScrollTop = sTop;
 
 		console.log(sTop , $(document).height() - $(window).height())
-		
 	}
 }
 */
-
-
-
 
 $(function(){
 	if ($('body').hasClass('fixedScroll')){
 		btmAreaFixed();
 	}
-
 	$('.section_btm_fixed .btn_toggle').on('click',function(){
 		var $fixedArea = $(this).parents('.section_btm_fixed');
 		$fixedArea.find('.price_list').slideToggle(300);
@@ -240,9 +242,6 @@ $(function(){
 		}
 	});
 });
-
-
-
 
 function btmAreaFixed(){
 	var lastScrollTop = 0;
@@ -273,16 +272,10 @@ function btmAreaFixed(){
 		}
 
 		var aaa = dHgt - wHgt;
-		
-		
 
-
-		
-		
 
 		lastScrollTop = sTop;
 
 		$('.fixedVal').text(sTop + ' , ' + dHgt + '-' + wHgt + '=' + aaa);
 	});
 }
-
