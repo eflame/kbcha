@@ -220,32 +220,36 @@
 				</div>
 				<!-- //검색결과 -->
 
-
-				<div class="field_wrap">
-					<div class="field">
-						<strong class="tit_legend">잔가</strong>
-						<!-- 양쪽 정렬 class추가 'group_row between' -->
-						<div class="group_row between">
-							<span class="txt_tip">기준잔가[30.5%|11,000,000 원]</span>
-							<a href="#none" class="btn_col1 rnd ty1">기준잔가적용</a>
-						</div>
-						<!-- //양쪽 정렬 class추가 'group_row between' -->
-						<!-- 비대칭 영역 class추가 'group_row asymmetry' -->
+				
+			</div>
+			
+			<div class="field">
+				<!-- 보증금 -->
+				<div class="field_box">
+					<div class="article">
+						<strong class="tit_legend">비율 및 금액</strong>
 						<div class="group_row">
-							<span class="inp_unit size_ty2">
-								<input type="text" id="inptxt001">
-								<label class="unit" for="inptxt001">%</label>
-							</span>
+							<ul class="list_tog_btn ty2 case3">
+								<li><a href="#none">10%</a></li>
+								<li><a href="#none" class="active">20%</a></li>
+								<li><a href="#none">30%</a></li>
+								<li><a href="#none">40%</a></li>
+								<li><a href="#none">잔가가동일</a></li>
+								<li><a href="#none">직접입력</a></li>
+							</ul>
+						</div>
+						<div class="group_row">
 							<span class="inp_unit">
-								<input type="text" id="inptxt002">
-								<label class="unit" for="inptxt002">원</label>
+								<!-- input 비활성화 disabled 속성 추가 -->
+								<input type="text" value="28,000,000" id="inptxt003" disabled >
+								<label class="unit" for="inptxt003">원</label>
 							</span>
 						</div>
-						<!-- //비대칭 영역 class추가 'group_row asymmetry' -->
 					</div>
 				</div>
-
+				<!-- //보증금 -->
 			</div>
+
 		</div>
 		<!-- //contents -->
 	</div>
