@@ -76,8 +76,7 @@
 
 
 
-.group_rdo {}
-
+.group_rdo {margin:5px 0;}
 .group_rdo label {margin-right:12px;}
 
 .group_rdo.rtl {text-align:right;}
@@ -154,7 +153,7 @@
 .toggle_wrap.ty5 > .toggle_top .bx_tit span {}
 .toggle_wrap.ty5 > .toggle_top .bx_tit span:before {}
 .toggle_wrap.ty5 > .toggle_top .bx_side {}
-.toggle_wrap.ty5 > .toggle_top .bx_side .btn {}
+.toggle_wrap.ty5 > .toggle_top .bx_side .btn {height:30px; line-height:30px;}
 .toggle_wrap.ty5 > .toggle_top .bx_side .btn.side {}
 .toggle_wrap.ty5 > .toggle_top .bx_side .side:after {}
 
@@ -250,6 +249,7 @@
 .list_tog_btn li {}
 .list_tog_btn li a {}
 .list_tog_btn li a.active {}
+.list_tog_btn li a.disabled {pointer-events:none; color:#DDD;}
 
 .list_tog_btn.ty1 {margin:1px 0 0;}
 .list_tog_btn.ty1 li {margin-top:-1px;}

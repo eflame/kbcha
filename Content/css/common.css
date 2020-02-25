@@ -35,7 +35,7 @@ ver : 1.00
 
 
 /* text ================================================== */
-
+.txt_notice {padding-left:18px; font-size:0.857rem; color:#ff1e00; background:url("../../Content/images/icon/ic_notice2.png") no-repeat 0 0; background-size:12px auto;}
 
 
 /* button ================================================== */
@@ -53,7 +53,7 @@ ver : 1.00
 .btn_col1.rnd, .btn_col2.rnd, .btn_col3.rnd, .btn_col4.rnd {border-radius:57px;}
 /* disabled */
 .btn_col1.disabled, .btn_col2.disabled, .btn_col3.disabled, .btn_col4.disabled { color:#ffffff !important; cursor:default; pointer-events:none; border-color:#ddd; background-color:#ddd;}
-/* active */cv
+/* active */
 .btn_col1.disabled.active, .btn_col2.disabled.active, .btn_col3.disabled.active, .btn_col4.disabled.active {cursor:pointer; pointer-events:inherit;}
 
 
