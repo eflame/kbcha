@@ -27,16 +27,21 @@
 /* 차량검색 ========================================================================================= */
 /* 브랜드검색 ============================== */
 .section {margin:18px 0 27px;}
-.section.bg {margin:18px 18px 27px; background-color:#f9fafa;}
+.section.bg {margin:0; padding:18px; background-color:#f9fafa;}
+.section.bg + .section.bg {padding-top:0;}
 .section:last-child {margin-bottom:18px;}
+
 .article {margin:25px 18px 25px;}
 .article:last-child {margin-bottom:10px;}
+.section.bg > .article {margin-right:0; margin-left:0;}
+.section.bg > .article:first-child {margin-top:0;}
 .section_top + .article {margin-top:10px;}
 .toggle_wrap .toggle_con .article {margin:0 0 25px;}
 .toggle_wrap .toggle_con .article:last-child {margin-bottom:0;}
 .toggle_wrap .toggle_con .article.area_btn {margin-top:30px; text-align:center;}
 
 .section_top {display:flex; justify-content:space-between; align-items:center; margin:10px 0; padding:0 18px;}
+.section.bg > .section_top {padding:0;}
 .section_top .bx_tit {}
 .section_top .bx_tit .tit {display:inline-block; font-size:1.143rem;}
 .section_top .bx_tit strong {display:inline-block; font-size:1.143rem;}

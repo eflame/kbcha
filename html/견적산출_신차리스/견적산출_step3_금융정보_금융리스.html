@@ -14,7 +14,7 @@
 	<script src="../../Content/js/common.js"></script>
 </head>
 
-<body class="bg_colr">
+<body>
 	<!-- header -->
 	<div class="header">
 		<h1 class="tit1">견적산출</h1>
@@ -26,18 +26,21 @@
 
 	<div class="container">
 		<div class="contents">
-			<!-- 견적산출 step 상태 영역 -->
+			<!-- step상태영역 -->
 			<div class="step_progress_area">
 				<h3 class="tit">3. 금융정보</h3>
 				<ol class="step_state">
-					<!-- 해당 step은 "active", 지난 step은 on -->
+					<!-- ==============================
+						현재스텝 : li.active
+						지난스텝 : li.on
+					============================== -->
 					<li class="on"><a href="#none">1</a></li>
 					<li class="on"><a href="#none">2</a></li>
 					<li class="active"><a href="#none">3</a></li>
 					<li><a href="#none">4</a></li>
 				</ol>
 			</div>
-			<!-- //견적산출 step 상태 영역 -->
+			<!-- //step상태영역 -->
 
 			<div class="section bg">
 				<div class="toggle_wrap ty3 ">
@@ -153,8 +156,7 @@
 				</div>
 			</div>
 			
-			<!-- 금융정보 -->
-			<div class="section">
+			<div class="section bg">
 				<div class="article">
 					<div class="field_wrap">
 						<div class="field">
@@ -214,7 +216,7 @@
 								<a href="#none" class="btn_del">삭제</a>
 								<a href="#none" class="btn_toggle close">펼쳐보기</a>
 							</button>
-							
+
 							<!-- 견적서 상세내용 ================================================== -->
 							<div class="toggle_con">
 								<!-- 계약기간 -->
@@ -235,71 +237,21 @@
 								</div>
 								<!-- //계약기간 -->
 
-								<!-- 주행거리 -->
+								<!-- 선수금-->
 								<div class="field_wrap">
 									<div class="field">
-										<strong class="tit_legend ic_essential">주행거리(만km)</strong>
-										<span class="txt_side big">1만</span>
-										<div class="group_row">
-											<div class="group_row">
-												<ul class="list_tog_btn ty2 case3">
-													<li><a href="#none">1</a></li>
-													<li><a href="#none">1.5</a></li>
-													<li><a href="#none">2</a></li>
-													<li><a href="#none">2.5</a></li>
-													<li><a href="#none" class="active">3</a></li>
-													<li><a href="#none">3.5</a></li>
-													<li><a href="#none">4</a></li>
-													<li><a href="#none" class="disabled">무제한</a></li>
-													<li><a href="#none" class="disabled">무제한(인수)</a></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- //주행거리 -->
-
-								<!-- 보증/잔가기준 -->
-								<div class="field_wrap">
-									<div class="field">
-										<strong class="tit_legend ic_essential">보증/잔가기준</strong>
+										<strong class="tit_legend ic_essential">선수금</strong>
 										<div class="group_row">
 											<div class="group_rdo">
-												<label><input type="radio">차량가</label>
-												<label><input type="radio">취득원가</label>
-												<label><input type="radio">MSRP</label>
+												<label><input type="radio">선수비율금액</label>
+												<label><input type="radio">초기납입금</label>
 											</div>
 										</div>
-									</div>
-								</div>
-								<!-- //보증/잔가기준 -->
-
-								<!-- 보증/선납 -->
-								<div class="field_wrap">
-									<div class="field">
-										<strong class="tit_legend ic_essential">보증/선납</strong>
-										<div class="group_row">
-											<div class="group_rdo">
-												<label><input type="radio">보증금</label>
-												<label><input type="radio">선납금</label>
-												<label><input type="radio">보증금+선납금</label>
-											</div>
-										</div>
-										<!-- 보증금 -->
+										<!-- 선수비율금액 -->
 										<div class="field_box">
 											<div class="article">
 												<strong class="tit_legend">비율 및 금액</strong>
 												<div class="group_row">
-													<ul class="list_tog_btn ty2 case3">
-														<li><a href="#none">10%</a></li>
-														<li><a href="#none" class="active">20%</a></li>
-														<li><a href="#none">30%</a></li>
-														<li><a href="#none">40%</a></li>
-														<li><a href="#none">잔가가동일</a></li>
-														<li><a href="#none">직접입력</a></li>
-													</ul>
-												</div>
-												<div class="group_row">
 													<span class="inp_unit size_ty2">
 														<input type="text" id="inptxt004">
 														<label class="unit" for="inptxt004">%</label>
@@ -311,51 +263,32 @@
 												</div>
 											</div>
 										</div>
-										<!-- //보증금 -->
-										<!-- 보증금+선납금 -->
+										<!-- //선수비율금액 -->
+										<!-- 초기납입금 -->
 										<div class="field_box">
 											<div class="article">
-												<strong class="tit_legend">보증금</strong>
+												<strong class="tit_legend">초기납입금</strong>
 												<div class="group_row">
-													<ul class="list_tog_btn ty2 case3">
-														<li><a href="#none">10%</a></li>
-														<li><a href="#none" class="active">20%</a></li>
-														<li><a href="#none">30%</a></li>
-														<li><a href="#none">40%</a></li>
-														<li><a href="#none">잔가가동일</a></li>
-														<li><a href="#none">직접입력</a></li>
-													</ul>
-												</div>
-												<div class="group_row">
-													<span class="inp_unit size_ty2">
-														<input type="text" id="inptxt004">
-														<label class="unit" for="inptxt004">%</label>
-													</span>
 													<span class="inp_unit">
-														<input type="text" id="inptxt005" class="inp_price">
+														<input type="text" id="inptxt005" class="inp_price" placeholder="100,000">
 														<label class="unit" for="inptxt005">원</label>
 													</span>
 												</div>
 											</div>
 											<div class="article">
-												<strong class="tit_legend">선납금</strong>
+												<strong class="tit_legend">선수금</strong>
 												<div class="group_row">
-													<ul class="list_tog_btn ty2 case3">
-														<li><a href="#none">10%</a></li>
-														<li><a href="#none" class="active">20%</a></li>
-														<li><a href="#none">30%</a></li>
-														<li><a href="#none">40%</a></li>
-														<li><a href="#none">잔가가동일</a></li>
-														<li><a href="#none">직접입력</a></li>
-													</ul>
-												</div>
-												<div class="group_row">
-													<span class="inp_unit size_ty2">
-														<input type="text" id="inptxt004">
-														<label class="unit" for="inptxt004">%</label>
-													</span>
 													<span class="inp_unit">
-														<input type="text" id="inptxt005" class="inp_price">
+														<input type="text" id="inptxt005" class="inp_price" value="200,000" disabled>
+														<label class="unit" for="inptxt005">원</label>
+													</span>
+												</div>
+											</div>
+											<div class="article">
+												<strong class="tit_legend">리스신청금액</strong>
+												<div class="group_row">
+													<span class="inp_unit">
+														<input type="text" id="inptxt005" class="inp_price" placeholder="200,000">
 														<label class="unit" for="inptxt005">원</label>
 													</span>
 												</div>
@@ -364,7 +297,7 @@
 										<!-- //보증금+선납금 -->
 									</div>
 								</div>
-								<!-- //보증/선납 -->
+								<!-- //선수금 -->
 
 								<!-- 적용잔가 -->
 								<div class="field_wrap">
@@ -391,6 +324,57 @@
 									</div>
 								</div>
 								<!-- //적용잔가 -->
+
+								<!-- 신청금 -->
+								<div class="field_wrap">
+									<div class="field">
+										<strong class="tit_legend ic_essential">신청금</strong>
+										<div class="group_row">
+											<span class="inp_unit">
+												<input type="text" id="inptxt002" class="inp_price" plasceholder="11,000,000">
+												<label class="unit" for="inptxt002">원</label>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- //신청금 -->
+
+								<!-- 유예금 기준 -->
+								<div class="field_wrap">
+									<div class="field">
+										<div class="tit_area between">
+											<strong class="tit_legend">유예금 기준</strong>
+										</div>
+										<!-- toggle_wrap -->
+										<div class="toggle_wrap ty5 active">
+											<div class="toggle_top">
+												<div class="bx_tit">
+													<strong>차량가</strong>
+												</div>
+												<div class="bx_side">
+													<span class="btn"><a href="#none" class="btn_txt">변경</a></span>
+												</div>
+											</div>
+											<div class="toggle_con">
+												<div class="article">
+													<strong class="tit_legend">비율 및 금액</strong>
+													<div class="group_row">
+														<span class="inp_unit size_ty2">
+															<input type="text" id="inptxt001">
+															<label class="unit" for="inptxt001">%</label>
+														</span>
+														<span class="inp_unit">
+															<input type="text" id="inptxt002" class="inp_price">
+															<label class="unit" for="inptxt002">원</label>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- //toggle_wrap -->
+									</div>
+								</div>
+								<!-- //유예금 기준 -->
 
 								<!-- 딜러사이손금 -->
 								<div class="field_wrap">
@@ -427,37 +411,6 @@
 									</div>
 								</div>
 								<!-- //판매사이손금 -->
-
-								<!-- 잔가지원금 -->
-								<div class="field_wrap">
-									<div class="field">
-										<strong class="tit_legend">잔가지원금</strong>
-										<div class="group_row">
-											<span class="inp_unit size_ty2">
-												<input type="text" id="inptxt001">
-												<label class="unit" for="inptxt001">%</label>
-											</span>
-											<span class="inp_unit">
-												<input type="text" id="inptxt002" class="inp_price">
-												<label class="unit" for="inptxt002">원</label>
-											</span>
-										</div>
-									</div>
-								</div>
-								<!-- //잔가지원금 -->
-
-								<!-- 자동차세포함여부 -->
-								<div class="field_wrap">
-									<div class="field">
-										<strong class="tit_legend ic_essential">자동차세 포함 여부</strong>
-										<div class="group_row">
-											<div class="group_rdo">
-												<label><input type="checkbox">자동차세 포함</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- //자동차세포함여부 -->
 
 								<!-- CM수수료 -->
 								<div class="field_wrap">
@@ -638,7 +591,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- //금융정보 -->
 
 			<!-- section_btm_fixed -->
 			<div class="section_btm_fixed">
