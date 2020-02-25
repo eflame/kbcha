@@ -4,6 +4,7 @@
 ver : 1.00
 ============================== */
 
+.fixedVal {position:fixed; z-index:999; top:0; width:100%; padding:10px; font-size:18px; background:#CCC;}
 
 /* 페이지 가이드 전용 ================================================== */
 .article_pg_guide {margin:0 20px 50px; border:1px solid #CCC;}
