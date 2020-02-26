@@ -250,25 +250,22 @@ function btmAreaFixed(){
 		var dHgt = $(document).height();
 		var sTop = $(this).scrollTop();
 
-		if (sTop > lastScrollTop && sTop < dHgt - wHgt - 100){
+		if (sTop > lastScrollTop && sTop < dHgt - wHgt - 77 ){
 			$('.section_btm_fixed .btn_wrap2').slideUp();
-
-
-			console.log('down');
+				// console.log('down');
 		} else {
-			if (sTop + wHgt < dHgt && sTop < dHgt - wHgt - 100){
+			if (sTop + wHgt < dHgt && sTop < dHgt - wHgt - 77) {
 				if ($('.section_btm_fixed').hasClass('active') == false){
 					$('.section_btm_fixed .btn_wrap2').slideUp();
 				}
-				
-				console.log('up');
+				// console.log('up');
 			}
 		}
 
-		if (sTop == dHgt - wHgt){
+		if (sTop >= dHgt - wHgt - 77){
 			$('.section_btm_fixed .btn_wrap2').slideDown();
 
-			console.log('?');
+			// console.log('?');
 		}
 
 		var aaa = dHgt - wHgt;
@@ -279,3 +276,6 @@ function btmAreaFixed(){
 		$('.fixedVal').text(sTop + ' , ' + dHgt + '-' + wHgt + '=' + aaa);
 	});
 }
+
+
+
