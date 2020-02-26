@@ -154,53 +154,68 @@
 			</div>
 			
 			<!-- 금융정보 -->
-			<div class="section">
+			<div class="section bg">
 				<div class="section_top">
 					<div class="bx_tit">
 						<strong>금융정보</strong>
 					</div>
+					<!-- 비활성화시 class="disabled" 추가 -->
+					<a href="#none" class="btn btn_col2 ty1 rnd">상담등록</a>
 				</div>
-				<div class="article">
-					<ul class="estimate_list">
-						<li class="toggle_wrap ty4">
-							<button type="button" class="toggle_top">
-								<span class="title">견적서 01</span>
-								<a href="#none" class="btn_del">삭제</a>
-								<a href="#none" class="btn_toggle open">펼쳐보기</a>
-							</button>
-							<!-- 견적서 상세내용 -->
-							<div class="toggle_con">
-								
+				<dl class="pd_code_box">
+					<dt>상품코드</dt>
+					<dd>일반(개인채널)</dd>
+				</dl>
+				<ul class="estimate_list ty2">
+					<li>
+						<a href="#none" class="active">
+							<div class="es_price">
+								<strong class="title">견적서 01</strong>
+								<span class="cont"><em>770,000원</em>렌트료</span>
 							</div>
-							<!-- //견적서 상세내용 -->
-						</li>
-						<li class="toggle_wrap ty4">
-							<button type="button" class="toggle_top">
-								<span class="title">견적서 02</span>
-								<a href="#none" class="btn_del">삭제</a>
-								<a href="#none" class="btn_toggle open">펼쳐보기</a>
-							</button>
-							<!-- 견적서 상세내용 -->
-							<div class="toggle_con">
-								
+							<div class="es_list">
+								<strong class="title">견적서 내역</strong>
+								<span class="cont">
+									<span>36개월(30%/46%)</span><span>3만km</span><br>
+									<span>보증금 0원</span><span>선납금 0원</span><br>
+									<span>AG 0%  / CM 3%</span>
+								</span>
 							</div>
-							<!-- //견적서 상세내용 -->
-						</li>
-						<li class="toggle_wrap ty4">
-							<button type="button" class="toggle_top">
-								<span class="title">견적서 03</span>
-								<a href="#none" class="btn_del">삭제</a>
-								<a href="#none" class="btn_toggle open">펼쳐보기</a>
-							</button>
-							<!-- 견적서 상세내용 -->
-							<div class="toggle_con">
-								
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<div class="es_price">
+								<strong class="title">견적서 02</strong>
+								<span class="cont"><em>770,000원</em>렌트료</span>
 							</div>
-							<!-- //견적서 상세내용 -->
-						</li>
-
-					</ul>
-				</div>
+							<div class="es_list">
+								<strong class="title">견적서 내역</strong>
+								<span class="cont">
+									<span>36개월(30%/46%)</span><span>3만km</span><br>
+									<span>보증금 0원</span><span>선납금 0원</span><br>
+									<span>AG 0%  / CM 3%</span>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#none">
+							<div class="es_price">
+								<strong class="title">견적서 03</strong>
+								<span class="cont"><em>770,000원</em>렌트료</span>
+							</div>
+							<div class="es_list">
+								<strong class="title">견적서 내역</strong>
+								<span class="cont">
+									<span>36개월(30%/46%)</span><span>3만km</span><br>
+									<span>보증금 0원</span><span>선납금 0원</span><br>
+									<span>AG 0%  / CM 3%</span>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
 			</div>
 			<!-- //금융정보 -->
 
@@ -228,7 +243,7 @@
 									<div class="field">
 										<strong class="tit_legend">고객구분</strong>
 										<div class="group_row">
-											<ul class="list_tog_btn ty2 case2">
+											<ul class="list_tog_btn ty4 case2">
 												<li><a href="#none" class="active">개인</a></li>
 												<li><a href="#none">법인사업자</a></li>
 											</ul>
@@ -273,44 +288,50 @@
 								<!-- //법인사업자_사업자번호 -->
 
 
-								<!-- 신용정보조회 동의여부 -->
+								<!-- 신용정보조회 -->
 								<div class="field_wrap">
 									<div class="field">
-										<strong class="tit_legend">신용정보조회 동의여부</strong>
+										<strong class="tit_legend">신용정보조회</strong>
 										<div class="group_row">
-											<span class="bx_inp">
-												<input type="text" placeholder="-">
-												<a href="#none" class="btn btn_col1 ty1 rnd">고객검색</a>
-											</span>
+											<table class="tbl_write">
+												<colgroup>
+													<col style="width: 30%">
+													<col style="width: auto">
+													<col style="width: 35%">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>동의부여</th>
+														<td colspan="2" class="txt_l">
+															-
+															<a href="#none" class="btn btn_col1 ty1 rnd">고객검색</a>
+														</td>
+													</tr>
+													<tr>
+														<th>조회방식</th>
+														<td colspan="2" class="txt_l">
+															<div class="group_rdo">
+																<label><input type="radio" checked>URL</label>
+																<label><input type="radio">ARS</label>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="txt_r">
+											<a href="#none" class="btn_col1 ty1 rnd">신용정보조회 동의요청</a>
 										</div>
 									</div>
 								</div>
-								<!-- //신용정보조회 동의여부 -->
+								<!-- //신용정보조회 -->
 
-								<!-- 신용정보조회 방식 -->
-								<div class="field_wrap">
-									<div class="field">
-										<strong class="tit_legend">신용정보조회 방식</strong>
-										<div class="group_row">
-											<div class="group_rdo">
-												<label><input type="radio" checked>URL</label>
-												<label><input type="radio">ARS</label>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- //신용정보조회 방식 -->
-								<div class="article_btm_area txt_r">
-									<a href="#none" class="btn_col1 ty1 rnd">신용정보조회 동의요청</a>
-								</div>
+
+
 
 							</div>
 							<!-- //고객정보 상세내용 -->
-						</div>
-
-						<div class="article_btm_area">
-							<a href="#none" class="btn_col2 ty1 rnd">상담등록</a>
-						</div>
+						</div> 
 					</div>
 				</div>
 			</div>
