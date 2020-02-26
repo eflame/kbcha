@@ -52,13 +52,13 @@ input[type="text"]:read-only,
 input[type="password"]:read-only,
 input[type="number"]:read-only,
 input[type="tel"]:read-only,
-input[type="date"]:read-only {color:#ababab !important; background-color:#f6f6f6 !important;}
+input[type="date"]:read-only {color:#999 !important; background-color:#f6f6f6 !important;}
 
 input[type="text"]:disabled,
 input[type="password"]:disabled,
 input[type="number"]:disabled,
 input[type="tel"]:disabled,
-input[type="date"]:disabled {color:#ababab !important; background-color:#f6f6f6 !important;}
+input[type="date"]:disabled {color:#999 !important; background-color:#f6f6f6 !important;}
 
 /* Removes the clear button from date inputs */
 input[type="date"]::-webkit-clear-button {display:none;}
@@ -70,7 +70,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {color:#2c3e50;}
 input[type="date"] {display:inline-block !important; visibility:visible !important;}
 input[type="date"]:focus {box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;}
 
-::placeholder {color:#ababab;}
+::placeholder {color:#999;}
 
 input[type="button"],
 input[type="submit"],
@@ -82,10 +82,10 @@ select {height:42px; padding:0 30px 0 10px; border:1px solid #DDD; font-size:1.1
 select:hover, 
 select:active {/* background-image:url('../images/common/form_slct_up.svg'); */}
 select::-ms-expand {display:none;}
-select:disabled{color:#ababab !important; background-color:#f6f6f6 !important;}
+select:disabled{color:#999 !important; background-color:#f6f6f6 !important;}
 
 textarea {resize:none; width:100%; line-height:1.5; box-sizing:border-box; padding:10px; border:1px solid #DDD; font-size:1.143rem;}
-textarea:disabled{color:#ababab !important; background-color:#f6f6f6 !important;}
+textarea:disabled{color:#999 !important; background-color:#f6f6f6 !important;}
 
 input[type="radio"] {width:24px; height:24px; border:1px solid #EEE; border-radius:50%; background:#FFF;}
 input[type="radio"]:checked {border-color:#EEE; background:#FFF url("../../Content/images/common/form_rdo_on.png") no-repeat center center; background-size:12px 12px;}
@@ -97,8 +97,8 @@ input[type="checkbox"]:checked {border-color:#ffba00; background:#ffba00 url("..
 input[type="checkbox"]:disabled {border-color:#DDD; background:#DDD;}
 input[type="checkbox"]:disabled:checked {border-color:#DDD; background:#DDD url("../../Content/images/common/form_chk_on.png") no-repeat center center; background-size:16px 13px;}
 
-label input[type="radio"],
-label input[type="checkbox"] {margin-right:5px; vertical-align:-7px;}
+label input[type="radio"] {margin-right:5px; vertical-align:-7px;}
+label input[type="checkbox"] {margin-right:5px; vertical-align:-5px;}
 
 input[type=range] {width:100%; height:4px; margin:11px 0; box-sizing:border-box; border-radius:10px; cursor:pointer; transition:background 450ms ease-in; background:#DDD;}
 input[type=range]:focus {outline:none;}
@@ -148,6 +148,8 @@ input[type="checkbox"]:checked + label:before {border-color:#ffba00; background:
 input.inp_price {}
 input.inp_price:disabled,
 input.inp_price:read-only {text-align:right;}
+
+input.inp_col1 {color:#ff1e00;}
 
 /* 정렬 */
 .txt_l {text-align:left !important;}
