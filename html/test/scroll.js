@@ -11,44 +11,26 @@ $(function(){
 
 function btmAreaFixed(){
 	var lastScrollTop = 0;
+	var didScroll = true;
+	var dist = 80;
+	
 	$(window).on('scroll', function(){
-	//$(window).on('scroll', function(){
 		var wHgt = Math.ceil($(window).height());
 		var dHgt = Math.ceil($(document).height());
 		var sTop = Math.ceil($(this).scrollTop());
 		var aaa = dHgt - wHgt;
 
-		var bbb = $('.wrap > .inner').outerHeight();
+		if (sTop >= dHgt - wHgt - dist && didScroll){
+			console.log('바닥');
 
-		if (sTop > lastScrollTop && sTop < bbb - wHgt - 100){
-			console.log('down');
-		} else {
-			if (sTop + wHgt < bbb && sTop < bbb - wHgt - 100){
-				console.log('up');
-			}
-		}
-
-		if (sTop + wHgt == bbb){
-			console.log('?');
+			didScroll = false;
 			$('.fixedVal .tit2').text('바닥');
-		} else {
+		} else if (sTop < dHgt - wHgt - dist && didScroll == false){
+			console.log('x');
+
+			didScroll = true;
 			$('.fixedVal .tit2').text('');
 		}
-
-		/*
-		if (sTop == dHgt - wHgt){
-			console.log('?');
-			alert('s');
-		}
-
-		if (sTop == dHgt - wHgt){
-			console.log('??????');
-		}
-
-		if (sTop + wHgt == dHgt){
-			console.log('?');
-		}
-		*/
 		lastScrollTop = sTop;
 		$('.fixedVal .tit1').text(sTop + ' , ' + dHgt + '-' + wHgt + '=' + aaa + ',' + lastScrollTop);
 	});
