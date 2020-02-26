@@ -221,21 +221,25 @@
 
 
 /* step4 고객정보 */
-.pd_code_box { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; padding: 0 18px; color: #555; height: 42px; font-size: 1.000rem; background-color: #f4f4f4; }
-.estimate_list.ty2 li { margin-top: 8px; }
-.estimate_list.ty2 li a { display: block; padding: 0 18px; border: 1px solid #ddd; border-radius: 6px; background-color: #fff; }
-.estimate_list.ty2 li a.active { border-color: #ffba00; }
+.pd_code_box { display: flex; align-items: center; justify-content: space-between; padding: 0 18px; color: #555; height: 42px; font-size: 1.000rem; background-color: #f4f4f4; }
+.estimate_list.ty2 { margin-top: 10px; }
+.estimate_list.ty2 li:nth-of-type(1n+2) { margin-top: 8px; }
+.estimate_list.ty2 li a { display: block; overflow: hidden; padding: 0 18px 18px; height: 145px; border: 1px solid #ddd; border-radius: 6px; background-color: #fff; box-sizing: border-box; /* transition: all linear 300ms; */}
+.estimate_list.ty2 li a.active { height: 270px; border-color: #ffba00; }
 .estimate_list.ty2 .es_price { display: flex; align-items: center; justify-content: space-between; height: 63px; }
-.estimate_list.ty2 .es_price .title { color: #555; font-size: 1.143rem; font-family: "KBFGTextB"; }
+.estimate_list.ty2 .es_price .title { color: #555; font-size: 1.143rem; font-family: "KBFGTextB"; /* transition: all linear 300ms; */ }
 .estimate_list.ty2 .active .es_price .title { padding-left: 27px; color: #336fc9; background: url('../images/icon/check_on.png') no-repeat left 50%; background-size: auto 11px; }
 .estimate_list.ty2 .es_price .cont { color: #333; font-size: 1.143rem; text-align: right; }
 .estimate_list.ty2 .es_price .cont em { display: block; }
-.estimate_list.ty2 .es_list { display: flex; justify-content: space-between; padding: 12px 0; text-align: right; border-top: 1px solid #ededed; }
-.estimate_list.ty2 .es_list .title { color: #333; font-size: 0.857rem; }
+.estimate_list.ty2 .es_list { display: flex; justify-content: space-between; padding-top: 12px; text-align: right; border-top: 1px solid #ededed; }
+.estimate_list.ty2 .es_list .title,
+.estimate_list.ty2 .es_memo .title { color: #333; font-size: 0.857rem; }
 .estimate_list.ty2 .es_list .cont { color: #777; font-size: 0.857rem; }
 .estimate_list.ty2 .es_list .cont span { margin-top: 6px; }
 .estimate_list.ty2 .es_list .cont span + span { position: relative; margin-left: 15px; }
 .estimate_list.ty2 .es_list .cont span + span::before { content: ''; position: absolute; left: -8px; top: 4px; width: 4px; height: 4px; border-radius: 4px; background-color: #999; }
+.estimate_list.ty2 .es_memo { padding-top: 8px; }
+.estimate_list.ty2 .es_memo textarea { margin-top: 6px; padding: 15px; height: 88px; color: #555; font-size: 0.857rem; }
 
 /* td position "파폭 사파리 문제" 모바일 확인 필요 */
 .tbl_write td { position: relative; }
@@ -243,7 +247,7 @@
 
 
 
-
+.article_rnd { margin-bottom: 10px; padding: 18px; border-radius: 6px; border: 1px solid #ddd; background-color: #fff; }
 
 
 
