@@ -105,14 +105,15 @@
 
 
 /* 팝업 */
-.pop_base,
+.pop_base{ z-index: 100; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding-bottom: 50px; width: 285px; background-color: #fff; box-sizing: border-box; }
 .pop_alert { z-index: 100; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); padding-bottom: 50px; width: 285px; text-align: center; background-color: #fff; box-sizing: border-box; }
 [class^="pop_"] > .cont { padding: 37px 18px; color: #333; font-size: 1.143rem; line-height: 1.643rem; }
 [class^="pop_"] > .cont > .num { margin-top: 6px; }
 [class^="pop_"] > .cont > .num strong { color: #ffc000; }
+[class^="pop_"] > .cont .txt_cen { margin-bottom: 30px; color: #777; font-size: 1.000rem; text-align: center; }
+[class^="pop_"] > .cont .txt_cen strong { color: #333; font-size:1.214rem }
 [class^="pop_"] .btn_wrap { display: flex; position: absolute; left: 0; bottom: 0; width: 100%; }
 [class^="pop_"] .btn_wrap > * { flex: 1; height: 50px; line-height: 50px; }
-
 
 
 /* 견적산출 step */
@@ -181,7 +182,7 @@
 
 .field_box { padding: 18px 16px; border: 1px solid #ddd; background-color: #eee; }
 .field_box > .field:nth-of-type(1n+2) { margin-top: 27px; }
-
+.between,
 .tit_area.between { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
 
 /* text */
@@ -235,3 +236,17 @@
 .estimate_list.ty2 .es_list .cont span { margin-top: 6px; }
 .estimate_list.ty2 .es_list .cont span + span { position: relative; margin-left: 15px; }
 .estimate_list.ty2 .es_list .cont span + span::before { content: ''; position: absolute; left: -8px; top: 4px; width: 4px; height: 4px; border-radius: 4px; background-color: #999; }
+
+/* td position "파폭 사파리 문제" 모바일 확인 필요 */
+.tbl_write td { position: relative; }
+.tbl_write .btn_col1.rnd { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); }
+
+
+
+
+
+
+
+
+
+
