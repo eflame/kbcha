@@ -285,6 +285,13 @@
 .list_tog_btn.ty3.case5 li a {padding:0 4px;}
 .list_tog_btn.ty3 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
 
+.list_tog_btn.ty4 {display:flex; flex-wrap:wrap; justify-content:flex-start; margin:-2px 0;}
+.list_tog_btn.ty4 li {flex:1; margin:2px;}
+.list_tog_btn.ty4 li a {display:flex; align-items:center; justify-content:center; height:40px; box-sizing:border-box; border:1px solid #DDD; text-align:center; background-color:#FFF;}
+.list_tog_btn.ty4 li a.active {border-color:#ffc000; color:#FFF; background-color:#ffc000;}
+.list_tog_btn.ty4.case2 li {flex:0 0 calc(50% - 4px);}
+.list_tog_btn.ty4.case3 li {flex:0 0 calc(33.333% - 4px);}
+.list_tog_btn.ty4.case4 li {flex:0 0 calc(25% - 4px);}
 
 
 
