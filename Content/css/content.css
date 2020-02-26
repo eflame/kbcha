@@ -72,7 +72,7 @@
 
 
 .article_btm_area {margin:25px 0; text-align:center;}
-.toggle_wrap > .toggle_con .article_btm_area:last-child {margin-bottom:0;}
+.toggle_wrap .toggle_con .article_btm_area:last-child {margin-bottom:0;}
 
 .group_btn {display:inline-block; box-sizing:border-box; padding:0 18px; border:1px solid #ececec; border-radius:38px;}
 .group_btn a {padding:10px 0; white-space:nowrap; vertical-align:middle;}
@@ -89,82 +89,82 @@
 
 
 .toggle_wrap {}
-.toggle_wrap > .toggle_top {display:flex; justify-content:space-between; align-items:center; padding:10px 0;}
-.toggle_wrap > .toggle_top .bx_tit {flex:1;}
-.toggle_wrap > .toggle_top .bx_tit strong {display:inline-block; font-family:"KBFGTextB"; font-size:1.000rem; color:#222; vertical-align:middle;}
-.toggle_wrap > .toggle_top .bx_tit span {display:inline-block; margin-top:-2px; font-family:"KBFGTextB"; font-size:0.857rem; vertical-align:middle;}
-.toggle_wrap > .toggle_top .bx_tit span:before {content:""; display:inline-block; height:12px; margin:-1px 8px 0 6px; border-left:1px solid #999; vertical-align:middle;}
-.toggle_wrap > .toggle_top .bx_tit a {font-family:"KBFGTextB"; text-decoration:underline;}
-.toggle_wrap > .toggle_top .bx_tit input[type="text"] {width:100%; height:30px; padding:0; border:none;}
-.toggle_wrap > .toggle_top .bx_side {flex:0 0 auto; margin-left:auto;}
-.toggle_wrap > .toggle_top .bx_side .btn {}
-.toggle_wrap > .toggle_top .bx_side .btn.side {}
-.toggle_wrap > .toggle_top .bx_side .side:before {content:""; display:inline-block; height:10px; margin:0 8px 0 12px; border-left:1px solid #BBB; vertical-align:middle;}
-.toggle_wrap > .toggle_top .btn_toggle {display:inline-block; width:30px; height:30px; font-size:0; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
-.toggle_wrap > .toggle_con {display:none;}
+.toggle_wrap .toggle_top {display:flex; justify-content:space-between; align-items:center; padding:10px 0;}
+.toggle_wrap .toggle_top .bx_tit {flex:1;}
+.toggle_wrap .toggle_top .bx_tit strong {display:inline-block; font-family:"KBFGTextB"; font-size:1.000rem; color:#222; vertical-align:middle;}
+.toggle_wrap .toggle_top .bx_tit span {display:inline-block; margin-top:-2px; font-family:"KBFGTextB"; font-size:0.857rem; vertical-align:middle;}
+.toggle_wrap .toggle_top .bx_tit span:before {content:""; display:inline-block; height:12px; margin:-1px 8px 0 6px; border-left:1px solid #999; vertical-align:middle;}
+.toggle_wrap .toggle_top .bx_tit a {font-family:"KBFGTextB"; text-decoration:underline;}
+.toggle_wrap .toggle_top .bx_tit input[type="text"] {width:100%; height:30px; padding:0; border:none;}
+.toggle_wrap .toggle_top .bx_side {flex:0 0 auto; margin-left:auto;}
+.toggle_wrap .toggle_top .bx_side .btn {}
+.toggle_wrap .toggle_top .bx_side .btn.side {}
+.toggle_wrap .toggle_top .bx_side .side:before {content:""; display:inline-block; height:10px; margin:0 8px 0 12px; border-left:1px solid #BBB; vertical-align:middle;}
+.toggle_wrap .toggle_top .btn_toggle {display:inline-block; width:30px; height:30px; font-size:0; vertical-align:middle; background-repeat:no-repeat; background-position:center center;}
+.toggle_wrap .toggle_con {display:none;}
 .toggle_wrap.active > .toggle_con {display:block;}
-.toggle_wrap > .toggle_con.non_pad {padding:0 !important;}
-.toggle_wrap > .toggle_con .list_opt {padding:5px 18px 10px;}
+.toggle_wrap .toggle_con.non_pad {padding:0 !important;}
+.toggle_wrap .toggle_con .list_opt {padding:5px 18px 10px;}
 
 .toggle_wrap.ty1 {margin-bottom:10px; border-radius:4px; box-shadow:0 0 5px rgba(0, 0, 0, .08); background-color:#FFF;}
-.toggle_wrap.ty1 > .toggle_top {padding:10px 18px;}
-.toggle_wrap.ty1 > .toggle_top .bx_tit {}
-.toggle_wrap.ty1 > .toggle_top .bx_tit strong {}
-.toggle_wrap.ty1 > .toggle_top .bx_tit span {}
-.toggle_wrap.ty1 > .toggle_top .bx_tit span:before {}
-.toggle_wrap.ty1 > .toggle_top .bx_side {}
-.toggle_wrap.ty1 > .toggle_top .bx_side .btn {}
-.toggle_wrap.ty1 > .toggle_top .bx_side .btn.side {}
-.toggle_wrap.ty1 > .toggle_top .bx_side .side:after {}
+.toggle_wrap.ty1 .toggle_top {padding:10px 18px;}
+.toggle_wrap.ty1 .toggle_top .bx_tit {}
+.toggle_wrap.ty1 .toggle_top .bx_tit strong {}
+.toggle_wrap.ty1 .toggle_top .bx_tit span {}
+.toggle_wrap.ty1 .toggle_top .bx_tit span:before {}
+.toggle_wrap.ty1 .toggle_top .bx_side {}
+.toggle_wrap.ty1 .toggle_top .bx_side .btn {}
+.toggle_wrap.ty1 .toggle_top .bx_side .btn.side {}
+.toggle_wrap.ty1 .toggle_top .bx_side .side:after {}
 
-.toggle_wrap.ty1 > .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
-.toggle_wrap.ty1 > .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
-.toggle_wrap.ty1 > .toggle_con {padding:24px 18px;}
+.toggle_wrap.ty1 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
+.toggle_wrap.ty1 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
+.toggle_wrap.ty1 .toggle_con {padding:24px 18px;}
 
 .toggle_wrap.ty2 {margin-bottom:1px; background-color:#FFF;}
 .toggle_wrap.ty2.active {margin-bottom:0;}
-.toggle_wrap.ty2 > .toggle_top {padding:10px 18px; background-color:#ececec;}
-.toggle_wrap.ty2 > .toggle_top .bx_tit {}
-.toggle_wrap.ty2 > .toggle_top .bx_tit strong {}
-.toggle_wrap.ty2 > .toggle_top .bx_tit span {}
-.toggle_wrap.ty2 > .toggle_top .bx_tit span:before {}
-.toggle_wrap.ty2 > .toggle_top .bx_side {}
-.toggle_wrap.ty2 > .toggle_top .bx_side .btn {}
-.toggle_wrap.ty2 > .toggle_top .bx_side .btn.side {}
-.toggle_wrap.ty2 > .toggle_top .bx_side .side:after {}
-.toggle_wrap.ty2 > .toggle_top .btn_toggle.open {background-size:10.5px 5.5px; background-image:url("../../Content/images/icon/btn_toggle_gry_dw.png")}
-.toggle_wrap.ty2 > .toggle_top .btn_toggle.close {background-size:10.5px 5.5px; background-image:url("../../Content/images/icon/btn_toggle_gry_up.png")}
-.toggle_wrap.ty2 > .toggle_con {padding:24px 18px;}
+.toggle_wrap.ty2 .toggle_top {padding:10px 18px; background-color:#ececec;}
+.toggle_wrap.ty2 .toggle_top .bx_tit {}
+.toggle_wrap.ty2 .toggle_top .bx_tit strong {}
+.toggle_wrap.ty2 .toggle_top .bx_tit span {}
+.toggle_wrap.ty2 .toggle_top .bx_tit span:before {}
+.toggle_wrap.ty2 .toggle_top .bx_side {}
+.toggle_wrap.ty2 .toggle_top .bx_side .btn {}
+.toggle_wrap.ty2 .toggle_top .bx_side .btn.side {}
+.toggle_wrap.ty2 .toggle_top .bx_side .side:after {}
+.toggle_wrap.ty2 .toggle_top .btn_toggle.open {background-size:10.5px 5.5px; background-image:url("../../Content/images/icon/btn_toggle_gry_dw.png")}
+.toggle_wrap.ty2 .toggle_top .btn_toggle.close {background-size:10.5px 5.5px; background-image:url("../../Content/images/icon/btn_toggle_gry_up.png")}
+.toggle_wrap.ty2 .toggle_con {padding:24px 18px;}
 
 .toggle_wrap.ty3 {margin-bottom:10px; border-radius:4px; box-shadow:0 0 5px rgba(0, 0, 0, .08); background-color:#FFF;}
-.toggle_wrap.ty3 > .toggle_top {display:block; padding:12px 8px; text-align:center;}
-.toggle_wrap.ty3 > .toggle_top .bx_pen {padding:8px 0 16px; border-bottom:1px solid #ececec;}
-.toggle_wrap.ty3 > .toggle_top .bx_pen .btn_pen {display:inline-block; padding-right:20px; font-size:1.071rem; color:#999; background:url("../../Content/images/icon/ic_pen.png") no-repeat right center; background-size:14px auto;}
-.toggle_wrap.ty3 > .toggle_top .bx_pen .btn_pen.active {font-size:1.214rem; color:#333; text-decoration:underline;}
-.toggle_wrap.ty3 > .toggle_top .bx_con {}
-.toggle_wrap.ty3 > .toggle_top .btn_toggle {display:block; width:auto;}
-.toggle_wrap.ty3 > .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../../Content/images/icon/btn_toggle_blk_dw.png")}
-.toggle_wrap.ty3 > .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../../Content/images/icon/btn_toggle_blk_up.png")}
-.toggle_wrap.ty3 > .toggle_con {padding:24px 18px;}
+.toggle_wrap.ty3 .toggle_top {display:block; padding:12px 8px; text-align:center;}
+.toggle_wrap.ty3 .toggle_top .bx_pen {padding:8px 0 16px; border-bottom:1px solid #ececec;}
+.toggle_wrap.ty3 .toggle_top .bx_pen .btn_pen {display:inline-block; padding-right:20px; font-size:1.071rem; color:#999; background:url("../../Content/images/icon/ic_pen.png") no-repeat right center; background-size:14px auto;}
+.toggle_wrap.ty3 .toggle_top .bx_pen .btn_pen.active {font-size:1.214rem; color:#333; text-decoration:underline;}
+.toggle_wrap.ty3 .toggle_top .bx_con {}
+.toggle_wrap.ty3 .toggle_top .btn_toggle {display:block; width:auto;}
+.toggle_wrap.ty3 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../../Content/images/icon/btn_toggle_blk_dw.png")}
+.toggle_wrap.ty3 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../../Content/images/icon/btn_toggle_blk_up.png")}
+.toggle_wrap.ty3 .toggle_con {padding:24px 18px;}
 
 
 
 
 
 .toggle_wrap.ty5 {margin-bottom:1px; background-color:#FFF;}
-.toggle_wrap.ty5 > .toggle_top {padding:5px 18px; border:1px solid #DDD;}
-.toggle_wrap.ty5 > .toggle_top .bx_tit {}
-.toggle_wrap.ty5 > .toggle_top .bx_tit strong {font-family:"KBFGTextM"; font-size:1.143rem; color:#555;}
-.toggle_wrap.ty5 > .toggle_top .bx_tit span {}
-.toggle_wrap.ty5 > .toggle_top .bx_tit span:before {}
-.toggle_wrap.ty5 > .toggle_top .bx_side {}
-.toggle_wrap.ty5 > .toggle_top .bx_side .btn {height:30px; line-height:30px;}
-.toggle_wrap.ty5 > .toggle_top .bx_side .btn.side {}
-.toggle_wrap.ty5 > .toggle_top .bx_side .side:after {}
+.toggle_wrap.ty5 .toggle_top {padding:5px 18px; border:1px solid #DDD;}
+.toggle_wrap.ty5 .toggle_top .bx_tit {}
+.toggle_wrap.ty5 .toggle_top .bx_tit strong {font-family:"KBFGTextM"; font-size:1.143rem; color:#555;}
+.toggle_wrap.ty5 .toggle_top .bx_tit span {}
+.toggle_wrap.ty5 .toggle_top .bx_tit span:before {}
+.toggle_wrap.ty5 .toggle_top .bx_side {}
+.toggle_wrap.ty5 .toggle_top .bx_side .btn {height:30px; line-height:30px;}
+.toggle_wrap.ty5 .toggle_top .bx_side .btn.side {}
+.toggle_wrap.ty5 .toggle_top .bx_side .side:after {}
 
-.toggle_wrap.ty5 > .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
-.toggle_wrap.ty5 > .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
-.toggle_wrap.ty5 > .toggle_con {padding:18px 16px; border:1px solid #DDD; border-top:none; background-color:#f9f9f9;}
+.toggle_wrap.ty5 .toggle_top .btn_toggle.open {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_dw.png")}
+.toggle_wrap.ty5 .toggle_top .btn_toggle.close {background-size:10.5px 6px; background-image:url("../images/icon/btn_toggle_blk_up.png")}
+.toggle_wrap.ty5 .toggle_con {padding:18px 16px; border:1px solid #DDD; border-top:none; background-color:#f9f9f9;}
 
 
 
