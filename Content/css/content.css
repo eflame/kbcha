@@ -295,6 +295,55 @@
 
 
 
+.list_graph_btn {display:flex; flex-wrap:wrap; justify-content:flex-start; padding:10px 0 30px;}
+.list_graph_btn li {flex:1 0 auto;}
+.list_graph_btn li a {display:block; position:relative;}
+.list_graph_btn li a em {display:block; overflow:hidden; position:relative; height:10px; background-color:#DDD;}
+.list_graph_btn li a em:before {content:""; position:absolute; z-index:1; left:50%; top:0; bottom:0; border-left:1px solid #FFF;}
+.list_graph_btn li a span {position:absolute; top:30px; width:100%; font-size:0.857rem; color:#777; text-align:center;}
+
+.list_graph_btn li a.on {}
+.list_graph_btn li a.on em {}
+.list_graph_btn li a.on em:after {content:""; position:absolute; left:0; right:0; top:0; bottom:0; background-color:#ffc000;}
+.list_graph_btn li a.active {}
+.list_graph_btn li a.active:after {content:""; position:absolute; z-index:2; left:50%; top:50%; width:11px; height:11px; margin:-12px 0 0 -12px; border-radius:50%; border:7px solid #ffc000; background-color:#FFF;}
+.list_graph_btn li a.active em:after {right:50%;}
+
+.list_graph_btn li:first-child a em {border-radius:10px 0 0 10px;}
+.list_graph_btn li:last-child a em {border-radius:0 10px 10px 0;}
+.list_graph_btn li:first-child a em:before {display:none;}
+.list_graph_btn li:last-child a em:before {display:none;}
+.list_graph_btn li:first-child a span {text-align:left;}
+.list_graph_btn li:last-child a span {text-align:right;}
+
+.list_graph_btn li:first-child a.active:after {left:0; margin-left:0;}
+.list_graph_btn li:last-child a.active:after {left:auto; right:0; margin-left:0;}
+.list_graph_btn li:first-child a.active em:after {left:0; right:auto;}
+.list_graph_btn li:last-child a.active em:after {right:0%;}
+
+
+.list_graph_btn.case3 li {width:34%;}
+.list_graph_btn.case3 li:first-child,
+.list_graph_btn.case3 li:last-child {width:33%;}
+
+.list_graph_btn.case4 li {width:33%;}
+.list_graph_btn.case4 li:first-child,
+.list_graph_btn.case4 li:last-child {width:17%;}
+
+.list_graph_btn.case5 li {width:25%;}
+.list_graph_btn.case5 li:first-child,
+.list_graph_btn.case5 li:last-child {width:12.5%;}
+
+.list_graph_btn.case6 li {width:20%;}
+.list_graph_btn.case6 li:first-child,
+.list_graph_btn.case6 li:last-child {width:10%;}
+
+.list_graph_btn.case7 li {width:16.6%;}
+.list_graph_btn.case7 li:first-child,
+.list_graph_btn.case7 li:last-child {width:8.5%;}
+
+
+
 
 
 

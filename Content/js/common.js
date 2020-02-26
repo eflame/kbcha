@@ -5,6 +5,7 @@ $(window).on('load', function(){
 
 	tabActiveBar();
 	inputRange();
+	btnRange();
 });
 
 function tabActiveBar(){
@@ -23,6 +24,23 @@ function inputRange(){
 			$(this).css('background', 'linear-gradient(to right, #ffba00 0%, #ffba00 '+ val +'%, #DDD ' + val + '%, #DDD 100%)');
 		})
 	}
+}
+
+function btnRange(){
+	$('.list_graph_btn').each(function(){
+		$menu = $(this).find('li');
+		num = parseInt($menu.length) - 1;
+		wdh = 100 / num;
+		wdh2 = wdh / 2;
+
+		$menu.css({'width' : wdh + '%'});
+		$(this).find('li:first-child, li:last-child').css({'width' : wdh2 + '%'});
+		
+
+		console.log(num + ' , ' + wdh + ' , ' + wdh2);
+
+	})
+	
 }
 
 $(function(){  
@@ -51,6 +69,16 @@ $(function(){
 	$('.list_tog_btn a').on('click', function(){
 		var $btns = $(this).parent('li').siblings().find('a');
 		$(this).addClass('active');
+		$btns.removeClass('active');
+	});
+
+	$('.list_graph_btn a').on('click', function(){
+		var $btns = $(this).parent('li').siblings().find('a');
+		var $prvBtn = $(this).parent('li').prevAll().find('a');
+		var $nxtBtn = $(this).parent('li').nextAll().find('a');
+		$(this).addClass('active on');
+		$prvBtn.addClass('on');
+		$nxtBtn.removeClass('on');
 		$btns.removeClass('active');
 	});
 
