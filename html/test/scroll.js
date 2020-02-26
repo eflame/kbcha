@@ -12,6 +12,7 @@ $(function(){
 function btmAreaFixed(){
 	var lastScrollTop = 0;
 	var didScroll = true;
+	var dist = 80;
 	
 	$(window).on('scroll', function(){
 		var wHgt = Math.ceil($(window).height());
@@ -19,12 +20,12 @@ function btmAreaFixed(){
 		var sTop = Math.ceil($(this).scrollTop());
 		var aaa = dHgt - wHgt;
 
-		if (sTop >= dHgt - wHgt - 100 && didScroll == true){
+		if (sTop >= dHgt - wHgt - dist && didScroll){
 			console.log('바닥');
 
 			didScroll = false;
 			$('.fixedVal .tit2').text('바닥');
-		} else if (sTop < dHgt - wHgt - 100 && didScroll == false){
+		} else if (sTop < dHgt - wHgt - dist && didScroll == false){
 			console.log('x');
 
 			didScroll = true;

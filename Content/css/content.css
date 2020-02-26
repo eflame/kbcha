@@ -384,7 +384,7 @@
 
 /* 버튼 */
 .section_btm_fixed .btn_wrap2 {display:flex;}
-.section_btm_fixed .btn_wrap2 > * {flex:1;  }
+.section_btm_fixed .btn_wrap2 > * {flex:1;}
 .section_btm_fixed .btn_wrap2.fixed {}
 
 /* 옵션 가격표 */
