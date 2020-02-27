@@ -177,21 +177,71 @@ function removeDim(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(function(){
 	if ($('body').hasClass('fixedScroll')){
 		fixedScroll();
 	}
 	$('.section_btm_fixed .btn_toggle').on('click',function(){
-		var $fixedArea = $(this).parents('.section_btm_fixed');
-		$fixedArea.find('.price_list').slideToggle(300);
-		$fixedArea.toggleClass('active');
-		if ($fixedArea.find('.btn_wrap2').css('display') == 'block'){
-			$fixedArea.find('.btn_wrap2').slideDown();
-		} else {
-			$fixedArea.find('.btn_wrap2').slideDown();
-		}
+		fixedBtmState('step3');
 	});
 });
+
+function fixedBtmState(state){
+	var state;
+	var $fixedArea = $('.section_btm_fixed');
+	var $prList = $fixedArea.find('.price_list');
+	var $btWrap = $fixedArea.find('.btn_wrap2');
+	
+	if (state == 'step1'){
+		console.log('1');
+	} else if (state == 'step2'){
+		console.log('2');
+		if ($fixedArea.hasClass('btm')){
+			$btWrap.slideDown();
+		} else {
+			$btWrap.slideUp();
+		}
+	} else if (state == 'step3'){
+		console.log('3');
+
+		if ($fixedArea.hasClass('active')){
+			$fixedArea.removeClass('active');
+			if ($fixedArea.hasClass('btm')){
+				//$btWrap.slideDown();
+			} else {
+				$btWrap.slideUp();
+				$prList.slideUp();
+			}
+		} else {
+			$fixedArea.addClass('active');
+			$prList.slideDown();
+			if ($btWrap.css('display') != 'block'){
+				$btWrap.slideDown();
+			}
+		}
+	} else {
+		console.log('4');
+	}
+}
  
 function fixedScroll(){
 	var lastScrollTop = 0;
@@ -202,21 +252,19 @@ function fixedScroll(){
 		var wHgt = Math.ceil($(window).height());
 		var dHgt = Math.ceil($(document).height());
 		var sTop = Math.ceil($(this).scrollTop());
-		var aaa = dHgt - wHgt;
 
 		if (sTop >= dHgt - wHgt - dist && didScroll){
 			didScroll = false;
-			$('.section_btm_fixed .btn_wrap2').slideDown();
+			$('.section_btm_fixed').addClass('btm');
+			fixedBtmState('step2');
 		} else if (sTop < dHgt - wHgt - dist && didScroll == false){
 			didScroll = true;
-			$('.section_btm_fixed .btn_wrap2').slideUp();
+			$('.section_btm_fixed').removeClass('btm');
+			fixedBtmState('step2');
 		}
 		lastScrollTop = sTop;
-		$('.fixedVal .tit1').text(sTop + ' , ' + dHgt + '-' + wHgt + '=' + aaa + ',' + lastScrollTop);
 	});
 }
-
-
 /*
 function btmAreaFixed(){
 	var lastScrollTop = 0;

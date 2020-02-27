@@ -121,7 +121,7 @@ a.btn_txt {font-family:"KBFGTextB"; font-size:0.714rem; font-weight:bold; color:
 /* tbl_write ========== */
 table.tbl_list {}
 table.tbl_list th,
-table.tbl_list td {height:38px; padding:4px; border:1px solid #e4e4e4; font-size:1.071rem; color:#555; text-align:center;}
+table.tbl_list td {padding:15px 4px; border:1px solid #e4e4e4; font-size:1.071rem; color:#555; text-align:center;}
 table.tbl_list thead th {background-color:#f6f6f6;}
 table.tbl_list thead tr:first-child th {border-top-color:#CCC;}
 table.tbl_list tbody th {}
@@ -133,7 +133,7 @@ table.tbl_list .txt_r {padding-right:15px;}
 /* tbl_write ========== */
 table.tbl_write {}
 table.tbl_write tbody th, 
-table.tbl_write tbody td {height:38px; padding:4px 8px; border:1px solid #e4e4e4; font-size:1.071rem; color:#555; text-align:left;}
+table.tbl_write tbody td {padding:15px 8px; border:1px solid #e4e4e4; font-size:1.071rem; color:#555; text-align:left;}
 table.tbl_write tbody th {text-align:center; background:#f6f6f6;}
 table.tbl_write tbody tr:first-child th,
 table.tbl_write tbody tr:first-child td {border-top-color:#CCC;}
