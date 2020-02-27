@@ -248,6 +248,18 @@
 .estimate_list.ty2 .es_memo { padding-top: 8px; }
 .estimate_list.ty2 .es_memo textarea { margin-top: 6px; padding: 15px; height: 88px; color: #555; font-size: 0.857rem; }
 
+/* 중고차 차량검색 */
+.dual_search_wrap { position: relative; padding-left: 18px; padding-right: 95px; border-radius: 6px; background-color: #fff; box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+.dual_search_wrap .search_box { position: relative; }
+.dual_search_wrap .search_box:first-child { border-bottom: 1px solid #e7e7e7; }
+.dual_search_wrap .search_box input { padding: 0; height: 50px; width: 100%; border: 0; }
+.dual_search_wrap .search_box input::placeholder { color: #c2c2c2; }
+.slt_history_box { position: absolute; left: -18px; top: 50px; z-index: 10; padding: 0 18px; width: calc(100% - 18px); background-color: #fff; box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
 
+.dual_search_wrap > .btn_col1 { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); }
+
+
+/*  */
+.btn_dual_rnd {  width: 170px; height: 38px; border-radius: 16px; border: 1px solid #ececec; }
 
 
