@@ -11,8 +11,10 @@ $(window).on('load', function(){
 $(function(){
 	//하단고정영역
 	if ($('.section_btm_fixed').length > 0){
-		fixedScroll();
-		$('.section_btm_fixed .btn_wrap2').hide();
+		if ($('.section_btm_fixed').hasClass('fixed')){
+			fixedScroll();
+			$('.section_btm_fixed .btn_wrap2').hide();
+		}
 		$('.section_btm_fixed .btn_toggle').on('click',function(){
 			fixedBtmState('toggle');
 		});
@@ -24,8 +26,8 @@ $(function(){
 	});
 
 	//tab : event
-	$('.layerTab.tab_wrap').each(function () {
-		$(this).children('.tab_tit').find('li a').each(function (i) {
+	$('.layerTab.tab_wrap').each(function(){
+		$(this).children('.tab_tit').find('li a').each(function (i){
 			$(this).parent('li').attr('idx', i);
 		}).on('click', function(obj){
 			var n = $(this).parent('li').attr('idx');
@@ -35,7 +37,6 @@ $(function(){
 			$(this).addClass('active').parent('li').siblings().find('a, button').removeClass('active');
 			$tabCon.removeClass('active');
 			$tabCon.eq(n).focus().addClass('active');
-
 			tabActiveBar();
 		});
 	});
@@ -67,7 +68,7 @@ $(function(){
 			$togCon.slideDown(500, 'easeInOutQuart', function(){
 				$toggle.addClass('active');
 			});
-		} else if($(this).hasClass('close')) {
+		} else if($(this).hasClass('close')){
 			$(this).removeClass('close').addClass('open').text('펼쳐보기');
 			$togCon.slideUp(500, 'easeInOutQuart', function(){
 				$toggle.removeClass('active');
@@ -183,11 +184,11 @@ function fixedScroll(){
 	function fixedBtm(e){
 		if (e){
 			didScroll = false;
-			$('.section_btm_fixed').addClass('btm');
+			$('.section_btm_fixed.fixed').addClass('btm');
 			fixedBtmState('scroll');
 		} else {
 			didScroll = true;
-			$('.section_btm_fixed').removeClass('btm');
+			$('.section_btm_fixed.fixed').removeClass('btm');
 			fixedBtmState('scroll');
 		}
 	}
@@ -300,7 +301,7 @@ function btmAreaFixed(){
 			$('.section_btm_fixed .btn_wrap2').slideUp();
 				// console.log('down');
 		} else {
-			if (sTop + wHgt < dHgt && sTop < dHgt - wHgt - 77) {
+			if (sTop + wHgt < dHgt && sTop < dHgt - wHgt - 77){
 				if ($('.section_btm_fixed').hasClass('active') == false){
 					$('.section_btm_fixed .btn_wrap2').slideUp();
 				}
