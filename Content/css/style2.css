@@ -14,6 +14,7 @@
 .field_box > .field:nth-of-type(1n+2) { margin-top: 27px; }
 /* 양쪽 정렬 */
 .between { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.field .between .tit_legend { margin-bottom: 0; }
 
 /* group_row */
 .field .group_row.non_mrg { margin-bottom: 0; }
