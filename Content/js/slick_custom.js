@@ -1260,91 +1260,90 @@
 
     };
 
+
 	Slick.prototype.buildBlank = function() {
 		// console.log('reminder');
-		var _ = this, a, b, c, newSlides, numOfSlides, originalSlides, slidesPerSection, slidesReminder;
+		var _ = this, a, b, c, newSlides, numOfSlides, originalSlides, slidesReminder, markup;
 
 		newSlides = document.createDocumentFragment();
 		originalSlides = _.$slider.children();
 
-		if(_.options.blank == true) {
 
-			slidesPerSection = _.options.slidesPerRow * _.options.rows;
+
+
+
+
+		if(_.options.blank == true) {
 			numOfSlides = Math.ceil(originalSlides.length);
 			slidesReminder = Math.ceil(originalSlides.length % _.options.slidesToShow);
+			var lastSlider = originalSlides.eq(numOfSlides-1);
+			lastSlider.css({'border' : '3px solid blue'});
 
-			
-
-			//_.$slides = _.$slideTrack.children(this.options.slide);
 
 			//var num = _.$slides;
+			//originalSlides.appendChild('div')
 
-			//console.log( numOfSlides , slidesReminder , num );
 
-			
-
-			
-			
-			
 
 			for(a = 0; a < slidesReminder; a++){
+
 				var slide = document.createElement('div');
+				var newContent = document.createTextNode("환영합니다!"); 
+				slide.appendChild(newContent);  
+				var currentDiv = document.getElementById("div1"); 
+				//originalSlides.parent().insertAfter(slide, lastSlider);
+
+
 
 				//_.$slider.appendChild(slide);
-
-				
-					//originalSlides.css({'border' : '3px solid blue'});
-
 				//_.$slider.insertBefore();
-
-				//_.$slider.appendChild(slide);
-
-
-
-				/*
-				for(b = 0; b < _.options.rows; b++) {
-					var row = document.createElement('div');
-					for(c = 0; c < _.options.slidesPerRow; c++) {
-						var target = (a * slidesPerSection + ((b * _.options.slidesPerRow) + c));
-						if (originalSlides.get(target)) {
-							row.appendChild(originalSlides.get(target));
-						}
-					}
-					slide.appendChild(row);
-				}
-				*/
-
-
-				
-			
-				console.log( newSlides.appendChild(slide));
-
-				
 			}
-
-			//newSlides.css({'border' : '3px solid red'});
-
-			//_.$slideTrack.css({'border' : '3px solid red'});
-
-			//_.$slider.css({'border' : '3px solid blue'});
-
-			//_.$slides = _.$slideTrack.children(this.options.slide);
-
-			//_.$slideTrack.children(this.options.slide).detach();
-
-			//_.$slideTrack.append(_.$slides);
-
-
-
-			
-
-			//_.$slider.empty().append(newSlides);
-
-
 		}
-		
+
+		/*
+
+        _.$slides = _.$slideTrack.children(this.options.slide);
+
+        _.$slideTrack.children(this.options.slide).detach();
+
+        _.$slideTrack.append(_.$slides);
+
+        _.$slides.each(function(index, element) {
+            $(element).attr('data-slick-index', index);
+        });
+
+		_.$slidesCache = _.$slides;
+
+		*/
 
 	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     Slick.prototype.init = function(creation) {
 
