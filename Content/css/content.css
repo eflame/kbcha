@@ -15,12 +15,6 @@
 
 
 
-.fixed_btm {position:fixed; z-index:10; left:0; right:0; bottom:0;}
-
-.fixed_btm .list_btn {display:flex; justify-content:center; align-items:center;}
-.fixed_btm .list_btn li {flex:1;}
-.fixed_btm .list_btn li a {display:block; height:57px; line-height:57px; text-align:center;}
-
 
 
 
