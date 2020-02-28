@@ -249,14 +249,19 @@
 .list_tog_btn li a {}
 .list_tog_btn li a.active {}
 .list_tog_btn li a.disabled {pointer-events:none; color:#DDD;}
+.field .group_row .list_tog_btn {margin-right:2px; margin-left:2px;}
 
 .list_tog_btn.ty1 {margin:1px 0 0;}
 .list_tog_btn.ty1 li {margin-top:-1px;}
-.list_tog_btn.ty1 li a {display:flex; align-items:center; position:relative; padding:15px 10px; border-bottom:1px solid #DDD;}
+.list_tog_btn.ty1 li a,
+.list_tog_btn.ty1 li p {display:flex; align-items:center; position:relative; padding:15px 18px; border-bottom:1px solid #DDD;}
+.list_tog_btn.ty1 li p.active {padding-top:20px; padding-bottom:20px; border-bottom:none; color:#FFF; background-color: #ffc000;}
 .list_tog_btn.ty1 li a.active {z-index:1; border:1px solid #ffc000;}
 .list_tog_btn.ty1 li a.active:after {content:"선택"; display:inline-block; width:15px; height:11px; margin:-2px 0 0 10px; font-size:0; background:url("../../Content/images/icon/ic_selected.png") no-repeat center center; background-size:16px auto;}
-.list_tog_btn.ty1 li a strong {flex:1 1 auto; line-height:1.5; font-size:0.929rem}
-.list_tog_btn.ty1 li a span {flex:none;}
+.list_tog_btn.ty1 li a strong,
+.list_tog_btn.ty1 li p strong {flex:1 1 auto; line-height:1.5; font-size:0.929rem}
+.list_tog_btn.ty1 li a span,
+.list_tog_btn.ty1 li p span {flex:none; font-size:1.143rem;}
 
 .list_tog_btn.ty2 {display:flex; flex-wrap:wrap; justify-content:flex-start; margin:-2px 0;}
 .list_tog_btn.ty2 li {flex:1; margin:2px;}
