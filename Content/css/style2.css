@@ -193,7 +193,7 @@
 .step_state li { position: relative; }
 .step_state li:nth-of-type(1n+2) { margin-left: 10px; }
 .step_state li:nth-last-child(1n+2):after { content:""; position:absolute; top:50%; right:-10px; width:10px; height:2px; margin-top:-2px; background-color:#DDD;}
-.step_state li a { display: block;  width:27px; height:27px; color: #fff; line-height: 2.000rem; border-radius:50%; text-align:center; background-color:#DDD; }
+.step_state li a { display: block;  width:27px; height:27px; color: #fff; font-family:"KBFGTextB";  line-height: 2.000rem; border-radius:50%; text-align:center; background-color:#DDD; }
 .step_state li.on a { background-color:#ffba00; }
 .step_state li.active a { font-size: 0; text-indent: -9999px; background:#ffba00 url('../images/icon/ic_check.png') no-repeat 50% 50%; background-size: auto 11px;;  }
 .step_state li.on:after, 
@@ -234,8 +234,8 @@
 .pd_code_box { display: flex; align-items: center; justify-content: space-between; padding: 0 18px; color: #555; height: 42px; font-size: 1.000rem; background-color: #f4f4f4; }
 .estimate_list.ty2 { margin-top: 10px; }
 .estimate_list.ty2 li:nth-of-type(1n+2) { margin-top: 8px; }
-.estimate_list.ty2 li a { display: block; overflow: hidden; padding: 0 18px 18px; height: 145px; border: 1px solid #ddd; border-radius: 6px; background-color: #fff; box-sizing: border-box; /* transition: all linear 300ms; */}
-.estimate_list.ty2 li a.active { height: 270px; border-color: #ffba00; }
+.estimate_list.ty2 li a { display: block; overflow: hidden; padding: 0 18px 18px; border: 1px solid #ddd; border-radius: 6px; background-color: #fff; box-sizing: border-box; /* transition: all linear 300ms; */}
+.estimate_list.ty2 li a.active { border-color: #ffba00; }
 .estimate_list.ty2 .es_price { display: flex; align-items: center; justify-content: space-between; height: 63px; }
 .estimate_list.ty2 .es_price .title { color: #555; font-size: 1.143rem; font-family: "KBFGTextB"; /* transition: all linear 300ms; */ }
 .estimate_list.ty2 .active .es_price .title { padding-left: 27px; color: #336fc9; background: url('../images/icon/check_on.png') no-repeat left 50%; background-size: auto 11px; }
