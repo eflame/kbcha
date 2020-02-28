@@ -166,20 +166,22 @@
 .txtarea_notice > .tit > span { color: #ffc000; }
 .txtarea_notice > span { display: block; }
 
+/* 이미지 + 알림글 */
 .txtarea_notice.ty1::before { background: #ffc000 url('../images/icon/ic_check.png') no-repeat 50% 50%; background-size: auto 11px; }
 .txtarea_notice.ty1 > .txt { margin-top: 26px; color: #555; font-size: 1.000rem; line-height: 1.286rem;}
 .txtarea_notice.ty2::before { background: #ffc000 url('../images/icon/ic_exclamation.png') no-repeat 50% 50%; background-size: auto 21px; }
 .txtarea_notice.ty2 > .txt { color: #555; font-size: 1.286rem; line-height: 2.000rem; }
-
-/* 검색없을때 이미지 */
 .txtarea_notice.ty3 { padding-top: 57px; }
 .txtarea_notice.ty3::before { background: #ddd url('../images/icon/ic_nodata.png') no-repeat 50% 50%; background-size: auto 12.5px; }
 .txtarea_notice > .tit { font-size: 1.143rem; line-height: 1.286rem; }
 .txtarea_notice.ty3 > .txt { margin-top: 10px; color: #777; font-size: 0.929rem; line-height: 1.214rem; }
+.txtarea_notice.ty4::before { background: #ddd url('../images/icon/ic_check.png') no-repeat 50% 50%; background-size: auto 11px; }
+.txtarea_notice.ty4 > .txt { margin-top: 26px; color: #555; font-size: 1.000rem; line-height: 1.286rem;}
 
 /* 나중에 class명 수정 */
 .base_wrap { display: flex; height: 300px; align-items: center; justify-content: center; }
-
+.base_wrap.ty2 { padding: 44px 0 40px; height: auto; border: 1px solid #ddd; }
+.base_wrap2 { padding: 140px 0 70px; }
 
 
 
@@ -251,15 +253,24 @@
 /* 중고차 차량검색 */
 .dual_search_wrap { position: relative; padding-left: 18px; padding-right: 95px; border-radius: 6px; background-color: #fff; box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
 .dual_search_wrap .search_box { position: relative; }
+.dual_search_wrap .search_box:nth-of-type(2) .slt_history_box { top: 50px; z-index: 9; }
 .dual_search_wrap .search_box:first-child { border-bottom: 1px solid #e7e7e7; }
 .dual_search_wrap .search_box input { padding: 0; height: 50px; width: 100%; border: 0; }
 .dual_search_wrap .search_box input::placeholder { color: #c2c2c2; }
-.slt_history_box { position: absolute; left: -18px; top: 50px; z-index: 10; padding: 0 18px; width: calc(100% - 18px); background-color: #fff; box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); }
+.slt_history_box { display: none; position: absolute; left: -18px; top: 51px; z-index: 10; width: calc(100% + 18px); background-color: #fff; box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+.slt_history_box.active { display: block; }
+.slt_history_box .history_list .row { display: flex; height: 42px; }
+.slt_history_box .history_list .row .search_txt { flex: 1; padding-left: 18px; line-height: 42px; font-size:1.143rem }
+.slt_history_box .history_list .btn_del { width: 42px; height: 42px; font-size: 0; text-indent: -9999px; background: url('../images/icon/btn_del2.png') no-repeat 50% 50%; background-size: 12px auto; }
+.slt_history_box .group_btn { position: relative; left: 50%; transform: translateX(-50%); margin: 6px 0 18px; }
 
 .dual_search_wrap > .btn_col1 { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); }
 
-
-/*  */
-.btn_dual_rnd {  width: 170px; height: 38px; border-radius: 16px; border: 1px solid #ececec; }
-
-
+.used_car_list { position: relative; background-color: #ededed; }
+.used_car_list:after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: #ededed; }
+.usedcar { display: flex; margin-bottom: 1px; padding: 0 18px; align-items: center; justify-content: space-between; color: #333; height: 80px; background-color: #fff; box-sizing: border-box;  }
+.usedcar.ty2 { color: #fff; background-color: #ffc000; }
+.usedcar .state { font-size: 0.929rem; line-height: 1.286rem; }
+.usedcar .price { font-size: 1.143rem; }
+.used_car_list .usedcar.active { border: 1px solid #ffba00; }
+.used_car_list .usedcar.active .price { padding-right: 27px; background: url('../images/icon/check_on.png') no-repeat right 50%; background-size: auto 11px; }
