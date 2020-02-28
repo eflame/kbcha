@@ -1,8 +1,5 @@
 
 $(window).on('load', function(){
-	fixedBtmBody();
-	fixedBtmPopup();
-
 	tabActiveBar();
 	inputRange();
 	btnRange();
@@ -11,7 +8,9 @@ $(window).on('load', function(){
 $(function(){
 	//하단고정영역
 	if ($('.section_btm_fixed').length > 0){
-		if ($('.section_btm_fixed').hasClass('fixed')){
+		fixedBtmBody();
+		fixedBtmPopup();
+		if ($('.section_btm_fixed').hasClass('flexible')){
 			fixedScroll();
 			$('.section_btm_fixed .btn_wrap2').hide();
 		}
@@ -65,12 +64,12 @@ $(function(){
 		var $togCon = $toggle.children('.toggle_con')
 		if($(this).hasClass('open')){
 			$(this).removeClass('open').addClass('close').text('접어보기');
-			$togCon.slideDown(500, 'easeInOutQuart', function(){
+			$togCon.stop().slideDown(500, 'easeInOutQuart', function(){
 				$toggle.addClass('active');
 			});
 		} else if($(this).hasClass('close')){
 			$(this).removeClass('close').addClass('open').text('펼쳐보기');
-			$togCon.slideUp(500, 'easeInOutQuart', function(){
+			$togCon.stop().slideUp(500, 'easeInOutQuart', function(){
 				$toggle.removeClass('active');
 			});
 		}
@@ -108,7 +107,7 @@ function tabActiveBar(){
 		var btn = $('.tab_wrap.outer > .tab_tit a.active > span');
 		var btnLft = $(btn).offset().left;
 		var btnWdh = $(btn).outerWidth();
-		$('.tab_wrap.outer > .tab_tit > .bar').animate({'left' : btnLft, 'width' : btnWdh}, 500, 'easeInOutQuart');
+		$('.tab_wrap.outer > .tab_tit > .bar').stop().animate({'left' : btnLft, 'width' : btnWdh}, 500, 'easeInOutQuart');
 	}
 }
 
@@ -184,11 +183,11 @@ function fixedScroll(){
 	function fixedBtm(e){
 		if (e){
 			didScroll = false;
-			$('.section_btm_fixed.fixed').addClass('btm');
+			$('.section_btm_fixed.flexible').addClass('btm');
 			fixedBtmState('scroll');
 		} else {
 			didScroll = true;
-			$('.section_btm_fixed.fixed').removeClass('btm');
+			$('.section_btm_fixed.flexible').removeClass('btm');
 			fixedBtmState('scroll');
 		}
 	}
